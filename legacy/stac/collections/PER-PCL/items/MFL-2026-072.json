@@ -1,0 +1,123 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-072",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -75.9479,
+          -9.4184
+        ],
+        [
+          -74.3225,
+          -9.4184
+        ],
+        [
+          -74.3225,
+          -7.9501
+        ],
+        [
+          -75.9479,
+          -7.9501
+        ],
+        [
+          -75.9479,
+          -9.4184
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -75.9479,
+    -9.4184,
+    -74.3225,
+    -7.9501
+  ],
+  "properties": {
+    "title": "Provinces and Districts",
+    "description": "Administrative boundaries for Ucayali, Peru",
+    "datetime": "2026-09-15T00:00:00Z",
+    "created": "2026-09-15T00:00:00Z",
+    "cgiar-cdh:geography": [
+      "peru"
+    ],
+    "mosaic:living_landscape": "PER-PCL",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Boundaries / admin units",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Processed",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "mosaic:spatial_resolution": "Admin level 2 and 3",
+    "mosaic:datetime_note": "No temporal coverage recorded. datetime is a stand-in: the date the record was catalogued (its registration date), not a time of the data.",
+    "mosaic:last_updated": "NA",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
+    "mosaic:license_original": "Free download from the Peruvian government source (MINAM/GEOBOSQUES, SERNANP, INEI); no formal license stated",
+    "mosaic:gee_asset_id": "projects/mosaic-mfl/assets/mvp/MFL-2026-072",
+    "contacts": [
+      {
+        "name": "Beatriz Rodríguez",
+        "emails": [
+          {
+            "value": "b.rodriguez@cgiar.org"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: One Drive | Server path: MOSAIC/datasets/MFL-2026-072/raw/"
+  },
+  "collection": "PER-PCL",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-072.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://www.datosabiertos.gob.pe/dataset/limites-departamentales",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://www.datosabiertos.gob.pe/dataset/limites-departamentales",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "application/octet-stream"
+    }
+  }
+}

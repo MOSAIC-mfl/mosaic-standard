@@ -1,0 +1,170 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "ETH-OG",
+  "title": "Omo-Gibe Basin",
+  "description": "Datasets registered under the 'Omo-Gibe Basin' Living Landscape (8 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          34.9533,
+          4.431,
+          38.4128,
+          9.3691
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1991-01-01T00:00:00Z",
+          "2026-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Agrobiodiversity / crops",
+    "Biodiversity / ecosystems",
+    "Boundaries / admin units",
+    "Degradation / land health",
+    "Land cover / land use",
+    "Socio-economic / livelihoods"
+  ],
+  "providers": [
+    {
+      "name": "Alliance Bioversity-CIAT",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Alliance Bioversity-CIAT (MOSAIC)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "NASA / USGS (external)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "National government (external)",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Open",
+      "Restricted"
+    ],
+    "mosaic:theme": [
+      "Agrobiodiversity / crops",
+      "Biodiversity / ecosystems",
+      "Boundaries / admin units",
+      "Degradation / land health",
+      "Land cover / land use",
+      "Socio-economic / livelihoods"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "ethiopia"
+  ],
+  "mosaic:living_landscape": "ETH-OG",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
+  "mosaic:item_count": 8,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/ETH-OG/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-036.json",
+      "type": "application/json",
+      "title": "Agricultural production system"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-037.json",
+      "type": "application/json",
+      "title": "Land use/cover"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-038.json",
+      "type": "application/json",
+      "title": "Soil resource"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-039.json",
+      "type": "application/json",
+      "title": "District level crop area, production and yield data - Ethiopia"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-040.json",
+      "type": "application/json",
+      "title": "Agroecological zones"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-041.json",
+      "type": "application/json",
+      "title": "Experimental CSA practices"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-042.json",
+      "type": "application/json",
+      "title": "Erosion map"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-100.json",
+      "type": "application/json",
+      "title": "Omo-Gibe Basin living landscape boundary"
+    }
+  ],
+  "mosaic:landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
+  "mosaic:countries": [
+    "Ethiopia"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/ETH-OG.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ],
+      "license": "CC-BY-4.0",
+      "mosaic:license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "mosaic:source": "Ethiopia River Basins (eth_basins), World Bank Group, World Bank Data Catalog dataset 0040202: Omo basin polygon (79,549 km2).",
+      "mosaic:attribution": "Contains data from 'Ethiopia River Basins', World Bank Group (World Bank Data Catalog, dataset 0040202), licensed under CC BY 4.0. Changes: Omo basin polygon extracted, reprojected from Adindan / UTM zone 37N to WGS 84, trimmed near the Kenya border (about 255 km2) and simplified."
+    }
+  }
+}

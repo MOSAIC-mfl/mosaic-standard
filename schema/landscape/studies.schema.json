@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosaic-mfl.github.io/catalog/schema/v0.2.0/landscape/studies.schema.json",
+  "title": "Study cards of a map explorer",
+  "description": "kind 'published': a finding verified against the cited paper (claims and where they were found in 'verified', or pages cited in the finding). kind 'explore': a question; a finding there only describes what the question rests on (no claims). Missing 'verified' and explore findings are warnings (validate-landscapes).",
+  "type": "object",
+  "required": ["cards"],
+  "properties": {
+    "about": {"type": "string"}, "updated": {"type": "string"}, "note": {"type": "string"},
+    "cards": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["id", "question", "kind"],
+        "properties": {
+          "id": {"type": "string"}, "question": {"type": "string"},
+          "kind": {"enum": ["published", "explore"]},
+          "finding": {"type": "string"}, "caveat": {"type": "string"}, "citation": {"type": "string"},
+          "doi": {"type": "string", "pattern": "^10\\."},
+          "verified": {"type": "array", "items": {"type": "object", "required": ["claim", "where"]}},
+          "layers": {"type": "array", "items": {"type": "string"}},
+          "open_panel": {"type": "string"}, "camera": {"type": "object"}, "time": {"type": "object"},
+          "steps": {"type": "array", "items": {"type": "object", "required": ["label"], "properties": {"label": {"type": "string"}, "layer": {"type": "string"}, "time": {"type": "object"}, "camera": {"type": "object"}}}},
+          "map_note": {"type": "string", "description": "What the map shows for this card (e.g. context only, not the study's data)."},
+          "data_note": {"type": "string", "description": "Why the card shows no layer."}
+        },
+        "allOf": [
+          {"if": {"properties": {"kind": {"const": "published"}}}, "then": {"required": ["finding", "citation"]}}
+        ]
+      }
+    }
+  }
+}

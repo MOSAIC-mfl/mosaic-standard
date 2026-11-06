@@ -1,0 +1,79 @@
+# INCOMPLETE: no theme
+schema_version: 0.2.0
+id: MFL-2099-001
+title: Test land cover map
+description: Synthetic record used by the test suite.
+resource_type: dataset
+keywords:
+- land cover
+- term: land cover
+  scheme: agrovoc
+  uri: http://aims.fao.org/aos/agrovoc/c_37897
+spatial:
+  bbox:
+  - -80
+  - -12
+  - -70
+  - -2
+  crs: EPSG:4326
+  geography:
+  - PER
+  - m49:419
+  landscapes:
+  - PER-PCL
+  resolution:
+    value: 30
+    unit: m
+temporal:
+  start_date: '2020'
+  end_date: null
+  text: 2020 onwards
+  update_frequency: annual
+license: CC-BY-4.0
+access: public
+contact:
+- organization: Example Institute
+  ror: https://ror.org/04xsxqp89
+  roles:
+  - producer
+  - licensor
+- name: Test Person
+  email: test@example.org
+  orcid: https://orcid.org/0000-0002-1825-0097
+  roles:
+  - point-of-contact
+  organization: Example Institute
+citation:
+  authors:
+  - organization: Example Institute
+  title: Test land cover map
+  date: '2099'
+additional_links:
+- rel: license
+  url: https://spdx.org/licenses/CC-BY-4.0.html
+data:
+- name: GeoTIFF
+  locations:
+  - url: https://example.org/data.tif
+  access_method: download
+  kind: raster
+  media_type: image/tiff; application=geotiff
+  structures:
+  - GeoTIFF
+- name: WMS
+  locations:
+  - url: https://example.org/wms
+  access_method: service
+  kind: raster
+  service:
+    type: wms
+    layers:
+    - landcover
+structures:
+- name: GeoTIFF
+  variables:
+  - name: class
+    data_type: uint8
+    nodata: 0
+created: '2099-01-01'
+updated: '2099-01-02'

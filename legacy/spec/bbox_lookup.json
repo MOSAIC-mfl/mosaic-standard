@@ -1,0 +1,375 @@
+{
+ "_meta": {
+  "file": "bbox_lookup.json",
+  "purpose": "Bounding boxes + centroids per living-landscape CODE, with a country-level fallback. Frontend plots centroids; STAC export seeds extent.spatial.bbox.",
+  "crs": "EPSG:4326 (WGS84)",
+  "bbox_order": "[west, south, east, north]  (minLon, minLat, maxLon, maxLat)",
+  "centroid_order": "[lon, lat]",
+  "accuracy": "Landscape entries marked delineated:true are derived from the REAL delineation shapefiles (MOSAIC_LLV_delim, dissolved, EPSG:4326) - authoritative for discovery extents. GLB-UNSPEC and country_fallback remain coarse locators only.",
+  "status": "CANONICAL - built from delineation shapefiles by scripts/build_boundaries.py on 2026-09-29. Approved by Lizeth 2026-07-21; PER-PCL pending confirmation with the Peru team.",
+  "lookup_rule": "Engineer: look up by landscape CODE first. If code missing or = GLB-UNSPEC, fall back to country_fallback by Country. If country also unknown, use GLB-UNSPEC (world-ish box) and flag."
+ },
+ "landscapes": {
+  "COL-CUM": {
+   "bbox": [
+    -78.0702,
+    0.8386,
+    -77.7535,
+    1.0784
+   ],
+   "centroid": [
+    -77.9096,
+    0.9702
+   ],
+   "name": "Cumbal (Narino)",
+   "landscape_system": "Amazon",
+   "countries": [
+    "Colombia"
+   ],
+   "delineated": true
+  },
+  "PER-PCL": {
+   "bbox": [
+    -75.9479,
+    -9.4184,
+    -74.3225,
+    -7.9501
+   ],
+   "centroid": [
+    -75.2342,
+    -8.635
+   ],
+   "name": "Pucallpa - Ucayali",
+   "landscape_system": "Amazon",
+   "countries": [
+    "Peru"
+   ],
+   "delineated": true,
+   "pending_confirmation": true
+  },
+  "SEN-FK": {
+   "bbox": [
+    -16.7921,
+    13.9284,
+    -16.1055,
+    14.6084
+   ],
+   "centroid": [
+    -16.4833,
+    14.3286
+   ],
+   "name": "Fatick Department",
+   "landscape_system": "Sudan-Sahelian and Guinea Forest-Savanna Transition",
+   "countries": [
+    "Senegal"
+   ],
+   "delineated": true
+  },
+  "CIV-NZ": {
+   "bbox": [
+    -5.3792,
+    5.95,
+    -3.8583,
+    9.4333
+   ],
+   "centroid": [
+    -4.7151,
+    7.5534
+   ],
+   "name": "N'Zi Watershed",
+   "landscape_system": "Sudan-Sahelian and Guinea Forest-Savanna Transition",
+   "countries": [
+    "Côte d'Ivoire"
+   ],
+   "delineated": true
+  },
+  "TUN-NW": {
+   "bbox": [
+    8.9235,
+    35.7384,
+    9.4466,
+    36.4324
+   ],
+   "centroid": [
+    9.1526,
+    36.0885
+   ],
+   "name": "Northwestern Tunisia",
+   "landscape_system": "Dryland Mediterranean",
+   "countries": [
+    "Tunisia"
+   ],
+   "delineated": true
+  },
+  "ETH-OG": {
+   "bbox": [
+    34.9533,
+    4.431,
+    38.4128,
+    9.3691
+   ],
+   "centroid": [
+    36.7199,
+    6.8439
+   ],
+   "name": "Omo-Gibe Basin",
+   "landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
+   "countries": [
+    "Ethiopia"
+   ],
+   "delineated": true
+  },
+  "KEN-LVB": {
+   "bbox": [
+    33.9499,
+    -0.4244,
+    35.343,
+    0.6557
+   ],
+   "centroid": [
+    34.5623,
+    0.0264
+   ],
+   "name": "Lake Victoria Basin (Kenya)",
+   "landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
+   "countries": [
+    "Kenya"
+   ],
+   "delineated": true
+  },
+  "KEN-LEI": {
+   "bbox": [
+    35.9962,
+    -3.187,
+    38.5194,
+    -0.7526
+   ],
+   "centroid": [
+    37.1654,
+    -1.9256
+   ],
+   "name": "LEILA (Southern Kenya Rangelands)",
+   "landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
+   "countries": [
+    "Kenya"
+   ],
+   "delineated": true
+  },
+  "ZWE-MB": {
+   "bbox": [
+    28.8445,
+    -17.4339,
+    32.0584,
+    -15.6073
+   ],
+   "centroid": [
+    30.1731,
+    -16.4096
+   ],
+   "name": "Mbire - Lower Zambezi Valley",
+   "landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
+   "countries": [
+    "Zimbabwe"
+   ],
+   "delineated": true
+  },
+  "IND-CH": {
+   "bbox": [
+    78.2942,
+    22.2022,
+    81.1975,
+    25.9555
+   ],
+   "centroid": [
+    79.6362,
+    24.134
+   ],
+   "name": "Central India Highlands",
+   "landscape_system": "Deccan Plateau Forest-Dryland Transition Zone",
+   "countries": [
+    "India"
+   ],
+   "delineated": true
+  },
+  "MEK-3S": {
+   "bbox": [
+    105.95,
+    11.8519,
+    108.7757,
+    16.3853
+   ],
+   "centroid": [
+    107.3023,
+    13.9935
+   ],
+   "name": "3S Basins (Sekong, Sesan, Srepok)",
+   "landscape_system": "Three S Rivers Sub-basin in the Mekong Basin",
+   "countries": [
+    "Laos",
+    "Cambodia",
+    "Vietnam"
+   ],
+   "delineated": true
+  },
+  "GLB": {
+   "bbox": [
+    -180,
+    -60,
+    180,
+    72
+   ],
+   "centroid": [
+    0,
+    10
+   ],
+   "name": "Global / cross-landscape",
+   "delineated": false
+  }
+ },
+ "country_fallback": {
+  "Colombia": {
+   "bbox": [
+    -79.0,
+    -4.2,
+    -66.9,
+    12.5
+   ],
+   "centroid": [
+    -73.0,
+    4.1
+   ]
+  },
+  "Côte d'Ivoire": {
+   "bbox": [
+    -8.6,
+    4.3,
+    -2.5,
+    10.7
+   ],
+   "centroid": [
+    -5.5,
+    7.5
+   ]
+  },
+  "Ethiopia": {
+   "bbox": [
+    33.0,
+    3.4,
+    48.0,
+    14.9
+   ],
+   "centroid": [
+    40.5,
+    9.1
+   ]
+  },
+  "India": {
+   "bbox": [
+    68.1,
+    6.5,
+    97.4,
+    35.5
+   ],
+   "centroid": [
+    82.8,
+    21.0
+   ]
+  },
+  "Kenya": {
+   "bbox": [
+    33.9,
+    -4.7,
+    41.9,
+    5.5
+   ],
+   "centroid": [
+    37.9,
+    0.4
+   ]
+  },
+  "Laos": {
+   "bbox": [
+    100.1,
+    13.9,
+    107.7,
+    22.5
+   ],
+   "centroid": [
+    103.9,
+    18.2
+   ]
+  },
+  "Peru": {
+   "bbox": [
+    -81.3,
+    -18.3,
+    -68.7,
+    -0.1
+   ],
+   "centroid": [
+    -75.0,
+    -9.2
+   ]
+  },
+  "Senegal": {
+   "bbox": [
+    -17.5,
+    12.3,
+    -11.3,
+    16.7
+   ],
+   "centroid": [
+    -14.4,
+    14.5
+   ]
+  },
+  "Tunisia": {
+   "bbox": [
+    7.5,
+    30.2,
+    11.6,
+    37.5
+   ],
+   "centroid": [
+    9.5,
+    33.9
+   ]
+  },
+  "Vietnam": {
+   "bbox": [
+    102.1,
+    8.2,
+    109.5,
+    23.4
+   ],
+   "centroid": [
+    105.8,
+    15.8
+   ]
+  },
+  "Zimbabwe": {
+   "bbox": [
+    25.2,
+    -22.4,
+    33.1,
+    -15.6
+   ],
+   "centroid": [
+    29.2,
+    -19.0
+   ]
+  },
+  "Tanzania": {
+   "bbox": [
+    29.3,
+    -11.8,
+    40.5,
+    -0.9
+   ],
+   "centroid": [
+    34.9,
+    -6.4
+   ]
+  }
+ }
+}

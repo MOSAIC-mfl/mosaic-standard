@@ -1,0 +1,160 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "SEN-FK",
+  "title": "Fatick Department",
+  "description": "Datasets registered under the 'Fatick Department' Living Landscape (9 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -16.7921,
+          13.9284,
+          -16.1055,
+          14.6084
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1981-01-01T00:00:00Z",
+          "2026-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Boundaries / admin units",
+    "Degradation / land health",
+    "Land cover / land use",
+    "Water / hydrology"
+  ],
+  "providers": [
+    {
+      "name": "Alliance Bioversity-CIAT (MOSAIC)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "ISRA-BAME",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Open",
+      "Restricted"
+    ],
+    "mosaic:theme": [
+      "Boundaries / admin units",
+      "Degradation / land health",
+      "Land cover / land use",
+      "Water / hydrology"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "senegal"
+  ],
+  "mosaic:living_landscape": "SEN-FK",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
+  "mosaic:item_count": 9,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/SEN-FK/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-017.json",
+      "type": "application/json",
+      "title": "Land Use and Land Cover - Senegal"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-018.json",
+      "type": "application/json",
+      "title": "Departments"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-019.json",
+      "type": "application/json",
+      "title": "Municipalities"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-020.json",
+      "type": "application/json",
+      "title": "Localities"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-021.json",
+      "type": "application/json",
+      "title": "Road"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-022.json",
+      "type": "application/json",
+      "title": "Land Degradation - Senegal"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-023.json",
+      "type": "application/json",
+      "title": "Tree mapping"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-024.json",
+      "type": "application/json",
+      "title": "Rainfall data"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-104.json",
+      "type": "application/json",
+      "title": "Fatick Department living landscape boundary"
+    }
+  ],
+  "mosaic:landscape_system": "Sudan-Sahelian and Guinea Forest-Savanna Transition",
+  "mosaic:countries": [
+    "Senegal"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/SEN-FK.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ],
+      "license": "other",
+      "mosaic:license_url": "https://gadm.org/license.html",
+      "mosaic:source": "GADM: level 2 unit Fatick departement (GADM v2 attribute schema; geometry identical to GADM 3.6 and 4.1 SEN.3.1_1).",
+      "mosaic:attribution": "Departement boundary: GADM (gadm.org)."
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-015",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          78.2942,
+          22.2022
+        ],
+        [
+          81.1975,
+          22.2022
+        ],
+        [
+          81.1975,
+          25.9555
+        ],
+        [
+          78.2942,
+          25.9555
+        ],
+        [
+          78.2942,
+          22.2022
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    78.2942,
+    22.2022,
+    81.1975,
+    25.9555
+  ],
+  "properties": {
+    "title": "Land Use and Land Cover - India",
+    "description": "Landuse and Land cover changes",
+    "datetime": null,
+    "start_datetime": "2018-01-01T00:00:00Z",
+    "end_datetime": "2025-12-31T23:59:59Z",
+    "cgiar-cdh:geography": [
+      "india"
+    ],
+    "mosaic:living_landscape": "IND-CH",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Land cover / land use",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Annual",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "GeoTIFF"
+    ],
+    "mosaic:spatial_resolution": "30m",
+    "mosaic:last_updated": "2025",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "CC-BY-4.0",
+    "contacts": [
+      {
+        "name": "Core Stack",
+        "emails": [
+          {
+            "value": "s.maliappan@cgiar.org"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: CoRE Stack: public Google Earth Engine assets and Google Drive downloads, one row per layer in the CoRE Stack GEE Layers Links sheet. Map viewer: https://ee-corestackdev.projects.earthengine.app/view/core-stack-gee-app"
+  },
+  "collection": "IND-CH",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-015.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://docs.google.com/spreadsheets/d/1xS5d7vgyjyoqqnmmajKDZBx9qS6GqyAdSbNDR62ot2Y/edit?gid=0",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://docs.google.com/spreadsheets/d/1xS5d7vgyjyoqqnmmajKDZBx9qS6GqyAdSbNDR62ot2Y/edit?gid=0",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "image/tiff; application=geotiff"
+    }
+  }
+}

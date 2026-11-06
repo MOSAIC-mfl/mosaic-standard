@@ -1,0 +1,51 @@
+# MOSAIC record template (standard v0.2). Copy to records/<id>/record.yaml and fill in.
+# (M) = minimum, (R) = recommended, (O) = optional. Delete what you do not know - never guess.
+# Same field names as the CGIAR Climate Data Hub core. Full reference: docs/fields.md
+
+schema_version: 0.2.0            # written by the build if missing
+id: MFL-2026-000                 # (M) next free MFL id; never reuse or change it
+title: ""                        # (M) as the source names it
+description: >-                  # (M) what it is: content, coverage, method in brief
+  ...
+resource_type: dataset           # (M) dataset | service | document | software | model
+themes: []                       # (M) vocab/themes.json ids, primary first, e.g. [land-cover-land-use]
+keywords: []                     # (R) plain terms, or {term, scheme, uri} (e.g. AGROVOC)
+spatial:
+  geography: []                  # (R) ISO3 countries (PER), m49:<code> regions, or global
+  landscapes: []                 # profile MOSAIC: vocab/landscapes.json, e.g. [PER-PCL]
+  bbox: null                     # (R) [west, south, east, north] in WGS84
+  # crs: EPSG:4326               # (O)
+  # resolution: {value: 30, unit: m}   # (O) or {text: district level}
+temporal:
+  start_date: null               # (R) YYYY, YYYY-MM or YYYY-MM-DD (or date: for a single period)
+  end_date: null                 #     null = still running
+  update_frequency: unknown      # (R) static | annual | monthly | ... | unknown
+  # text: ""                     # (O) the period as the source states it
+license: null                    # (M) SPDX (CC-BY-4.0); no SPDX code: LicenseRef-source-terms + license_text
+# license_text: ""               # the terms, when license is LicenseRef-...
+access: public                   # (M) public | restricted | non-public
+access_note: null                # (M) only if access is not public: how to obtain the data
+contact:                         # (M) organization and roles in each; at least one licensor
+  - organization: ""
+    name: ""
+    email: ""
+    roles: [producer, licensor]  # producer | licensor | host | processor | point-of-contact | maintainer | funder
+citation:                        # (R) citation OR doi
+  authors: [{family: "", given: ""}]   # or {organization: ""}
+  date: ""
+  # text: ""                     # the citation as the source gives it, when it is not structured
+doi: null                        # 10.xxxx/... without https://doi.org/
+data:                            # (M) one entry per way to reach the data; public -> at least one location
+  - name: ""
+    locations: [{url: ""}]       # a file, a service, a landing page or the page where it is requested
+    access_method: download      # (R) download | landing_page | service | request
+    kind: raster                 # (R) raster | vector | tabular | document | mixed | other
+    # media_type: image/tiff; application=geotiff
+    # geometry_type: polygon     # (R) for vector data: point | line | polygon | mixed
+    # access: non-public         # only when this entry differs from the record
+# structures: []                 # (O) data dictionary: variables (bands, attributes, columns) and dimensions
+# source_updated: "2025"         # (O) when the source last updated the data (not the record)
+# version: ""                    # (O) as the source labels it
+# related_publications: [{doi: ""}]   # (O)
+# additional_links: [{rel: license, url: ""}]   # (O) licence terms, documentation, related pages
+# funding: [{name: ""}]          # (O)

@@ -1,0 +1,33 @@
+# Example: a restricted dataset with no URL - it says how to ask for it instead.
+# Converted by hand from its schema-1 record; INCOMPLETE (no keywords, no citation).
+schema_version: 0.2.0
+id: MFL-2026-090
+title: Conflicts
+description: Locations and resources affected by conflicts and competing uses
+resource_type: dataset
+themes:
+- socio-economic-livelihoods
+spatial:
+  geography:
+  - KEN
+  landscapes:
+  - KEN-LVB
+temporal:
+  date: '2026'
+  text: '2026'
+license: LicenseRef-source-terms
+license_text: Restricted — contact data owner
+access: restricted
+access_note: Ask the contact person named in this record (Ambica Paliwal, ILRI).
+contact:
+- name: Ambica Paliwal
+  organization: ILRI
+  email: a.paliwal@cgiar.org
+  roles:
+  - producer
+  - point-of-contact
+data:
+- name: Conflict locations held by ILRI
+  access_method: request
+  kind: vector
+  access: restricted

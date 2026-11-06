@@ -1,0 +1,122 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-081",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -75.9479,
+          -9.4184
+        ],
+        [
+          -74.3225,
+          -9.4184
+        ],
+        [
+          -74.3225,
+          -7.9501
+        ],
+        [
+          -75.9479,
+          -7.9501
+        ],
+        [
+          -75.9479,
+          -9.4184
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -75.9479,
+    -9.4184,
+    -74.3225,
+    -7.9501
+  ],
+  "properties": {
+    "title": "Land Cover and Land Use",
+    "description": "Land cover and land-use classification within the Ucayali department for 2000, 2005, 2010, 2015, 2020 and 2024, derived from Mapbiomas Peru Collection 4. The original raster data was converted to vector polygons and aggregated by administrative provinces and districts level",
+    "datetime": null,
+    "start_datetime": "2000-01-01T00:00:00Z",
+    "end_datetime": "2024-12-31T23:59:59Z",
+    "created": "2026-09-15T00:00:00Z",
+    "cgiar-cdh:geography": [
+      "peru"
+    ],
+    "mosaic:living_landscape": "PER-PCL",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Land cover / land use",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Processed",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "mosaic:spatial_resolution": "30 m (original dataset)",
+    "mosaic:last_updated": "2026",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "CC-BY-4.0",
+    "contacts": [
+      {
+        "name": "Beatriz Rodríguez",
+        "emails": [
+          {
+            "value": "b.rodriguez@cgiar.org"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: One Drive | Server path: MOSAIC/datasets/MFL-2026-081/raw/"
+  },
+  "collection": "PER-PCL",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-081.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://peru.mapbiomas.org/iniciativas-y-productos/cobertura-y-uso-del-suelo/cobertura/",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://peru.mapbiomas.org/iniciativas-y-productos/cobertura-y-uso-del-suelo/cobertura/",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "application/octet-stream"
+    }
+  }
+}

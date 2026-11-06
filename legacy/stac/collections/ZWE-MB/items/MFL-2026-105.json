@@ -1,0 +1,122 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-105",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          28.8445,
+          -17.4339
+        ],
+        [
+          32.0584,
+          -17.4339
+        ],
+        [
+          32.0584,
+          -15.6073
+        ],
+        [
+          28.8445,
+          -15.6073
+        ],
+        [
+          28.8445,
+          -17.4339
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    28.8445,
+    -17.4339,
+    32.0584,
+    -15.6073
+  ],
+  "properties": {
+    "title": "Mbire – Lower Zambezi Valley living landscape boundary",
+    "description": "Canonical MOSAIC delineation of the Mbire – Lower Zambezi Valley living landscape (ZWE-MB), used to define the landscape across the catalogue. Source: GADM 4.1, level 3: all 112 wards of the districts Mbire, Centenary/Muzarabani and Mount Darwin (Mashonaland Central) and Hurungwe (Mashonaland West), unmodified. Full-detail Shapefile and GeoPackage in the dated release boundaries-2026-10-14 of MOSAIC-mfl/catalog; a simplified outline is attached to the landscape's STAC collection.",
+    "datetime": null,
+    "start_datetime": "2026-01-01T00:00:00Z",
+    "end_datetime": "2026-12-31T23:59:59Z",
+    "created": "2026-10-21T00:00:00Z",
+    "cgiar-cdh:geography": [
+      "zimbabwe"
+    ],
+    "mosaic:living_landscape": "ZWE-MB",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Boundaries / admin units",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Processed",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Static",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "ZIP"
+    ],
+    "mosaic:spatial_resolution": "Landscape boundary",
+    "mosaic:last_updated": "2026-10-14",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
+    "mosaic:license_original": "Source terms (https://gadm.org/license.html)",
+    "contacts": [
+      {
+        "name": "Lizeth Llanos",
+        "emails": [
+          {
+            "value": "l.llanos@cgiar.org"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: GitHub release boundaries-2026-10-14 (MOSAIC-mfl/catalog)"
+  },
+  "collection": "ZWE-MB",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/ZWE-MB/items/MFL-2026-105.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://github.com/MOSAIC-mfl/catalog/releases/download/boundaries-2026-10-14/ZWE-MB_Mbire_Lower_Zambezi_Valley_boundary_2026-10-14.zip",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://github.com/MOSAIC-mfl/catalog/releases/download/boundaries-2026-10-14/ZWE-MB_Mbire_Lower_Zambezi_Valley_boundary_2026-10-14.zip",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "KEN-LVB",
+  "title": "Lake Victoria Basin (Kenya)",
+  "description": "Datasets registered under the 'Lake Victoria Basin (Kenya)' Living Landscape (11 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          33.9,
+          -4.7,
+          41.9,
+          5.5
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2017-01-01T00:00:00Z",
+          "2026-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Boundaries / admin units",
+    "Decision-support outputs",
+    "Degradation / land health",
+    "Ecosystem condition",
+    "Ecosystem services",
+    "Pressures / drivers",
+    "Socio-economic / livelihoods"
+  ],
+  "providers": [
+    {
+      "name": "Alliance Bioversity-CIAT",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Alliance Bioversity-CIAT (MOSAIC)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "IFPRI",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "ILRI",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Open",
+      "Restricted"
+    ],
+    "mosaic:theme": [
+      "Boundaries / admin units",
+      "Decision-support outputs",
+      "Degradation / land health",
+      "Ecosystem condition",
+      "Ecosystem services",
+      "Pressures / drivers",
+      "Socio-economic / livelihoods"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "kenya"
+  ],
+  "mosaic:living_landscape": "KEN-LVB",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
+  "mosaic:item_count": 11,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LVB/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-064.json",
+      "type": "application/json",
+      "title": "Tree conservation and restoration priority areas (Kenya)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-083.json",
+      "type": "application/json",
+      "title": "Crop type map"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-085.json",
+      "type": "application/json",
+      "title": "Landscape Resources"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-086.json",
+      "type": "application/json",
+      "title": "Resource change"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-087.json",
+      "type": "application/json",
+      "title": "Environmental challenges"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-088.json",
+      "type": "application/json",
+      "title": "Climate risks"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-089.json",
+      "type": "application/json",
+      "title": "Livelihood resources"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-090.json",
+      "type": "application/json",
+      "title": "Conflicts"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-091.json",
+      "type": "application/json",
+      "title": "Drivers of change"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-092.json",
+      "type": "application/json",
+      "title": "Restoration opportunities"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-102.json",
+      "type": "application/json",
+      "title": "Lake Victoria Basin (Kenya) living landscape boundary"
+    }
+  ],
+  "mosaic:landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
+  "mosaic:countries": [
+    "Kenya"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/KEN-LVB.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ],
+      "license": "other",
+      "mosaic:license_url": "https://gadm.org/license.html",
+      "mosaic:source": "GADM 4.1, level 1: counties Kakamega (KEN.11_1), Kisumu (KEN.17_1), Siaya (KEN.38_1) and Vihiga (KEN.45_1), unmodified.",
+      "mosaic:attribution": "County boundaries: GADM version 4.1 (gadm.org)."
+    }
+  }
+}

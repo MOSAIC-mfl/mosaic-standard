@@ -1,0 +1,119 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-021",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -16.7921,
+          13.9284
+        ],
+        [
+          -16.1055,
+          13.9284
+        ],
+        [
+          -16.1055,
+          14.6084
+        ],
+        [
+          -16.7921,
+          14.6084
+        ],
+        [
+          -16.7921,
+          13.9284
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -16.7921,
+    13.9284,
+    -16.1055,
+    14.6084
+  ],
+  "properties": {
+    "title": "Road",
+    "description": "Official administrative boundaries of Senegal",
+    "datetime": "2026-07-21T00:00:00Z",
+    "cgiar-cdh:geography": [
+      "senegal"
+    ],
+    "mosaic:living_landscape": "SEN-FK",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Boundaries / admin units",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Static",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "mosaic:datetime_note": "No temporal coverage recorded. datetime is a stand-in: the date the record was catalogued (2026-07-21, the canonical registry snapshot it predates), not a time of the data.",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
+    "mosaic:license_original": "Restricted — GADM terms (academic/non-commercial use only, no redistribution)",
+    "contacts": [
+      {
+        "name": "dieyemohamadou@gmail.com",
+        "emails": [
+          {
+            "value": "dieyemohamadou@gmail.com"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: Drive"
+  },
+  "collection": "SEN-FK",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/SEN-FK/items/MFL-2026-021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://gadm.org/",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://gadm.org/",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "application/octet-stream"
+    }
+  }
+}

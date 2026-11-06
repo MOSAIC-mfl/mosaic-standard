@@ -1,0 +1,49 @@
+# Runs on every pull request and push: the standard (schemas, vocabularies, generated docs, the
+# validator and build) and, against it, the catalogue's records and landscape profiles.
+# The catalogue is MOSAIC-mfl/catalog: main when it already has the catalogue-only layout (records/
+# and landscapes/, no mosaic.config.yaml), otherwise the branch metadata-standard-v0.1. The
+# repository variable CATALOG_REF forces a branch or tag.
+name: Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Clone the catalogue
+        env:
+          CATALOG_REF: ${{ vars.CATALOG_REF }}
+        run: |
+          if [ -n "$CATALOG_REF" ]; then
+            git clone --quiet --branch "$CATALOG_REF" https://github.com/MOSAIC-mfl/catalog.git _catalog
+          else
+            git clone --quiet https://github.com/MOSAIC-mfl/catalog.git _catalog
+            if [ -f _catalog/mosaic.config.yaml ] || [ ! -d _catalog/records ]; then
+              git -C _catalog checkout --quiet metadata-standard-v0.1
+            fi
+          fi
+          echo "MOSAIC_CATALOG=$PWD/_catalog" >> "$GITHUB_ENV"
+          echo "Catalogue: $(git -C _catalog rev-parse --abbrev-ref HEAD) @ $(git -C _catalog rev-parse --short HEAD)"
+      - run: pip install -e ".[dev]"
+      - run: ruff check src scripts tests && ruff format --check src scripts tests
+      - run: mypy src
+      - run: python scripts/build_vocab.py --check
+      - run: python scripts/build_docs.py --check
+      - run: pytest -q
+      - name: Records
+        run: python -m mosaic_catalog validate --gaps review/minimum_gaps
+      - name: Landscape profiles
+        run: python -m mosaic_catalog validate-landscapes

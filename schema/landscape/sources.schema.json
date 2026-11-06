@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosaic-mfl.github.io/catalog/schema/v0.2.0/landscape/sources.schema.json",
+  "title": "Sources of the explorer layers",
+  "description": "Source, licence, citation and caveats of each layer, as stated by the explorer's author. 'record' links the catalogue record once the layer is registered; until then the website shows these texts.",
+  "type": "object",
+  "required": ["layers"],
+  "properties": {
+    "layers": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["id", "title"],
+        "properties": {
+          "id": {"type": "string"}, "title": {"type": "string"}, "group": {"type": "string"},
+          "source": {"type": "string"}, "period": {"type": "string"}, "units": {"type": "string"},
+          "licence": {"type": "string"}, "citation": {"type": "string"}, "attribution": {"type": "string"},
+          "caveats": {"type": "string"}, "placeholder": {"type": "boolean"},
+          "record": {"type": ["string", "null"], "pattern": "^[a-z0-9-]+:.+$"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "KEN-LEI",
+  "title": "LEILA (Southern Kenya Rangelands)",
+  "description": "Datasets registered under the 'LEILA (Southern Kenya Rangelands)' Living Landscape (1 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          35.9962,
+          -3.187,
+          38.5194,
+          -0.7526
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-01-01T00:00:00Z",
+          "2026-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Boundaries / admin units"
+  ],
+  "providers": [
+    {
+      "name": "Alliance Bioversity-CIAT (MOSAIC)",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Open"
+    ],
+    "mosaic:theme": [
+      "Boundaries / admin units"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "kenya"
+  ],
+  "mosaic:living_landscape": "KEN-LEI",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
+  "mosaic:item_count": 1,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LEI/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-101.json",
+      "type": "application/json",
+      "title": "LEILA (Southern Kenya Rangelands) living landscape boundary"
+    }
+  ],
+  "mosaic:landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
+  "mosaic:countries": [
+    "Kenya"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/KEN-LEI.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ],
+      "license": "other",
+      "mosaic:license_url": "https://gadm.org/license.html",
+      "mosaic:source": "GADM 4.1, level 1: counties Kajiado (KEN.10_1), Kiambu (KEN.13_1), Machakos (KEN.22_1) and Makueni (KEN.23_1), unmodified.",
+      "mosaic:attribution": "County boundaries: GADM version 4.1 (gadm.org)."
+    }
+  }
+}

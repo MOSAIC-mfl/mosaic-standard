@@ -1,0 +1,168 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "TUN-NW",
+  "title": "Northwestern Tunisia",
+  "description": "Datasets registered under the 'Northwestern Tunisia' Living Landscape (11 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          8.9235,
+          35.7384,
+          9.4466,
+          36.4324
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2017-01-01T00:00:00Z",
+          "2024-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Boundaries / admin units",
+    "Degradation / land health",
+    "Ecosystem condition",
+    "Land cover / land use",
+    "Socio-economic / livelihoods"
+  ],
+  "providers": [
+    {
+      "name": "ICARDA",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Open",
+      "Restricted"
+    ],
+    "mosaic:theme": [
+      "Boundaries / admin units",
+      "Degradation / land health",
+      "Ecosystem condition",
+      "Land cover / land use",
+      "Socio-economic / livelihoods"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "tunisia"
+  ],
+  "mosaic:living_landscape": "TUN-NW",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
+  "mosaic:item_count": 11,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/TUN-NW/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-030.json",
+      "type": "application/json",
+      "title": "Tunisia LLs Governorate boundary for Le Kef and Siliana."
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-031.json",
+      "type": "application/json",
+      "title": "Tunisia LLs Sector boundary containing Es Sers, Gaafour, El Krib, Makthar, and Kesra."
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-032.json",
+      "type": "application/json",
+      "title": "Tunisia LLs boundary for the six communities containing Sers, Elles, El Ahouez Sud, Hammam Biadha Sud, Chouarnia, and Kesra."
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-033.json",
+      "type": "application/json",
+      "title": "Tunisia Land use land cover for Le Kef and Siliana."
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-034.json",
+      "type": "application/json",
+      "title": "Tunisia Agricultural soil for Le Kef and Siliana."
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-035.json",
+      "type": "application/json",
+      "title": "Agroecological and socioeconomic datasets"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-093.json",
+      "type": "application/json",
+      "title": "Land cover Kef-Siliana region (2017)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-094.json",
+      "type": "application/json",
+      "title": "Land cover Kef-Siliana region (2022)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-095.json",
+      "type": "application/json",
+      "title": "Land Cover change in Kef-Siliana region (2017-2022)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-096.json",
+      "type": "application/json",
+      "title": "Data on landscape metrics at different scales, Kef-Siliana region and sub-spatial units of the Agroecological Living Lab Landscape in Tunisia (2017-2022)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-097.json",
+      "type": "application/json",
+      "title": "Data on the dynamics of Land Cover at different scales, Kef-Siliana region and sub-spatial units of the Agroecological Living Lab Landscape in Tunisia (2017-2022)"
+    }
+  ],
+  "mosaic:landscape_system": "Dryland Mediterranean",
+  "mosaic:countries": [
+    "Tunisia"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/TUN-NW.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ],
+      "license": "CC-BY-3.0-IGO",
+      "mosaic:license_url": "https://creativecommons.org/licenses/by/3.0/igo/legalcode",
+      "mosaic:source": "Tunisia - Subnational Administrative Boundaries (COD-AB) v01, admin level 4, valid 2022-11-15; source Institut National de la Statistique Tunisie (INS), published by OCHA on HDX. Union of 7 sectors: Bousliaa, El Marja and Elles (Es Sers, Le Kef); El Ahouez Sud (Gaafour), Hammam Biadha Sud (El Krib), Chouarnia (Makthar) and Kesra (Kesra) (Siliana).",
+      "mosaic:attribution": "Contains data from 'Tunisia - Subnational Administrative Boundaries' (COD-AB), source: Institut National de la Statistique Tunisie (INS), published by UN OCHA on the Humanitarian Data Exchange (https://data.humdata.org/dataset/cod-ab-tun), licensed under CC BY-IGO 3.0. Changes: seven admin-4 sectors dissolved into one outline and simplified."
+    }
+  }
+}

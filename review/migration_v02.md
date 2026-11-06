@@ -1,0 +1,71 @@
+# Conversion notes (v0.1 -> v0.2)
+
+65 records, 65 notes. Things that changed form or were dropped; nothing was invented. In every record mosaic.intake (workflow state) was dropped: it lives in the issue / pull request and in git. Missing minimum fields are in minimum_gaps.md.
+
+| Record | Field | Note |
+|---|---|---|
+| MFL-2026-006 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-007 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-011 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-014 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-016 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-018 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-019 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-021 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-025 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-026 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-027 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-028 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-029 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-030 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-031 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-032 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-033 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-034 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-036 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-037 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-038 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-044 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-046 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-050 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-051 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-052 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-053 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-054 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-055 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-056 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-057 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-064 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-065 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-068 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-069 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-072 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-073 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-074 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-075 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-076 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-077 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-078 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-079 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-080 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-083 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-084 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-085 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-086 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-087 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-088 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-089 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-090 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-091 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-092 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-098 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-099 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-101 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-102 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-103 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-104 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-105 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-107 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-108 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-109 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |
+| MFL-2026-110 | `license` | no SPDX code: written as LicenseRef-source-terms with the source's text/link; confirm whether an SPDX licence applies |

@@ -1,0 +1,113 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "COL-CUM",
+  "title": "Cumbal (Narino)",
+  "description": "Datasets registered under the 'Cumbal (Narino)' Living Landscape (2 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -79.0,
+          -4.2,
+          -66.9,
+          12.5
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-01-01T00:00:00Z",
+          "2026-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Agrobiodiversity / crops",
+    "Boundaries / admin units"
+  ],
+  "providers": [
+    {
+      "name": "Alliance Bioversity-CIAT (MOSAIC)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "CIP",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Internal",
+      "Open"
+    ],
+    "mosaic:theme": [
+      "Agrobiodiversity / crops",
+      "Boundaries / admin units"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "colombia"
+  ],
+  "mosaic:living_landscape": "COL-CUM",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
+  "mosaic:item_count": 2,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/COL-CUM/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-056.json",
+      "type": "application/json",
+      "title": "Crop fields (2023)  focus on \tPotatoes, Oca, Mashua and andean fruit trees"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-099.json",
+      "type": "application/json",
+      "title": "Cumbal (Nariño) living landscape boundary"
+    }
+  ],
+  "mosaic:landscape_system": "Amazon",
+  "mosaic:countries": [
+    "Colombia"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/COL-CUM.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ],
+      "license": "other",
+      "mosaic:source": "Nine veredas of the Cumbal indigenous reserve area (Tasmag, Quilismal, Boyera, Cuaical, Cuaspud Grande, Llano de Piedras, Cuetial, Guan, San Martin-Miraflores), layer 'Cumbal_veredas_wgs84' compiled by Javier Ochoa (CIP). Original source to be confirmed.",
+      "mosaic:attribution": "Vereda boundaries compiled by J. Ochoa (CIP) for the CGIAR Science Program on Multifunctional Landscapes; original source to be confirmed."
+    }
+  }
+}

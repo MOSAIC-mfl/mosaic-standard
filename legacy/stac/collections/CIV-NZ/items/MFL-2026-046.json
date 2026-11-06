@@ -1,0 +1,127 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-046",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -5.3792,
+          5.95
+        ],
+        [
+          -3.8583,
+          5.95
+        ],
+        [
+          -3.8583,
+          9.4333
+        ],
+        [
+          -5.3792,
+          9.4333
+        ],
+        [
+          -5.3792,
+          5.95
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -5.3792,
+    5.95,
+    -3.8583,
+    9.4333
+  ],
+  "properties": {
+    "title": "Climate station data (NHMS synoptic stations)",
+    "description": "Daily weather data for three synoptic stations in and around the N'Zi watershed, served by AfricaRice's ARCWeather portal: Bouaké and Ferkessédougou from 1980 to 2010, Korhogo from 1994 to 2001. Korhogo holds fewer variables, and its dew point is estimated from the minimum temperature. AfricaRice's own M'Bé research-station data from 2014 onward is a separate record, MFL-2026-084.",
+    "datetime": null,
+    "start_datetime": "1980-01-01T00:00:00Z",
+    "end_datetime": "2010-12-31T23:59:59Z",
+    "cgiar-cdh:geography": [
+      "cote-d-ivoire"
+    ],
+    "mosaic:living_landscape": "CIV-NZ",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Water / hydrology",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Static",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "XLSX"
+    ],
+    "mosaic:spatial_resolution": "Climate station observations",
+    "mosaic:last_updated": "2026",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
+    "mosaic:license_original": "ARCWeather usage terms: non-commercial, educational, research or personal use only, with citation. The portal states that Côte d'Ivoire climate data is distributed by Sodexam; no licence stated by the rights holder",
+    "contacts": [
+      {
+        "name": "Louis Kouadio",
+        "emails": [
+          {
+            "value": "a.kouadio2@cgiar.org"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: server and drive | Server path: MOSAIC/datasets/MFL-2026-046/raw/"
+  },
+  "collection": "CIV-NZ",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/CIV-NZ/items/MFL-2026-046.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://arcweather.africarice.org/en/downloads",
+      "title": "Primary source / download"
+    },
+    {
+      "rel": "related",
+      "href": "https://climate-data-hub.cgiar.org/",
+      "title": "CGIAR Climate Data Hub (source of truth for climate layers) [placeholder URL]"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://arcweather.africarice.org/en/downloads",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    }
+  }
+}

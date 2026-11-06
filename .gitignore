@@ -1,0 +1,28 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+_site/
+*.egg-info/
+
+# local settings and secrets: never committed (copy .env.example when there is one)
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Internal working documents (discussions, plans, assessments) stay out of git.
+# Drop anything of that kind in _internal/ or at the repo root as office files.
+_internal/
+/*.pptx
+/*.docx
+/*.xlsx
+MOSAIC_Catalog_Gap_Analysis.*
+MOSAIC_CDH_Interoperability_STAC_Assessment_202606.md
+legacy/registry/*_LOCKED_*.xlsx
+
+# clone of the catalogue for local checks and the CI
+_catalog/

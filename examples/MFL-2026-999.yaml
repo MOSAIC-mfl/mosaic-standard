@@ -1,0 +1,80 @@
+# Example: a public dataset that lives at its source (Dryad); MOSAIC links to it and holds no copy.
+# The id MFL-2026-999 is an example id: the record is not registered in the catalogue (106 belongs to a real record).
+# Every value comes from Dryad, CGSpace or ROR (checked 2026-10-28). What they do not state stays out:
+# no period, no bounding box, no licensor, no ORCID, no AGROVOC URIs.
+schema_version: 0.2.0
+id: MFL-2026-999
+title: >-
+  Nocturnal insect communities altered by land-use change contribute little to coffee pollination in the
+  Western Ghats, India
+description: >-
+  Insect surveys, pollination experiments and analysis scripts (R, CSV) from coffee agroforests in the
+  Western Ghats, India. The dataset accompanies a journal article; MOSAIC links to it at Dryad and holds
+  no copy.
+resource_type: dataset
+themes:
+- biodiversity-ecosystems
+keywords:
+- nocturnal insects
+- coffee
+- pollination
+- land-use change
+- agroforestry
+- Western Ghats
+- term: pollination
+  scheme: agrovoc
+- term: coffea
+  scheme: agrovoc
+- term: agroforestry systems
+  scheme: agrovoc
+- term: Life on land
+  scheme: sdg
+spatial:
+  geography:
+  - IND
+temporal:
+  update_frequency: static
+license: LicenseRef-source-terms
+license_text: Dryad terms of use — licence to confirm with the authors
+access: public
+contact:
+- name: Smitha Krishnan
+  organization: Alliance of Bioversity International and CIAT
+  ror: https://ror.org/04xsxqp89
+  roles:
+  - producer
+  - point-of-contact
+- organization: Dryad
+  roles:
+  - host
+citation:
+  text: >-
+    Narayanan, H. Rama; Krishnan, Smitha; Osuri, Anand M., 2025, "Nocturnal insect communities altered
+    by land-use change contribute little to coffee pollination in the Western Ghats, India", Dryad, https://doi.org/10.5061/dryad.6djh9w18f
+  authors:
+  - family: Narayanan
+    given: H. Rama
+  - family: Krishnan
+    given: Smitha
+  - family: Osuri
+    given: Anand M.
+  date: '2025'
+  publisher: Dryad
+doi: 10.5061/dryad.6djh9w18f
+funding:
+- name: CGIAR Trust Fund
+- name: Department of Biotechnology (India)
+- name: Shri A.M.M. Murugappa Chettiar Research Centre
+related_publications:
+- doi: 10.1016/j.agee.2025.109966
+additional_links:
+- rel: is-documented-by
+  url: 10568/176581
+  title: The article's record in CGSpace
+data:
+- name: Dryad deposit (CSV data, R scripts, README)
+  locations:
+  - url: https://doi.org/10.5061/dryad.6djh9w18f
+  access_method: landing_page
+  kind: mixed
+  description: CSV data files, R scripts and a README.

@@ -1,0 +1,122 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-071",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180,
+          -60
+        ],
+        [
+          180,
+          -60
+        ],
+        [
+          180,
+          72
+        ],
+        [
+          -180,
+          72
+        ],
+        [
+          -180,
+          -60
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180,
+    -60,
+    180,
+    72
+  ],
+  "properties": {
+    "title": "Urochloa hybrid adoption in Latin America and the Caribbean 2001-2024: An analysis of the land use, social, economic, and environmental impacts in 27 countries",
+    "description": "Analysis of interspecific Urochloa forage-grass hybrid adoption across 27 Latin American and Caribbean countries, 2001-2024. Estimates over 1.09 million adopting farmers on 1.62 million cumulative hectares, projects cumulative forage value of US$47-62 billion by 2033, and estimates potential greenhouse gas emission reductions of 16.9-56.3 Mt CO2-eq by that timeframe.",
+    "datetime": null,
+    "start_datetime": "2001-01-01T00:00:00Z",
+    "end_datetime": "2024-12-31T23:59:59Z",
+    "created": "2026-08-03T00:00:00Z",
+    "cgiar-cdh:geography": [
+      "latin-america-and-the-caribbean"
+    ],
+    "mosaic:living_landscape": "GLB",
+    "mosaic:coverage": "global",
+    "mosaic:theme": "Agrobiodiversity / crops",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Raw",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Static",
+    "mosaic:bbox_approximate": true,
+    "mosaic:bbox_note": "Global/world locator box; not the dataset's own extent.",
+    "mosaic:formats": [
+      "XLSX"
+    ],
+    "mosaic:last_updated": "2026",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "CC0-1.0",
+    "contacts": [
+      {
+        "name": "Stefan Burkart",
+        "emails": [
+          {
+            "value": "s.burkart@cgiar.org"
+          }
+        ],
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: Harvard Dataverse"
+  },
+  "collection": "GLB",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/GLB/items/MFL-2026-071.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://doi.org/10.7910/DVN/L86VZ9",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://doi.org/10.7910/DVN/L86VZ9",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    }
+  }
+}

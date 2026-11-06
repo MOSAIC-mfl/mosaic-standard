@@ -1,0 +1,157 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "CIV-NZ",
+  "title": "N'Zi Watershed",
+  "description": "Datasets registered under the 'N'Zi Watershed' Living Landscape (8 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -8.6,
+          4.3,
+          -2.5,
+          10.7
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1979-01-01T00:00:00Z",
+          "2026-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Boundaries / admin units",
+    "Degradation / land health",
+    "Water / hydrology"
+  ],
+  "providers": [
+    {
+      "name": "AfricaRice",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Alliance Bioversity-CIAT (MOSAIC)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "IFPRI",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Open"
+    ],
+    "mosaic:theme": [
+      "Boundaries / admin units",
+      "Degradation / land health",
+      "Water / hydrology"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "cote-d-ivoire"
+  ],
+  "mosaic:living_landscape": "CIV-NZ",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
+  "mosaic:item_count": 8,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/CIV-NZ/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-044.json",
+      "type": "application/json",
+      "title": "District/Region boundaries"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-045.json",
+      "type": "application/json",
+      "title": "Agroecological zones"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-046.json",
+      "type": "application/json",
+      "title": "Climate station data (NHMS synoptic stations)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-048.json",
+      "type": "application/json",
+      "title": "DSSAT soil profiles for Côte d'Ivoire (CI.SOL)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-066.json",
+      "type": "application/json",
+      "title": "iSDAsoil soil properties for the N'Zi watershed (0-20 and 20-50 cm)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-067.json",
+      "type": "application/json",
+      "title": "Gridded climate data (CHIRPS and AgERA5)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-084.json",
+      "type": "application/json",
+      "title": "Climate data AfricaRice M'Bé Research Station"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-098.json",
+      "type": "application/json",
+      "title": "N'Zi Watershed living landscape boundary"
+    }
+  ],
+  "mosaic:landscape_system": "Sudan-Sahelian and Guinea Forest-Savanna Transition",
+  "mosaic:countries": [
+    "Côte d'Ivoire"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/CIV-NZ.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ],
+      "license": "other",
+      "mosaic:license_url": "https://data.hydrosheds.org/file/technical-documentation/HydroSHEDS_TechDoc_v1_4.pdf",
+      "mosaic:source": "HydroBASINS v1c, level 6, basin HYBAS_ID 1060982320 (PFAF_ID 145402), unmodified. HydroSHEDS version 1, World Wildlife Fund (WWF).",
+      "mosaic:attribution": "This product (MOSAIC landscape boundary CIV-NZ) incorporates data from the HydroSHEDS version 1 database which is © World Wildlife Fund, Inc. (2006-2022) and has been used herein under license. WWF has not evaluated the data as altered and incorporated within MOSAIC landscape boundary CIV-NZ, and therefore gives no warranty regarding its accuracy, completeness, currency or suitability for any particular purpose. Portions of the HydroSHEDS v1 database incorporate data which are the intellectual property rights of © USGS (2006-2008), NASA (2000-2005), ESRI (1992-1998), CIAT (2004-2006), UNEP-WCMC (1993), WWF (2004), Commonwealth of Australia (2007), and Her Royal Majesty and the British Crown and are used under license. The HydroSHEDS v1 database and more information are available at https://www.hydrosheds.org. Citation: Lehner, B., Grill, G. (2013). Global river hydrography and network routing: baseline data and new approaches to study the world's large river systems. Hydrological Processes, 27(15): 2171-2186. https://doi.org/10.1002/hyp.9740"
+    }
+  }
+}

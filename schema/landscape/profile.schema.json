@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosaic-mfl.github.io/catalog/schema/v0.2.0/landscape/profile.schema.json",
+  "title": "MOSAIC landscape profile",
+  "description": "One page per living landscape (landscapes/<CODE>/profile.yaml). The page is a list of sections; each section is a module the website knows how to draw ('kind'). A landscape without profile.yaml gets the default sections (see mosaic.config.yaml: landscapes.default_sections).",
+  "type": "object",
+  "required": ["profile", "landscape", "title", "sections"],
+  "additionalProperties": false,
+  "properties": {
+    "profile": {"const": "mosaic-landscape-profile@0.1", "x-message": "profile must be 'mosaic-landscape-profile@0.1'"},
+    "landscape": {"type": "string", "pattern": "^[A-Z]{3}-[A-Z0-9]{2,4}$", "description": "Code from vocab/landscapes.json; must match the folder name."},
+    "title": {"type": "string", "minLength": 1},
+    "summary": {"type": "string"},
+    "status": {"enum": ["draft", "review", "published"], "default": "draft", "description": "draft and review pages are shown with a notice."},
+    "sections": {
+      "type": "array", "minItems": 1,
+      "items": {"$ref": "#/$defs/section"}
+    },
+    "credits": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["name"], "additionalProperties": false,
+        "properties": {"name": {"type": "string"}, "role": {"type": "string"}, "url": {"type": "string", "format": "uri"}}
+      }
+    },
+    "origin": {
+      "type": "object", "additionalProperties": false,
+      "properties": {"repository": {"type": "string"}, "commit": {"type": "string"}, "note": {"type": "string"}}
+    }
+  },
+  "$defs": {
+    "section": {
+      "type": "object",
+      "required": ["id", "kind"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$", "description": "Anchor of the section in the page (#id)."},
+        "kind": {
+          "type": "string", "pattern": "^[a-z][a-z0-9-]*$",
+          "description": "Module that draws the section. Core kinds: overview, map-explorer, catalogue-datasets, data-status. A profile may use a kind of its own once the website registers it (src/features/landscape/sections)."
+        },
+        "title": {"type": "string"},
+        "intro": {"type": "string"},
+        "source": {"type": "string", "pattern": "^[a-z0-9_-]+\\.ya?ml$", "description": "Configuration file of the section, next to profile.yaml (required by map-explorer)."},
+        "options": {"type": "object", "description": "Free options read by the section module."}
+      },
+      "allOf": [
+        {"if": {"properties": {"kind": {"const": "map-explorer"}}}, "then": {"required": ["source"]}}
+      ]
+    }
+  }
+}

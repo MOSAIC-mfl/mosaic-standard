@@ -1,0 +1,192 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "PER-PCL",
+  "title": "Pucallpa - Ucayali",
+  "description": "Datasets registered under the 'Pucallpa - Ucayali' Living Landscape (13 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary. NOTE: this landscape's name and delineation are PENDING CONFIRMATION with the country team.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -81.3,
+          -18.3,
+          -68.7,
+          -0.1
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2000-01-01T00:00:00Z",
+          "2026-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Agrobiodiversity / crops",
+    "Biodiversity / ecosystems",
+    "Boundaries / admin units",
+    "Land cover / land use",
+    "Pressures / drivers"
+  ],
+  "providers": [
+    {
+      "name": "Alliance Bioversity-CIAT",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Alliance Bioversity-CIAT (MOSAIC)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "CIP",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Internal",
+      "Open"
+    ],
+    "mosaic:theme": [
+      "Agrobiodiversity / crops",
+      "Biodiversity / ecosystems",
+      "Boundaries / admin units",
+      "Land cover / land use",
+      "Pressures / drivers"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "peru"
+  ],
+  "mosaic:living_landscape": "PER-PCL",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
+  "mosaic:item_count": 13,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-055.json",
+      "type": "application/json",
+      "title": "Crop fields (2025) - focus on NUS crops"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-072.json",
+      "type": "application/json",
+      "title": "Provinces and Districts"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-073.json",
+      "type": "application/json",
+      "title": "National Protected Natural Areas"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-074.json",
+      "type": "application/json",
+      "title": "Regional Conservation Areas"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-075.json",
+      "type": "application/json",
+      "title": "Indigenous Territories"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-076.json",
+      "type": "application/json",
+      "title": "National Ecosystem Map"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-077.json",
+      "type": "application/json",
+      "title": "Human Footprint map"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-078.json",
+      "type": "application/json",
+      "title": "Physical Vulnerability map"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-079.json",
+      "type": "application/json",
+      "title": "Forest/Non-forest 2000/Forest loss 2001-2024"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-080.json",
+      "type": "application/json",
+      "title": "Annual deforestation"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-081.json",
+      "type": "application/json",
+      "title": "Land Cover and Land Use"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-082.json",
+      "type": "application/json",
+      "title": "Accumulated Burned Area 2013-2024"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-103.json",
+      "type": "application/json",
+      "title": "Pucallpa – Ucayali living landscape boundary"
+    }
+  ],
+  "mosaic:landscape_system": "Amazon",
+  "mosaic:countries": [
+    "Peru"
+  ],
+  "mosaic:pending_confirmation": true,
+  "assets": {
+    "boundary": {
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/PER-PCL.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ],
+      "license": "other",
+      "mosaic:source": "INEI referential census district limits (cartography of the V Censo Nacional Economico 2022; 'Distrital' layer, ide.inei.gob.pe): 11 whole districts of Coronel Portillo and Padre Abad provinces (Ucayali) and a clipped part of Calleria.",
+      "mosaic:attribution": "Contains referential census district limits of the Instituto Nacional de Estadistica e Informatica (INEI), Peru (ide.inei.gob.pe); the limits are referential and have no demarcation value. Changes: districts dissolved into one outline, Calleria clipped, simplified. No licence is stated by INEI (to be confirmed)."
+    }
+  }
+}

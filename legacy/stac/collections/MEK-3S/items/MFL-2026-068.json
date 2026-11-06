@@ -1,0 +1,108 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-068",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          100.1,
+          13.9
+        ],
+        [
+          107.7,
+          13.9
+        ],
+        [
+          107.7,
+          22.5
+        ],
+        [
+          100.1,
+          22.5
+        ],
+        [
+          100.1,
+          13.9
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    100.1,
+    13.9,
+    107.7,
+    22.5
+  ],
+  "properties": {
+    "title": "Tree conservation and restoration priority areas (Laos)",
+    "description": "Conservation for Restoration (C4R) tool LAOS: mapping the vulnerability and priority areas for conservation and restoration of 79 native tree species. Linked to D4R",
+    "datetime": null,
+    "start_datetime": "2017-01-01T00:00:00Z",
+    "end_datetime": "2025-12-31T23:59:59Z",
+    "cgiar-cdh:geography": [
+      "lao-people-s-democratic-republic"
+    ],
+    "mosaic:living_landscape": "MEK-3S",
+    "mosaic:coverage": "national",
+    "mosaic:theme": "Decision-support outputs",
+    "mosaic:access_level": "Restricted",
+    "mosaic:processing_status": "Raw",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "On-demand",
+    "mosaic:bbox_approximate": true,
+    "mosaic:bbox_note": "Country-level locator box (dataset covers the whole country); not the dataset's own extent.",
+    "mosaic:formats": [
+      "GeoTIFF"
+    ],
+    "mosaic:spatial_resolution": "1000m",
+    "mosaic:last_updated": "2025",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
+    "mosaic:license_original": "CGIAR Open Access",
+    "contacts": [
+      {
+        "name": "Hannes Gaisberger",
+        "emails": [
+          {
+            "value": "h.gaisberger@cgiar.org"
+          }
+        ],
+        "roles": [
+          "producer"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: One drive | Server path: MOSAIC/datasets/MFL-2026-068/raw/"
+  },
+  "collection": "MEK-3S",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-068.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {}
+}

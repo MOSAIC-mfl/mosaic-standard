@@ -1,0 +1,122 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-057",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          102.1,
+          8.2
+        ],
+        [
+          109.5,
+          8.2
+        ],
+        [
+          109.5,
+          23.4
+        ],
+        [
+          102.1,
+          23.4
+        ],
+        [
+          102.1,
+          8.2
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    102.1,
+    8.2,
+    109.5,
+    23.4
+  ],
+  "properties": {
+    "title": "Crop fields (2023)  focus on Banana, Pumpkins, Taro, Mustard",
+    "description": "A total of 200 farmers in Vietnam, were surveyed utilizing ArcGIS Survey 123. Each farmer's field was physically visited, and the 'Participatory Mapping of Farmers' Fields' tool was employed to delineate polygons for each 'parcel', accurately determining their respective areas. This process captured the characteristics of 773 mapped plots across 200 farmers' households. The resultant comprehensive dataset comprises five distinct databases: A) Preliminary Information, B) Plot Information, C) Plot and Land Use, D) Crop Information, E) Variety Names. These datasets have been individualized and standardized using the common identifiers 'GlobalID Household' and 'GlobalID Plot'.",
+    "datetime": null,
+    "start_datetime": "2023-01-01T00:00:00Z",
+    "end_datetime": "2023-12-31T23:59:59Z",
+    "cgiar-cdh:geography": [
+      "viet-nam"
+    ],
+    "mosaic:living_landscape": "MEK-3S",
+    "mosaic:coverage": "national",
+    "mosaic:theme": "Agrobiodiversity / crops",
+    "mosaic:access_level": "Internal",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": true,
+    "mosaic:bbox_note": "Country-level locator box (dataset covers the whole country); not the dataset's own extent.",
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "mosaic:spatial_resolution": "Son La  and Lao Cai (Vietnam)",
+    "mosaic:last_updated": "NA",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
+    "mosaic:license_original": "Restricted — contact data owner",
+    "contacts": [
+      {
+        "name": "javier.ochoa@cgiar.org",
+        "emails": [
+          {
+            "value": "javier.ochoa@cgiar.org"
+          }
+        ],
+        "roles": [
+          "producer"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: CIP Dataverse"
+  },
+  "collection": "MEK-3S",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-057.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://data.cipotato.org/",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.cipotato.org/",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "application/octet-stream"
+    }
+  }
+}

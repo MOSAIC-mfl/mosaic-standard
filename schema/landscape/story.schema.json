@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosaic-mfl.github.io/catalog/schema/v0.2.0/landscape/story.schema.json",
+  "title": "Story of a map explorer",
+  "description": "Scroll-driven chapters: each chapter sets the map (overlay, time, camera) as it reaches the reading band. Numbers carry their source: kind 'study' (printed in the cited paper, page recorded) or 'app' (the explorer's own analysis, method named).",
+  "type": "object",
+  "required": ["title", "chapters"],
+  "properties": {
+    "title": {"type": "string"},
+    "about": {"type": "string"},
+    "updated": {"type": "string"},
+    "note": {"type": "string"},
+    "map": {"type": "object", "description": "Extra map layers for the story (sources, layers, while_open, highlights)."},
+    "chapters": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["id", "title", "text"],
+        "properties": {
+          "id": {"type": "string"},
+          "title": {"type": "string"},
+          "text": {"type": "string"},
+          "status": {"enum": ["ready", "pending", "provisional", null]},
+          "placeholder": {"type": "string"},
+          "visual": {"type": "object"},
+          "numbers": {
+            "type": "array",
+            "items": {
+              "type": "object", "required": ["value", "label"],
+              "properties": {
+                "value": {"type": "string"}, "label": {"type": "string"},
+                "source": {
+                  "type": "object", "required": ["kind"],
+                  "properties": {"kind": {"enum": ["study", "app"]}},
+                  "allOf": [
+                    {"if": {"properties": {"kind": {"const": "study"}}}, "then": {"required": ["citation"]}},
+                    {"if": {"properties": {"kind": {"const": "app"}}}, "then": {"required": ["method"]}}
+                  ]
+                }
+              }
+            }
+          },
+          "sources": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

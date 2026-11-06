@@ -1,0 +1,120 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-109",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          78.2942,
+          22.2022
+        ],
+        [
+          81.1975,
+          22.2022
+        ],
+        [
+          81.1975,
+          25.9555
+        ],
+        [
+          78.2942,
+          25.9555
+        ],
+        [
+          78.2942,
+          22.2022
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    78.2942,
+    22.2022,
+    81.1975,
+    25.9555
+  ],
+  "properties": {
+    "title": "Land-use pressures: mining, industry, energy and land conflicts - India",
+    "description": "Layers re-published by CoRE Stack. Land conflicts (Land Conflict Watch), mining (Pande et al., 2020), industries (Annual Survey of Industries), and solar and wind power plants (Global Energy Monitor). Pan-India.",
+    "datetime": "2026-10-29T00:00:00Z",
+    "created": "2026-10-29T00:00:00Z",
+    "cgiar-cdh:geography": [
+      "india"
+    ],
+    "mosaic:living_landscape": "IND-CH",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Pressures / drivers",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Processed",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "mosaic:datetime_note": "No temporal coverage recorded. datetime is a stand-in: the date the record was catalogued (its registration date), not a time of the data.",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
+    "mosaic:license_original": "Third-party layers re-published by CoRE Stack; licence set by each source (Land Conflict Watch, Pande et al. 2020, ASI, Global Energy Monitor)",
+    "contacts": [
+      {
+        "name": "Core Stack",
+        "emails": [
+          {
+            "value": "s.maliappan@cgiar.org"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: CoRE Stack: public Google Earth Engine assets and Google Drive downloads, one row per layer in the CoRE Stack GEE Layers Links sheet (Industry group). Map viewer: https://ee-corestackdev.projects.earthengine.app/view/core-stack-gee-app"
+  },
+  "collection": "IND-CH",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-109.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://docs.google.com/spreadsheets/d/1xS5d7vgyjyoqqnmmajKDZBx9qS6GqyAdSbNDR62ot2Y/edit?gid=0",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://docs.google.com/spreadsheets/d/1xS5d7vgyjyoqqnmmajKDZBx9qS6GqyAdSbNDR62ot2Y/edit?gid=0",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "application/octet-stream"
+    }
+  }
+}

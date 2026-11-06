@@ -1,0 +1,98 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.0.0",
+  "id": "mosaic-mfl-catalog",
+  "title": "MOSAIC — MFL Multifunctional Landscapes Catalog",
+  "description": "MOSAIC coordination-network metadata catalog for the CGIAR MFL Science Programme (AoW2). One STAC Collection per Living Landscape, one Item per registered dataset. Collection extents derive from the canonical landscape delineations (2026-07-21); each collection publishes its simplified boundary as a GeoJSON asset. Climate layers link to the CGIAR Climate Data Hub (connect, don't duplicate).",
+  "links": [
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/CIV-NZ/collection.json",
+      "type": "application/json",
+      "title": "N'Zi Watershed"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/COL-CUM/collection.json",
+      "type": "application/json",
+      "title": "Cumbal (Narino)"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/ETH-OG/collection.json",
+      "type": "application/json",
+      "title": "Omo-Gibe Basin"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/GLB/collection.json",
+      "type": "application/json",
+      "title": "Global / cross-landscape"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/IND-CH/collection.json",
+      "type": "application/json",
+      "title": "Central India Highlands"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/KEN-LEI/collection.json",
+      "type": "application/json",
+      "title": "LEILA (Southern Kenya Rangelands)"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/KEN-LVB/collection.json",
+      "type": "application/json",
+      "title": "Lake Victoria Basin (Kenya)"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/MEK-3S/collection.json",
+      "type": "application/json",
+      "title": "3S Basins (Sekong, Sesan, Srepok)"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/PER-PCL/collection.json",
+      "type": "application/json",
+      "title": "Pucallpa - Ucayali"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/SEN-FK/collection.json",
+      "type": "application/json",
+      "title": "Fatick Department"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/TUN-NW/collection.json",
+      "type": "application/json",
+      "title": "Northwestern Tunisia"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/ZWE-MB/collection.json",
+      "type": "application/json",
+      "title": "Mbire - Lower Zambezi Valley"
+    },
+    {
+      "rel": "related",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/landscapes.geojson",
+      "type": "application/geo+json",
+      "title": "Living Landscape boundaries that MOSAIC may redistribute (simplified; licence per feature)"
+    }
+  ],
+  "mosaic:schema_version": "0.3.0"
+}

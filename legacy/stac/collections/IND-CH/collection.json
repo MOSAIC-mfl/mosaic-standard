@@ -1,0 +1,309 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "IND-CH",
+  "title": "Central India Highlands",
+  "description": "Datasets registered under the 'Central India Highlands' Living Landscape (23 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          78.2942,
+          22.2022,
+          81.1975,
+          25.9555
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1999-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Agrobiodiversity / crops",
+    "Biodiversity / ecosystems",
+    "Boundaries / admin units",
+    "Decision-support outputs",
+    "Degradation / land health",
+    "Ecosystem condition",
+    "Hotspots / leverage points",
+    "Land cover / land use",
+    "Pressures / drivers",
+    "Scenarios / future risks",
+    "Socio-economic / livelihoods",
+    "Water / hydrology"
+  ],
+  "providers": [
+    {
+      "name": "Alliance Bioversity-CIAT",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "CGWB, via CoRE Stack (external)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "CoRE Stack (external)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "ESA / Copernicus (external)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "IWMI",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "India-WRIS, via CoRE Stack (external)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Land Conflict Watch, ASI, Global Energy Monitor and others, via CoRE Stack (external)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "NASA / USGS (external)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "National government (external)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "WRI India and CoRE Stack (external)",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Internal",
+      "Open",
+      "Restricted"
+    ],
+    "mosaic:theme": [
+      "Agrobiodiversity / crops",
+      "Biodiversity / ecosystems",
+      "Boundaries / admin units",
+      "Decision-support outputs",
+      "Degradation / land health",
+      "Ecosystem condition",
+      "Hotspots / leverage points",
+      "Land cover / land use",
+      "Pressures / drivers",
+      "Scenarios / future risks",
+      "Socio-economic / livelihoods",
+      "Water / hydrology"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "india"
+  ],
+  "mosaic:living_landscape": "IND-CH",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
+  "mosaic:item_count": 23,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-000.json",
+      "type": "application/json",
+      "title": "Central India Landscape - Boundary"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-001.json",
+      "type": "application/json",
+      "title": "Central India Landscape - Land Use / Land Cover"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-002.json",
+      "type": "application/json",
+      "title": "Central India Landscape - Rainfall (Remote sensing data)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-003.json",
+      "type": "application/json",
+      "title": "Central India Landscape - Rainfall (Observed)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-004.json",
+      "type": "application/json",
+      "title": "Central India Landscape - Socio economic"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-005.json",
+      "type": "application/json",
+      "title": "Central India Landscape - Environmental / Agriculture"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-006.json",
+      "type": "application/json",
+      "title": "Water Productivity atlas for India"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-007.json",
+      "type": "application/json",
+      "title": "Solar Irrigation Suitability map for India"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-008.json",
+      "type": "application/json",
+      "title": "District level crop area, prodcution and yield data - India"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-009.json",
+      "type": "application/json",
+      "title": "District level livestock population data - India"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-010.json",
+      "type": "application/json",
+      "title": "Soil health status of central Indian landscape"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-011.json",
+      "type": "application/json",
+      "title": "Central Indian Landscape health status (Rainfall, Vegetation, infrastructure, soil moisture, carbon stocks) using remote sensing indices"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-012.json",
+      "type": "application/json",
+      "title": "Rainfall erosivity, soil erodability, and water erosion status of India"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-013.json",
+      "type": "application/json",
+      "title": "Tree characteristics (canopy density & canopy height), tree cover change for India"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-014.json",
+      "type": "application/json",
+      "title": "Waterbodies data on River, canals, waterbodies, reservoir"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-015.json",
+      "type": "application/json",
+      "title": "Land Use and Land Cover - India"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-016.json",
+      "type": "application/json",
+      "title": "Groundwater data - India"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-063.json",
+      "type": "application/json",
+      "title": "India's open natural ecosystem"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-106.json",
+      "type": "application/json",
+      "title": "Microwatershed boundaries and drainage network - India"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-107.json",
+      "type": "application/json",
+      "title": "Climate hazard and drought indices - India"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-108.json",
+      "type": "application/json",
+      "title": "Restoration opportunities and plantation site suitability - India"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-109.json",
+      "type": "application/json",
+      "title": "Land-use pressures: mining, industry, energy and land conflicts - India"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-110.json",
+      "type": "application/json",
+      "title": "Soil type, nutrients and organic carbon - India"
+    }
+  ],
+  "mosaic:landscape_system": "Deccan Plateau Forest-Dryland Transition Zone",
+  "mosaic:countries": [
+    "India"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/IND-CH.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ],
+      "license": "other",
+      "mosaic:license_url": "https://gadm.org/license.html",
+      "mosaic:source": "Composite outline: districts Jhansi (Uttar Pradesh), Tikamgarh, Chhatarpur, Damoh and Jabalpur (Madhya Pradesh) from a GADM district layer (GADM v2 attribute schema; same line work as GADM 4.1), and Mandla district (Madhya Pradesh) from the Survey of India district boundary layer with LGD codes (2021).",
+      "mosaic:attribution": "District boundaries: GADM (gadm.org) and Survey of India."
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-088",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          33.9499,
+          -0.4244
+        ],
+        [
+          35.343,
+          -0.4244
+        ],
+        [
+          35.343,
+          0.6557
+        ],
+        [
+          33.9499,
+          0.6557
+        ],
+        [
+          33.9499,
+          -0.4244
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    33.9499,
+    -0.4244,
+    35.343,
+    0.6557
+  ],
+  "properties": {
+    "title": "Climate risks",
+    "description": "Areas exposed to climate-related environmental risks and stress.",
+    "datetime": null,
+    "start_datetime": "2026-01-01T00:00:00Z",
+    "end_datetime": "2026-12-31T23:59:59Z",
+    "created": "2026-09-30T00:00:00Z",
+    "cgiar-cdh:geography": [
+      "kenya"
+    ],
+    "mosaic:living_landscape": "KEN-LVB",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Ecosystem condition",
+    "mosaic:access_level": "Restricted",
+    "mosaic:processing_status": "Raw",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "On-demand",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "mosaic:spatial_resolution": "Basin level",
+    "mosaic:last_updated": "2026",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
+    "mosaic:license_original": "Restricted — contact data owner",
+    "contacts": [
+      {
+        "name": "Ambica Paliwal",
+        "emails": [
+          {
+            "value": "a.paliwal@cgiar.org"
+          }
+        ],
+        "roles": [
+          "producer"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: One drive | Source note: Internal Available on Request"
+  },
+  "collection": "KEN-LVB",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LVB/items/MFL-2026-088.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {}
+}

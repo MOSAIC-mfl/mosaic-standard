@@ -1,0 +1,18 @@
+# MOSAIC catalogue configuration. Read by the validator and the build.
+standard_version: 0.2.0
+
+profiles:
+  # MOSAIC profile (mosaic.landscapes, MFL-YYYY-NNN ids). false = warnings only.
+  mosaic:
+    enforce: false
+
+publication:
+  # Records that fail the minimum (level 0). true = published flagged `incomplete`
+  # with their completeness; false = left out of the published catalogue.
+  # Either way they are listed in review/minimum_gaps.csv.
+  include_incomplete: true
+
+landscapes:
+  # Sections of the page of a landscape that has no landscapes/<CODE>/profile.yaml.
+  # Every landscape of vocab/landscapes.json gets a page; a curated profile replaces this list.
+  default_sections: [overview, catalogue-datasets, data-status]

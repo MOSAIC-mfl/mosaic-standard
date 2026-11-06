@@ -1,0 +1,154 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "ZWE-MB",
+  "title": "Mbire - Lower Zambezi Valley",
+  "description": "Datasets registered under the 'Mbire - Lower Zambezi Valley' Living Landscape (7 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          28.8445,
+          -17.4339,
+          32.0584,
+          -15.6073
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-01-01T00:00:00Z",
+          "2026-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Boundaries / admin units",
+    "Degradation / land health",
+    "Ecosystem services",
+    "Land cover / land use"
+  ],
+  "providers": [
+    {
+      "name": "Alliance Bioversity-CIAT (MOSAIC)",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "CIMMYT",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "IWMI",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Open",
+      "Restricted"
+    ],
+    "mosaic:theme": [
+      "Boundaries / admin units",
+      "Degradation / land health",
+      "Ecosystem services",
+      "Land cover / land use"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "zimbabwe"
+  ],
+  "mosaic:living_landscape": "ZWE-MB",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
+  "mosaic:item_count": 7,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/ZWE-MB/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-025.json",
+      "type": "application/json",
+      "title": "Crop damage mapping"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-026.json",
+      "type": "application/json",
+      "title": "District/ward boundaries"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-027.json",
+      "type": "application/json",
+      "title": "LULC classification"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-028.json",
+      "type": "application/json",
+      "title": "LULC classification training points"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-029.json",
+      "type": "application/json",
+      "title": "Ecosystem services mapping"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-065.json",
+      "type": "application/json",
+      "title": "Soil health status and texture"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-105.json",
+      "type": "application/json",
+      "title": "Mbire – Lower Zambezi Valley living landscape boundary"
+    }
+  ],
+  "mosaic:landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
+  "mosaic:countries": [
+    "Zimbabwe"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/ZWE-MB.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ],
+      "license": "other",
+      "mosaic:license_url": "https://gadm.org/license.html",
+      "mosaic:source": "GADM 4.1, level 3: all 112 wards of the districts Mbire, Centenary/Muzarabani and Mount Darwin (Mashonaland Central) and Hurungwe (Mashonaland West), unmodified.",
+      "mosaic:attribution": "Ward boundaries: GADM version 4.1 (gadm.org)."
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosaic-mfl.github.io/catalog/schema/v0.2.0/levels/minimum.schema.json",
+  "title": "MOSAIC minimum (level 0)",
+  "description": "Enough metadata to find, understand, use legally and reach a resource. Aligned with the CDH required fields (keywords are recommended for now, decision of 2026-11-05). A record that fails this level is INCOMPLETE: listed in review/minimum_gaps and published flagged as incomplete.",
+  "required": [
+    "id",
+    "title",
+    "description",
+    "resource_type",
+    "themes",
+    "license",
+    "contact",
+    "access",
+    "data"
+  ],
+  "properties": {
+    "contact": {
+      "items": {
+        "required": [
+          "organization",
+          "roles"
+        ]
+      },
+      "x-message": "every contact needs an organization and its roles"
+    },
+    "data": {
+      "items": {
+        "required": [
+          "name"
+        ]
+      },
+      "x-message": "every data entry needs a name"
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "contact": {
+          "contains": {
+            "properties": {
+              "roles": {
+                "contains": {
+                  "const": "licensor"
+                }
+              }
+            },
+            "required": [
+              "roles"
+            ]
+          }
+        }
+      },
+      "x-field": "contact",
+      "x-message": "no contact with the licensor role (who grants the licence)"
+    },
+    {
+      "if": {
+        "required": [
+          "access"
+        ],
+        "properties": {
+          "access": {
+            "const": "public"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "contains": {
+              "required": [
+                "locations"
+              ]
+            }
+          }
+        }
+      },
+      "x-field": "data",
+      "x-message": "public resource with no location (URL) in data"
+    },
+    {
+      "if": {
+        "required": [
+          "access"
+        ],
+        "properties": {
+          "access": {
+            "enum": [
+              "restricted",
+              "non-public"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "access_note"
+        ]
+      },
+      "x-field": "access_note",
+      "x-message": "restricted / non-public resource without access_note (how to obtain it)"
+    },
+    {
+      "if": {
+        "required": [
+          "license"
+        ],
+        "properties": {
+          "license": {
+            "pattern": "\\bLicenseRef-"
+          }
+        }
+      },
+      "then": {
+        "anyOf": [
+          {
+            "required": [
+              "license_text"
+            ]
+          },
+          {
+            "required": [
+              "additional_links"
+            ],
+            "properties": {
+              "additional_links": {
+                "contains": {
+                  "required": [
+                    "rel",
+                    "url"
+                  ],
+                  "properties": {
+                    "rel": {
+                      "const": "license"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "x-field": "license",
+      "x-message": "LicenseRef-… licence without its text (license_text) or link (additional_links rel: license)"
+    }
+  ]
+}

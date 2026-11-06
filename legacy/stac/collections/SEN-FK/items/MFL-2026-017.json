@@ -1,0 +1,121 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-017",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -16.7921,
+          13.9284
+        ],
+        [
+          -16.1055,
+          13.9284
+        ],
+        [
+          -16.1055,
+          14.6084
+        ],
+        [
+          -16.7921,
+          14.6084
+        ],
+        [
+          -16.7921,
+          13.9284
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -16.7921,
+    13.9284,
+    -16.1055,
+    14.6084
+  ],
+  "properties": {
+    "title": "Land Use and Land Cover - Senegal",
+    "description": "Land cover derived from Sentinel-2 imagery using machine learning classification. Moderate spatial accuracy depending on land cover type and cloud cover; small or rapid changes may not be captured. Related: Sentinel-2 imagery, global land cover datasets, NDVI products.",
+    "datetime": null,
+    "start_datetime": "2017-01-01T00:00:00Z",
+    "end_datetime": "2025-12-31T23:59:59Z",
+    "cgiar-cdh:geography": [
+      "senegal"
+    ],
+    "mosaic:living_landscape": "SEN-FK",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Land cover / land use",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Annual",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "GeoTIFF"
+    ],
+    "mosaic:spatial_resolution": "10m",
+    "mosaic:last_updated": "2025",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "CC-BY-4.0",
+    "contacts": [
+      {
+        "name": "dieyemohamadou@gmail.com",
+        "emails": [
+          {
+            "value": "dieyemohamadou@gmail.com"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: Drive"
+  },
+  "collection": "SEN-FK",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/SEN-FK/items/MFL-2026-017.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://livingatlas.arcgis.com/landcoverexplorer/#mapCenter=-14.06266%2C13.65709%2C11.00&mode=step&timeExtent=2017%2C2022&year=2023",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://livingatlas.arcgis.com/landcoverexplorer/#mapCenter=-14.06266%2C13.65709%2C11.00&mode=step&timeExtent=2017%2C2022&year=2023",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "image/tiff; application=geotiff"
+    }
+  }
+}

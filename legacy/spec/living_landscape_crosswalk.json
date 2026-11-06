@@ -1,0 +1,49 @@
+{
+ "_meta": {
+  "file": "living_landscape_crosswalk.json",
+  "purpose": "Crosswalk from 'Living landscape' registry values to canonical MOSAIC living-landscape CODES. The registry now uses controlled 'CODE — Name' values (dropdown, Reference sheet cols K–M); legacy free-text variants are kept so older copies of the registry still resolve. Feeds frontend datasets.json 'living_landscape' (CODE) and STAC 'mosaic:living_landscape'.",
+  "code_scheme": "COUNTRY3-XX (ISO3 + mnemonic) or basin prefix (MEK). Special codes: NATIONAL (country-wide coverage; resolved to the country's landscape collection with mosaic:coverage=national) and GLB (global / cross-landscape).",
+  "status": "CANONICAL — list approved by Lizeth 2026-07-21, derived from the delineation shapefiles in MOSAIC_LLV_delim. PER-PCL is pending confirmation with the Peru team (reference map said Apurimac; delivered shapefile is Pucallpa/Ucayali). Boundaries: boundaries/<CODE>.geojson.",
+  "match_rule": "Engineer: trim + lowercase before matching free_text. Values shaped 'CODE — Name' short-circuit on the CODE prefix in vocab.py. Unmatched values -> NATIONAL if country known, else GLB, and flag for review.",
+  "checked": "github.com/CGIAR-Climate-Data-Hub/metadata vocab/geography.json (UN M49) confirmed 2026-06-22; geography for Country is UN M49, but living_landscape is MOSAIC-specific (mosaic:living_landscape) with no CDH equivalent.",
+  "landscape_systems": [
+   "Amazon",
+   "Sudan-Sahelian and Guinea Forest-Savanna Transition",
+   "East-South Africa Highland-Lowland-Rift Valley System",
+   "Deccan Plateau Forest-Dryland Transition Zone",
+   "Three S Rivers Sub-basin in the Mekong Basin",
+   "Dryland Mediterranean"
+  ]
+ },
+ "landscapes": [
+  {"free_text": "MEK-3S — 3S Basins (Sekong, Sesan, Srepok)", "code": "MEK-3S", "name": "3S Basins (Sekong, Sesan, Srepok)", "country": "Laos / Cambodia / Vietnam"},
+  {"free_text": "3S basins-Sekong, Sesan, and Srepok", "code": "MEK-3S", "name": "3S Basins (Sekong, Sesan, Srepok)", "country": "Laos / Cambodia / Vietnam", "note": "legacy free text"},
+  {"free_text": "CIV-NZ — N'Zi Watershed", "code": "CIV-NZ", "name": "N'Zi Watershed", "country": "Côte d'Ivoire"},
+  {"free_text": "N'Zi watershed", "code": "CIV-NZ", "name": "N'Zi Watershed", "country": "Côte d'Ivoire", "note": "legacy free text"},
+  {"free_text": "COL-CUM — Cumbal (Nariño)", "code": "COL-CUM", "name": "Cumbal (Nariño)", "country": "Colombia"},
+  {"free_text": "ETH-OG — Omo-Gibe Basin", "code": "ETH-OG", "name": "Omo-Gibe Basin", "country": "Ethiopia"},
+  {"free_text": "Omo-Gibe Ethiopia", "code": "ETH-OG", "name": "Omo-Gibe Basin", "country": "Ethiopia", "note": "legacy free text"},
+  {"free_text": "IND-CH — Central India Highlands", "code": "IND-CH", "name": "Central India Highlands", "country": "India"},
+  {"free_text": "Central India highlands: Hot sub-humid rainfed transition zone", "code": "IND-CH", "name": "Central India Highlands", "country": "India", "note": "legacy free text"},
+  {"free_text": "KEN-LVB — Lake Victoria Basin (Kenya)", "code": "KEN-LVB", "name": "Lake Victoria Basin (Kenya)", "country": "Kenya"},
+  {"free_text": "KEN-LEI — LEILA (Southern Kenya Rangelands)", "code": "KEN-LEI", "name": "LEILA (Southern Kenya Rangelands)", "country": "Kenya"},
+  {"free_text": "PER-PCL — Pucallpa – Ucayali", "code": "PER-PCL", "name": "Pucallpa – Ucayali", "country": "Peru", "note": "PENDING CONFIRMATION with the Peru team"},
+  {"free_text": "SEN-FK — Fatick Department", "code": "SEN-FK", "name": "Fatick Department", "country": "Senegal"},
+  {"free_text": "Department of Fatick", "code": "SEN-FK", "name": "Fatick Department", "country": "Senegal", "note": "legacy free text"},
+  {"free_text": "In the Senegal region, the resolution does not allow for data at the departmental level", "code": "SEN-FK", "name": "Fatick Department", "country": "Senegal", "note": "legacy free text; sentence is a resolution caveat, not a place"},
+  {"free_text": "TUN-NW — Northwestern Tunisia", "code": "TUN-NW", "name": "Northwestern Tunisia", "country": "Tunisia"},
+  {"free_text": "Northwestern Tunisia", "code": "TUN-NW", "name": "Northwestern Tunisia", "country": "Tunisia", "note": "legacy free text"},
+  {"free_text": "ZWE-MB — Mbire – Lower Zambezi Valley", "code": "ZWE-MB", "name": "Mbire – Lower Zambezi Valley", "country": "Zimbabwe"},
+  {"free_text": "Mbire: Wards 2, 3, 9, 12 and 17", "code": "ZWE-MB", "name": "Mbire – Lower Zambezi Valley", "country": "Zimbabwe", "note": "legacy free text"},
+  {"free_text": "Mbire: Wards 2 and 3", "code": "ZWE-MB", "name": "Mbire – Lower Zambezi Valley", "country": "Zimbabwe", "note": "legacy free text"},
+  {"free_text": "Mbire Ward 2", "code": "ZWE-MB", "name": "Mbire – Lower Zambezi Valley", "country": "Zimbabwe", "note": "legacy free text"},
+  {"free_text": "Lower Zambezi Valley", "code": "ZWE-MB", "name": "Mbire – Lower Zambezi Valley", "country": "Zimbabwe", "note": "legacy free text"},
+  {"free_text": "NATIONAL — Country-wide coverage", "code": "NATIONAL", "name": "Country-wide coverage", "country": null},
+  {"free_text": "Entire Kenya", "code": "NATIONAL", "name": "Country-wide coverage", "country": "Kenya", "note": "legacy free text"},
+  {"free_text": "Entire Laos", "code": "NATIONAL", "name": "Country-wide coverage", "country": "Laos", "note": "legacy free text"},
+  {"free_text": "Entire Vietnam", "code": "NATIONAL", "name": "Country-wide coverage", "country": "Vietnam", "note": "legacy free text"},
+  {"free_text": "Country and basin scale", "code": "NATIONAL", "name": "Country-wide coverage", "country": null, "note": "legacy free text"},
+  {"free_text": "GLOBAL — Global / cross-landscape", "code": "GLB", "name": "Global / cross-landscape", "country": null},
+  {"free_text": "Soil dataset", "code": "GLB", "name": "Global / cross-landscape", "country": null, "note": "legacy malformed rows"}
+ ]
+}

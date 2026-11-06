@@ -1,0 +1,127 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-067",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -5.3792,
+          5.95
+        ],
+        [
+          -3.8583,
+          5.95
+        ],
+        [
+          -3.8583,
+          9.4333
+        ],
+        [
+          -5.3792,
+          9.4333
+        ],
+        [
+          -5.3792,
+          5.95
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -5.3792,
+    5.95,
+    -3.8583,
+    9.4333
+  ],
+  "properties": {
+    "title": "Gridded climate data (CHIRPS and AgERA5)",
+    "description": "Gridded daily climate data from CHIRPS and ERA5 climate reanalysis",
+    "datetime": null,
+    "start_datetime": "1979-01-01T00:00:00Z",
+    "end_datetime": "2026-07-21T00:00:00Z",
+    "cgiar-cdh:geography": [
+      "cote-d-ivoire"
+    ],
+    "mosaic:living_landscape": "CIV-NZ",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Water / hydrology",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Seasonal",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "CSV"
+    ],
+    "mosaic:spatial_resolution": "0.05° × 0.05° and 0.1° x 0.1°, depending on the products",
+    "mosaic:datetime_note": "Open-ended coverage ('present'). end_datetime is the date the record was catalogued (2026-07-21, the canonical registry snapshot it predates).",
+    "mosaic:last_updated": "2026",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "CC-BY-4.0",
+    "contacts": [
+      {
+        "name": "Louis Kouadio",
+        "emails": [
+          {
+            "value": "a.kouadio2@cgiar.org"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: server and drive"
+  },
+  "collection": "CIV-NZ",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/CIV-NZ/items/MFL-2026-067.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://doi.org/10.15780/G2JQ0P",
+      "title": "Primary source / download"
+    },
+    {
+      "rel": "related",
+      "href": "https://climate-data-hub.cgiar.org/",
+      "title": "CGIAR Climate Data Hub (source of truth for climate layers) [placeholder URL]"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://doi.org/10.15780/G2JQ0P",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "text/csv"
+    }
+  }
+}

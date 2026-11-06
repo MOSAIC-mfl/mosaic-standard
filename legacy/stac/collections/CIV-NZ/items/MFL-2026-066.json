@@ -1,0 +1,120 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-066",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -5.3792,
+          5.95
+        ],
+        [
+          -3.8583,
+          5.95
+        ],
+        [
+          -3.8583,
+          9.4333
+        ],
+        [
+          -5.3792,
+          9.4333
+        ],
+        [
+          -5.3792,
+          5.95
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -5.3792,
+    5.95,
+    -3.8583,
+    9.4333
+  ],
+  "properties": {
+    "title": "iSDAsoil soil properties for the N'Zi watershed (0-20 and 20-50 cm)",
+    "description": "Fifteen soil properties from iSDAsoil (iSDA), extracted by AfricaRice for the N'Zi watershed at about 30 m, at 0-20 and 20-50 cm: bulk density, calcium, cation exchange capacity, clay, iron, potassium, magnesium, total nitrogen, phosphorus, pH, sulphur, sand, silt, soil organic carbon and zinc, in physical units. The public source is iSDAsoil for Africa.",
+    "datetime": "2026-07-21T00:00:00Z",
+    "cgiar-cdh:geography": [
+      "cote-d-ivoire"
+    ],
+    "mosaic:living_landscape": "CIV-NZ",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Degradation / land health",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "GeoTIFF"
+    ],
+    "mosaic:spatial_resolution": "30 m",
+    "mosaic:datetime_note": "No temporal coverage recorded. datetime is a stand-in: the date the record was catalogued (2026-07-21, the canonical registry snapshot it predates), not a time of the data.",
+    "mosaic:last_updated": "2026",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "CC-BY-4.0",
+    "contacts": [
+      {
+        "name": "Louis Kouadio",
+        "emails": [
+          {
+            "value": "a.kouadio2@cgiar.org"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: server and drive"
+  },
+  "collection": "CIV-NZ",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/CIV-NZ/items/MFL-2026-066.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://www.isda-africa.com/isdasoil/",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://www.isda-africa.com/isdasoil/",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "image/tiff; application=geotiff"
+    }
+  }
+}

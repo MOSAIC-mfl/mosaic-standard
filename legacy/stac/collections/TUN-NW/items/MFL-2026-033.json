@@ -1,0 +1,108 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-033",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          8.9235,
+          35.7384
+        ],
+        [
+          9.4466,
+          35.7384
+        ],
+        [
+          9.4466,
+          36.4324
+        ],
+        [
+          8.9235,
+          36.4324
+        ],
+        [
+          8.9235,
+          35.7384
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    8.9235,
+    35.7384,
+    9.4466,
+    36.4324
+  ],
+  "properties": {
+    "title": "Tunisia Land use land cover for Le Kef and Siliana.",
+    "description": "Land Use and Land Cover Classification",
+    "datetime": null,
+    "start_datetime": "2021-01-01T00:00:00Z",
+    "end_datetime": "2021-12-31T23:59:59Z",
+    "cgiar-cdh:geography": [
+      "tunisia"
+    ],
+    "mosaic:living_landscape": "TUN-NW",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Land cover / land use",
+    "mosaic:access_level": "Restricted",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "mosaic:spatial_resolution": "10 m",
+    "mosaic:last_updated": "2021",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
+    "mosaic:license_original": "CGIAR Open Access",
+    "contacts": [
+      {
+        "name": "Ayman Frija",
+        "emails": [
+          {
+            "value": "a.frija@cgiar.org"
+          }
+        ],
+        "roles": [
+          "producer"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: Drive | Source note: Internal Available on request"
+  },
+  "collection": "TUN-NW",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/TUN-NW/items/MFL-2026-033.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {}
+}

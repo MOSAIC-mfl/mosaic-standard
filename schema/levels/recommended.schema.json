@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosaic-mfl.github.io/catalog/schema/v0.2.0/levels/recommended.schema.json",
+  "title": "MOSAIC recommended (level 1)",
+  "description": "What makes a record easy to find, cite and reuse. Failures are warnings only.",
+  "required": [
+    "keywords",
+    "spatial",
+    "temporal"
+  ],
+  "properties": {
+    "spatial": {
+      "required": [
+        "geography",
+        "bbox"
+      ],
+      "x-message": "spatial coverage: give geography and bbox"
+    },
+    "temporal": {
+      "anyOf": [
+        {
+          "required": [
+            "date"
+          ]
+        },
+        {
+          "required": [
+            "start_date"
+          ]
+        },
+        {
+          "required": [
+            "text"
+          ]
+        }
+      ],
+      "x-message": "temporal coverage: give date or start_date (or the source's text)"
+    },
+    "data": {
+      "items": {
+        "required": [
+          "access_method",
+          "kind"
+        ]
+      },
+      "x-message": "every data entry should say how it is reached (access_method) and what it holds (kind)"
+    },
+    "citation": {
+      "anyOf": [
+        {
+          "required": [
+            "authors",
+            "date"
+          ]
+        },
+        {
+          "required": [
+            "text"
+          ]
+        }
+      ],
+      "x-message": "citation: give authors and date (or at least the text)"
+    }
+  },
+  "allOf": [
+    {
+      "anyOf": [
+        {
+          "required": [
+            "citation"
+          ]
+        },
+        {
+          "required": [
+            "doi"
+          ]
+        }
+      ],
+      "x-field": "citation",
+      "x-message": "no citation and no DOI"
+    },
+    {
+      "properties": {
+        "temporal": {
+          "required": [
+            "update_frequency"
+          ]
+        }
+      },
+      "x-field": "temporal",
+      "x-message": "temporal.update_frequency missing (use unknown if the source does not say)"
+    },
+    {
+      "properties": {
+        "data": {
+          "items": {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "vector"
+                }
+              },
+              "required": [
+                "kind"
+              ]
+            },
+            "then": {
+              "required": [
+                "geometry_type"
+              ]
+            }
+          }
+        }
+      },
+      "x-field": "data_classification",
+      "x-message": "vector data entry without geometry_type"
+    },
+    {
+      "properties": {
+        "license": {
+          "not": {
+            "pattern": "\\bLicenseRef-"
+          }
+        }
+      },
+      "x-field": "license",
+      "x-message": "licence without an SPDX code (confirm whether one exists)"
+    }
+  ]
+}

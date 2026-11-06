@@ -1,0 +1,309 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosaic-mfl.github.io/catalog/spec/record_schema.json",
+  "title": "MOSAIC dataset record (records/<ID>.yaml)",
+  "description": "One YAML file per dataset under records/. This file is jsonschema-SHAPED but is consumed by the pure-python validator in mosaic_pipeline/records.py (jsonschema is NOT installed in this environment). Only the constructs used here are supported by that validator: type (incl. unions), enum (null in the enum list means nullable), pattern, minLength, required, additionalProperties:false, nested properties (bbox), items.type. Property order below is the canonical key order for records/*.yaml. Human-readable companion: spec/record_schema.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "living_landscape",
+    "country",
+    "contact"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^MFL-\\d{4}-\\d{3}$",
+      "description": "Registry record ID; must equal the filename stem (records/<id>.yaml)."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Dataset title (required, non-empty)."
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Free-text description / notes."
+    },
+    "country": {
+      "enum": [
+        "Africa",
+        "Asia",
+        "Cambodia",
+        "Colombia",
+        "Côte d'Ivoire",
+        "Ethiopia",
+        "Global",
+        "India",
+        "Kenya",
+        "Laos",
+        "Latin America and the Caribbean",
+        "Peru",
+        "Senegal",
+        "Tanzania",
+        "Tunisia",
+        "Vietnam",
+        "Zimbabwe",
+        null
+      ],
+      "description": "Country display name (vocab_reconciliation.md §1), or null."
+    },
+    "living_landscape": {
+      "enum": [
+        "CIV-NZ",
+        "COL-CUM",
+        "ETH-OG",
+        "IND-CH",
+        "KEN-LVB",
+        "KEN-LEI",
+        "MEK-3S",
+        "PER-PCL",
+        "SEN-FK",
+        "TUN-NW",
+        "ZWE-MB",
+        "NATIONAL",
+        "GLOBAL"
+      ],
+      "description": "BARE canonical code (frozen 2026-07-21), NOT the Excel 'CODE — Name' string. NATIONAL = country-wide coverage (folded into the country's landscape collection); GLOBAL = global / cross-landscape (folded into the GLB collection)."
+    },
+    "theme": {
+      "enum": [
+        "Boundaries / admin units",
+        "Land cover / land use",
+        "Ecosystem condition",
+        "Degradation / land health",
+        "Water / hydrology",
+        "Biodiversity / ecosystems",
+        "Pressures / drivers",
+        "Ecosystem services",
+        "Hotspots / leverage points",
+        "Scenarios / future risks",
+        "Decision-support outputs",
+        "Agrobiodiversity / crops",
+        "Socio-economic / livelihoods",
+        null
+      ],
+      "description": "MFL theme (13 canonical labels), or null."
+    },
+    "data_type": {
+      "enum": [
+        "Raster",
+        "Vector",
+        "Tabular",
+        "Mixed",
+        "Netcdf",
+        null
+      ],
+      "description": "Pipeline VALID_DATA_TYPES plus the extra value present in the Excel Reference sheet (Netcdf), or null."
+    },
+    "spatial_resolution": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Free string; real data mixes units ('30m', '5000', 'Village level', 'Admin'). Kept verbatim; the pipeline flags non-numeric values."
+    },
+    "temporal_coverage": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Free string (e.g. '2015-2023', '2020 - present'); the pipeline parses years out of it (R4)."
+    },
+    "source": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Source / Centre."
+    },
+    "contact": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Single 'Name, email' cell format, kept as-is so the R1 extractors (name + email) work unchanged. Do NOT split into separate fields."
+    },
+    "access_level": {
+      "enum": [
+        "Open",
+        "Internal",
+        "Restricted",
+        null
+      ],
+      "description": "Canonical access level. Legacy 'CGIAR-internal' was normalized to 'Internal' at migration."
+    },
+    "license": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Free string, original wording; SPDX mapping happens in the pipeline (R3)."
+    },
+    "processing_status": {
+      "enum": [
+        "Raw",
+        "Processed",
+        "Validated",
+        null
+      ],
+      "description": "Registry processing status; null maps to readiness 'Raw' + flag in the pipeline (R7)."
+    },
+    "file_names": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "File name(s); formats are derived from extensions (R2), falling back to data_type."
+    },
+    "current_location": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Where the data lives today (often not a resolvable URL; becomes a STAC access note)."
+    },
+    "migration_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Free string (Reference sheet suggests 'Registered only' / 'Migrated to Alliance server')."
+    },
+    "server_path": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Internal server path (STAC access note, never an asset href)."
+    },
+    "date_registered": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Kept as a string exactly as the Excel cell serialized (T.s). Quote values in YAML ('2026-07-15') so they stay strings."
+    },
+    "last_updated": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Kept as a string (many registry cells are bare years, e.g. '2024'). Quote in YAML."
+    },
+    "update_frequency": {
+      "enum": [
+        "Annual",
+        "Seasonal",
+        "Monthly",
+        "On-demand",
+        "Static",
+        "Unknown",
+        null
+      ],
+      "description": "Null maps to 'Unknown' in the pipeline."
+    },
+    "download_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Raw cell value; may be a real URL, 'Internal', or prose containing a URL. The pipeline extracts/cleans it (R8)."
+    },
+    "file_size": {
+      "type": [
+        "string",
+        "number",
+        "null"
+      ],
+      "description": "Raw scalar exactly as in the source (e.g. '220 MB'); ints stay ints."
+    },
+    "gee_asset_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^projects/[a-z][a-z0-9-]{4,28}[a-z0-9]/assets/[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$",
+      "description": "Google Earth Engine asset ID of MOSAIC's copy of the dataset (Cloud-project form, e.g. 'projects/mosaic-mfl/assets/mvp/MFL-2026-064'). YAML-only; published as STAC property mosaic:gee_asset_id. An ID, not a URL; download_url stays the canonical location. Once the asset is public, STAC also gets an earth-engine asset with the CDH's form, https://earthengine.googleapis.com/v1/<gee_asset_id> (needs a Google sign-in)."
+    },
+    "encoding": {
+      "enum": [
+        "stac",
+        "ogc-records",
+        null
+      ],
+      "description": "FORWARD-LOOKING (assessment §4 Phase 1). Validated but NOT yet consumed by the pipeline. Default null."
+    },
+    "bbox": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "xmin",
+        "ymin",
+        "xmax",
+        "ymax"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "xmin": {
+          "type": "number"
+        },
+        "ymin": {
+          "type": "number"
+        },
+        "xmax": {
+          "type": "number"
+        },
+        "ymax": {
+          "type": "number"
+        }
+      },
+      "description": "FORWARD-LOOKING: the dataset's OWN extent (EPSG:4326 degrees). Validated but NOT yet consumed — the pipeline still uses the landscape/country locator bbox. Never fabricate; leave null if unknown."
+    },
+    "crs": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "FORWARD-LOOKING: e.g. 'EPSG:4326'. Validated but not yet consumed."
+    },
+    "citation": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "FORWARD-LOOKING: preferred citation text. Validated but not yet consumed."
+    },
+    "doi": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "FORWARD-LOOKING: DOI (bare or URL form). Validated but not yet consumed."
+    },
+    "keywords": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "description": "FORWARD-LOOKING: free keywords (list of strings). Validated but not yet consumed."
+    },
+    "media_type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "FORWARD-LOOKING: IANA media type of the primary asset (e.g. 'image/tiff; application=geotiff'). Validated but not yet consumed."
+    }
+  }
+}

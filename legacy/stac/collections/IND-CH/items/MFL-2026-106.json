@@ -1,0 +1,124 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-106",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          78.2942,
+          22.2022
+        ],
+        [
+          81.1975,
+          22.2022
+        ],
+        [
+          81.1975,
+          25.9555
+        ],
+        [
+          78.2942,
+          25.9555
+        ],
+        [
+          78.2942,
+          22.2022
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    78.2942,
+    22.2022,
+    81.1975,
+    25.9555
+  ],
+  "properties": {
+    "title": "Microwatershed boundaries and drainage network - India",
+    "description": "CoRE Stack hydrological layers. Microwatershed boundaries (v1 and v2) and microwatershed connectivity; drainage lines, stream order, distance to upstream drainage line, single-flow and multi-flow catchment area, and natural depressions. Pan-India.",
+    "datetime": "2026-10-29T00:00:00Z",
+    "created": "2026-10-29T00:00:00Z",
+    "cgiar-cdh:geography": [
+      "india"
+    ],
+    "mosaic:living_landscape": "IND-CH",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Water / hydrology",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Processed",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Static",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "Mixed"
+    ],
+    "mosaic:spatial_resolution": "Multiple resolutions",
+    "mosaic:datetime_note": "No temporal coverage recorded. datetime is a stand-in: the date the record was catalogued (its registration date), not a time of the data.",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "CC-BY-4.0",
+    "contacts": [
+      {
+        "name": "Core Stack",
+        "emails": [
+          {
+            "value": "s.maliappan@cgiar.org"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: CoRE Stack: public Google Earth Engine assets and Google Drive downloads, one row per layer in the CoRE Stack GEE Layers Links sheet (Hydrological boundaries and Drainage layers groups). Map viewer: https://ee-corestackdev.projects.earthengine.app/view/core-stack-gee-app"
+  },
+  "collection": "IND-CH",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-106.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://docs.google.com/spreadsheets/d/1xS5d7vgyjyoqqnmmajKDZBx9qS6GqyAdSbNDR62ot2Y/edit?gid=0",
+      "title": "Primary source / download"
+    },
+    {
+      "rel": "related",
+      "href": "https://climate-data-hub.cgiar.org/",
+      "title": "CGIAR Climate Data Hub (source of truth for climate layers) [placeholder URL]"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://docs.google.com/spreadsheets/d/1xS5d7vgyjyoqqnmmajKDZBx9qS6GqyAdSbNDR62ot2Y/edit?gid=0",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

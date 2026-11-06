@@ -1,0 +1,90 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "GLB",
+  "title": "Global / cross-landscape",
+  "description": "Datasets registered as 'Global / cross-landscape' (2 item(s)). Spatial extent is an APPROXIMATE locator box.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -60,
+          180,
+          72
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2001-01-01T00:00:00Z",
+          "2024-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Agrobiodiversity / crops",
+    "Ecosystem services"
+  ],
+  "providers": [
+    {
+      "name": "Alliance Bioversity-CIAT",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Open"
+    ],
+    "mosaic:theme": [
+      "Agrobiodiversity / crops",
+      "Ecosystem services"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "latin-america-and-the-caribbean",
+    "world"
+  ],
+  "mosaic:living_landscape": "GLB",
+  "mosaic:bbox_approximate": true,
+  "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326).",
+  "mosaic:item_count": 2,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/GLB/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-070.json",
+      "type": "application/json",
+      "title": "Coding Matrix: Ecosystem Services in Tropical Cattle Systems — A Systematic Literature Review across Five Thematic Streams"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-071.json",
+      "type": "application/json",
+      "title": "Urochloa hybrid adoption in Latin America and the Caribbean 2001-2024: An analysis of the land use, social, economic, and environmental impacts in 27 countries"
+    }
+  ]
+}

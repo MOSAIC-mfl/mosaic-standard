@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosaic-mfl.github.io/catalog/schema/v0.2.0/landscape/explorer.schema.json",
+  "title": "Map explorer of a landscape profile",
+  "description": "A map-first explorer: base map (MapLibre style fragments), switchable overlays, toggles, side panels, an optional story and study cards. Data files are referenced as {asset: path} or {pmtiles: path}; 'data' says where each path is served from. Heavy data is never copied into MOSAIC.",
+  "type": "object",
+  "required": ["title", "data", "map", "groups", "overlays"],
+  "additionalProperties": false,
+  "properties": {
+    "title": {"type": "string"},
+    "tagline": {"type": "string"},
+    "data": {"$ref": "#/$defs/data"},
+    "map": {"$ref": "#/$defs/map"},
+    "groups": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true, "description": "Rail groups, in order."},
+    "toggles": {"type": "array", "items": {"$ref": "#/$defs/toggle"}},
+    "panels": {"type": "array", "items": {"$ref": "#/$defs/panel"}},
+    "click": {"$ref": "#/$defs/click"},
+    "overlays": {"type": "array", "items": {"$ref": "#/$defs/overlay"}, "minItems": 1},
+    "story": {"$ref": "#/$defs/fileRef"},
+    "studies": {"$ref": "#/$defs/fileRef"},
+    "about": {
+      "type": "object", "additionalProperties": false,
+      "properties": {"intro": {"type": "string"}, "licence": {"type": "string"}, "sources": {"type": "string", "pattern": "\\.ya?ml$"}}
+    }
+  },
+  "$defs": {
+    "path": {"type": "string", "pattern": "^[A-Za-z0-9_./{}-]+$", "not": {"pattern": "\\.\\."}},
+    "fileRef": {"type": "object", "required": ["file"], "additionalProperties": false, "properties": {"file": {"type": "string", "pattern": "^[a-z0-9_-]+\\.ya?ml$"}}},
+    "colour": {"type": "string", "pattern": "^(#[0-9a-fA-F]{3,8}|rgba?\\([0-9., ]+\\))$"},
+    "data": {
+      "type": "object", "required": ["roots", "default_root"], "additionalProperties": false,
+      "properties": {
+        "roots": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string", "pattern": "^https://.+/$"}},
+        "default_root": {"type": "string"},
+        "routes": {
+          "type": "array",
+          "items": {
+            "type": "object", "required": ["root"], "additionalProperties": false,
+            "properties": {"prefix": {"$ref": "#/$defs/path"}, "path": {"$ref": "#/$defs/path"}, "root": {"type": "string"}},
+            "oneOf": [{"required": ["prefix"]}, {"required": ["path"]}]
+          }
+        },
+        "withheld": {"type": "array", "items": {"$ref": "#/$defs/path"}, "description": "Never requested on the published site (licence not cleared)."},
+        "withheld_reason": {"type": "string"},
+        "tiles_version": {"type": "string", "description": "Appended to PMTiles URLs to defeat stale caches after a rebuild."},
+        "report": {"type": "string", "format": "uri"}
+      }
+    },
+    "map": {
+      "type": "object", "required": ["center", "zoom", "sources", "layers"], "additionalProperties": false,
+      "properties": {
+        "center": {"type": "array", "prefixItems": [{"type": "number"}, {"type": "number"}], "minItems": 2, "maxItems": 2},
+        "zoom": {"type": "number"}, "pitch": {"type": "number"}, "bearing": {"type": "number"},
+        "min_zoom": {"type": "number"}, "max_zoom": {"type": "number"}, "max_pitch": {"type": "number"},
+        "max_bounds": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "number"}}},
+        "sky": {"type": "object"},
+        "glyphs": {"type": "string"},
+        "terrain": {
+          "type": "object", "required": ["source"], "additionalProperties": false,
+          "properties": {"source": {"type": "string"}, "exaggeration": {"type": "number"}, "min": {"type": "number"}, "max": {"type": "number"}, "step": {"type": "number"}}
+        },
+        "attribution": {"type": "string"},
+        "sources": {"type": "object", "additionalProperties": {"$ref": "#/$defs/styleSource"}},
+        "layers": {"type": "array", "items": {"$ref": "#/$defs/styleLayer"}, "minItems": 1}
+      }
+    },
+    "styleSource": {"type": "object", "required": ["type"], "description": "A MapLibre source; 'data' or 'url' may be {asset: path} or {pmtiles: path}."},
+    "styleLayer": {"type": "object", "required": ["id", "type"], "properties": {"id": {"type": "string"}, "type": {"type": "string"}}, "description": "A MapLibre style layer."},
+    "railItem": {
+      "type": "object", "required": ["id", "group", "title"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+        "group": {"type": "string"}, "title": {"type": "string"}, "swatch": {"$ref": "#/$defs/colour"},
+        "source_ref": {"type": "string", "description": "Entry of sources.yaml describing this layer."},
+        "record": {"type": "string", "pattern": "^[a-z0-9-]+:.+$", "description": "Catalogue record (source:id) of the data, when registered."},
+        "attribution": {"type": "string"}
+      }
+    },
+    "toggle": {
+      "allOf": [{"$ref": "#/$defs/railItem"}],
+      "required": ["layers"],
+      "unevaluatedProperties": false,
+      "properties": {"default": {"type": "boolean"}, "layers": {"type": "array", "items": {"type": "string"}, "minItems": 1}}
+    },
+    "panel": {
+      "allOf": [{"$ref": "#/$defs/railItem"}],
+      "required": ["kind"],
+      "properties": {"kind": {"type": "string"}, "open_on_click": {"type": "string"}},
+      "description": "A rail entry that opens a side panel (kind 'series-summary': KPIs and a chart of one series)."
+    },
+    "click": {"type": "object", "description": "What a click shows when no overlay is active (place, admin unit)."},
+    "legend": {
+      "type": "object", "required": ["kind", "title"],
+      "properties": {
+        "kind": {"enum": ["steps", "classes", "gradient"]},
+        "title": {"type": "string", "description": "{year} is replaced by the selected year."},
+        "colors": {"type": "array", "items": {"$ref": "#/$defs/colour"}},
+        "labels": {"type": "array", "items": {"type": "string"}},
+        "classes": {"type": "array", "items": {"type": "object"}},
+        "notes": {"type": "array", "items": {"type": "string"}},
+        "source": {"type": "string"}
+      }
+    },
+    "overlay": {
+      "required": ["kind"],
+      "properties": {
+        "kind": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$", "description": "Renderer. Core: raster-tiles, year-tiles, climate-grid, index-grid, style-layers (the overlay's own MapLibre sources and layers: vector data, or a raster grid with points on top)."},
+        "before": {"type": "string", "description": "Base layer the overlay is drawn under."},
+        "asset": {"$ref": "#/$defs/path"},
+        "paint": {"type": "object"},
+        "legend": {"$ref": "#/$defs/legend"},
+        "inspect": {"type": "object", "required": ["kind"], "properties": {"kind": {"type": "string"}}, "description": "What a click on the map shows while the overlay is active. Core: cell-sum, class-at-point, annual-series, region-series, feature-attributes, value-at-point, series-values, combined (several parts)."},
+        "sources": {"type": "object", "additionalProperties": {"$ref": "#/$defs/styleSource"}, "description": "style-layers: MapLibre sources, with {asset} / {pmtiles} references."},
+        "layers": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/styleLayer"}, "description": "style-layers: MapLibre layers, shown and hidden together."},
+        "variants": {
+          "type": "array", "minItems": 2,
+          "items": {"type": "object", "required": ["id", "label", "asset"], "properties": {"id": {"type": "string"}, "label": {"type": "string"}, "asset": {"$ref": "#/$defs/path"}, "legend": {"$ref": "#/$defs/legend"}}}
+        },
+        "years": {"type": "object", "minProperties": 1, "propertyNames": {"pattern": "^[0-9]{4}$"}, "additionalProperties": {"$ref": "#/$defs/path"}}
+      },
+      "allOf": [
+        {"$ref": "#/$defs/railItem"},
+        {"if": {"properties": {"kind": {"const": "raster-tiles"}}}, "then": {"anyOf": [{"required": ["asset"]}, {"required": ["variants"]}]}},
+        {"if": {"properties": {"kind": {"const": "year-tiles"}}}, "then": {"required": ["years"]}},
+        {"if": {"properties": {"kind": {"enum": ["climate-grid", "index-grid"]}}}, "then": {"required": ["grid"]}},
+        {"if": {"properties": {"kind": {"const": "style-layers"}}}, "then": {"required": ["sources", "layers"]}}
+      ]
+    }
+  }
+}

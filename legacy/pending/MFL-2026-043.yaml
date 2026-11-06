@@ -1,0 +1,24 @@
+# MOSAIC dataset record — schema: spec/record_schema.md (the build fails on invalid records)
+id: MFL-2026-043
+title: Rainfall trends
+description: null
+country: Kenya
+living_landscape: NATIONAL
+theme: Water / hydrology
+data_type: null
+spatial_resolution: null
+temporal_coverage: null
+source: null
+contact: null
+access_level: null
+license: null
+processing_status: null
+file_names: null
+current_location: null
+migration_status: null
+server_path: null
+date_registered: null
+last_updated: null
+update_frequency: null
+download_url: null
+file_size: null

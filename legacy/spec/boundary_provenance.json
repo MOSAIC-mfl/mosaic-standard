@@ -1,0 +1,97 @@
+{
+ "_meta": {
+  "file": "boundary_provenance.json",
+  "purpose": "Source, licence and required attribution of each canonical landscape delineation. Read by scripts/build_boundaries.py (GeoJSON feature properties; withholds the geometry when publish is false) and by mosaic_pipeline/stac_build.py (fields on the collection's boundary asset).",
+  "license_values": "SPDX identifier when the licence has one, otherwise 'other' (same convention as the item licences). The terms are at license_url.",
+  "publish": "false = the geometry is not written; the bbox is still derived and the collection cites the source instead. Since 2026-09-29 all 11 are published (Lizeth's decision; see the licence audit of 2026-09-28).",
+  "audit": "Licence audit 2026-09-28 (internal report boundaries_licence_audit_2026-09-28.md). Values marked 'to be confirmed' wait for an answer from the person named in the report."
+ },
+ "CIV-NZ": {
+  "source": "HydroBASINS v1c, level 6, basin HYBAS_ID 1060982320 (PFAF_ID 145402), unmodified. HydroSHEDS version 1, World Wildlife Fund (WWF).",
+  "source_url": "https://www.hydrosheds.org/products/hydrobasins",
+  "license": "other",
+  "license_url": "https://data.hydrosheds.org/file/technical-documentation/HydroSHEDS_TechDoc_v1_4.pdf",
+  "attribution": "This product (MOSAIC landscape boundary CIV-NZ) incorporates data from the HydroSHEDS version 1 database which is © World Wildlife Fund, Inc. (2006-2022) and has been used herein under license. WWF has not evaluated the data as altered and incorporated within MOSAIC landscape boundary CIV-NZ, and therefore gives no warranty regarding its accuracy, completeness, currency or suitability for any particular purpose. Portions of the HydroSHEDS v1 database incorporate data which are the intellectual property rights of © USGS (2006-2008), NASA (2000-2005), ESRI (1992-1998), CIAT (2004-2006), UNEP-WCMC (1993), WWF (2004), Commonwealth of Australia (2007), and Her Royal Majesty and the British Crown and are used under license. The HydroSHEDS v1 database and more information are available at https://www.hydrosheds.org. Citation: Lehner, B., Grill, G. (2013). Global river hydrography and network routing: baseline data and new approaches to study the world's large river systems. Hydrological Processes, 27(15): 2171-2186. https://doi.org/10.1002/hyp.9740",
+  "publish": true
+ },
+ "COL-CUM": {
+  "source": "Nine veredas of the Cumbal indigenous reserve area (Tasmag, Quilismal, Boyera, Cuaical, Cuaspud Grande, Llano de Piedras, Cuetial, Guan, San Martin-Miraflores), layer 'Cumbal_veredas_wgs84' compiled by Javier Ochoa (CIP). Original source to be confirmed.",
+  "source_url": null,
+  "license": "other",
+  "license_url": null,
+  "attribution": "Vereda boundaries compiled by J. Ochoa (CIP) for the CGIAR Science Program on Multifunctional Landscapes; original source to be confirmed.",
+  "publish": true
+ },
+ "ETH-OG": {
+  "source": "Ethiopia River Basins (eth_basins), World Bank Group, World Bank Data Catalog dataset 0040202: Omo basin polygon (79,549 km2).",
+  "source_url": "https://datacatalog.worldbank.org/search/dataset/0040202",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "Contains data from 'Ethiopia River Basins', World Bank Group (World Bank Data Catalog, dataset 0040202), licensed under CC BY 4.0. Changes: Omo basin polygon extracted, reprojected from Adindan / UTM zone 37N to WGS 84, trimmed near the Kenya border (about 255 km2) and simplified.",
+  "publish": true
+ },
+ "IND-CH": {
+  "source": "Composite outline: districts Jhansi (Uttar Pradesh), Tikamgarh, Chhatarpur, Damoh and Jabalpur (Madhya Pradesh) from a GADM district layer (GADM v2 attribute schema; same line work as GADM 4.1), and Mandla district (Madhya Pradesh) from the Survey of India district boundary layer with LGD codes (2021).",
+  "source_url": "https://gadm.org",
+  "license": "other",
+  "license_url": "https://gadm.org/license.html",
+  "attribution": "District boundaries: GADM (gadm.org) and Survey of India.",
+  "publish": true
+ },
+ "KEN-LEI": {
+  "source": "GADM 4.1, level 1: counties Kajiado (KEN.10_1), Kiambu (KEN.13_1), Machakos (KEN.22_1) and Makueni (KEN.23_1), unmodified.",
+  "source_url": "https://gadm.org",
+  "license": "other",
+  "license_url": "https://gadm.org/license.html",
+  "attribution": "County boundaries: GADM version 4.1 (gadm.org).",
+  "publish": true
+ },
+ "KEN-LVB": {
+  "source": "GADM 4.1, level 1: counties Kakamega (KEN.11_1), Kisumu (KEN.17_1), Siaya (KEN.38_1) and Vihiga (KEN.45_1), unmodified.",
+  "source_url": "https://gadm.org",
+  "license": "other",
+  "license_url": "https://gadm.org/license.html",
+  "attribution": "County boundaries: GADM version 4.1 (gadm.org).",
+  "publish": true
+ },
+ "MEK-3S": {
+  "source": "Mekong River Commission (MRC), 'Subcatchments of the Lower Mekong Basin' (Watershed Classification Project, October 2000; layer b_catlmb50): sub-catchments 43 Se Kong, 44 Se San and 45 Sre Pok.",
+  "source_url": "https://portal.mrcmekong.org/",
+  "license": "other",
+  "license_url": "https://portal.mrcmekong.org/about/account-types",
+  "attribution": "Sub-catchment boundaries © Mekong River Commission (MRC).",
+  "publish": true
+ },
+ "PER-PCL": {
+  "source": "INEI referential census district limits (cartography of the V Censo Nacional Economico 2022; 'Distrital' layer, ide.inei.gob.pe): 11 whole districts of Coronel Portillo and Padre Abad provinces (Ucayali) and a clipped part of Calleria.",
+  "source_url": "https://ide.inei.gob.pe/",
+  "license": "other",
+  "license_url": null,
+  "attribution": "Contains referential census district limits of the Instituto Nacional de Estadistica e Informatica (INEI), Peru (ide.inei.gob.pe); the limits are referential and have no demarcation value. Changes: districts dissolved into one outline, Calleria clipped, simplified. No licence is stated by INEI (to be confirmed).",
+  "publish": true
+ },
+ "SEN-FK": {
+  "source": "GADM: level 2 unit Fatick departement (GADM v2 attribute schema; geometry identical to GADM 3.6 and 4.1 SEN.3.1_1).",
+  "source_url": "https://gadm.org",
+  "license": "other",
+  "license_url": "https://gadm.org/license.html",
+  "attribution": "Departement boundary: GADM (gadm.org).",
+  "publish": true
+ },
+ "TUN-NW": {
+  "source": "Tunisia - Subnational Administrative Boundaries (COD-AB) v01, admin level 4, valid 2022-11-15; source Institut National de la Statistique Tunisie (INS), published by OCHA on HDX. Union of 7 sectors: Bousliaa, El Marja and Elles (Es Sers, Le Kef); El Ahouez Sud (Gaafour), Hammam Biadha Sud (El Krib), Chouarnia (Makthar) and Kesra (Kesra) (Siliana).",
+  "source_url": "https://data.humdata.org/dataset/cod-ab-tun",
+  "license": "CC-BY-3.0-IGO",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/igo/legalcode",
+  "attribution": "Contains data from 'Tunisia - Subnational Administrative Boundaries' (COD-AB), source: Institut National de la Statistique Tunisie (INS), published by UN OCHA on the Humanitarian Data Exchange (https://data.humdata.org/dataset/cod-ab-tun), licensed under CC BY-IGO 3.0. Changes: seven admin-4 sectors dissolved into one outline and simplified.",
+  "publish": true
+ },
+ "ZWE-MB": {
+  "source": "GADM 4.1, level 3: all 112 wards of the districts Mbire, Centenary/Muzarabani and Mount Darwin (Mashonaland Central) and Hurungwe (Mashonaland West), unmodified.",
+  "source_url": "https://gadm.org",
+  "license": "other",
+  "license_url": "https://gadm.org/license.html",
+  "attribution": "Ward boundaries: GADM version 4.1 (gadm.org).",
+  "publish": true
+ }
+}

@@ -1,0 +1,106 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-031",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          8.9235,
+          35.7384
+        ],
+        [
+          9.4466,
+          35.7384
+        ],
+        [
+          9.4466,
+          36.4324
+        ],
+        [
+          8.9235,
+          36.4324
+        ],
+        [
+          8.9235,
+          35.7384
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    8.9235,
+    35.7384,
+    9.4466,
+    36.4324
+  ],
+  "properties": {
+    "title": "Tunisia LLs Sector boundary containing Es Sers, Gaafour, El Krib, Makthar, and Kesra.",
+    "description": "Administrative boundaries for Tunisia",
+    "datetime": "2026-07-21T00:00:00Z",
+    "cgiar-cdh:geography": [
+      "tunisia"
+    ],
+    "mosaic:living_landscape": "TUN-NW",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Boundaries / admin units",
+    "mosaic:access_level": "Restricted",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "mosaic:spatial_resolution": "admin-level-2",
+    "mosaic:datetime_note": "No temporal coverage recorded. datetime is a stand-in: the date the record was catalogued (2026-07-21, the canonical registry snapshot it predates), not a time of the data.",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
+    "mosaic:license_original": "CGIAR Open Access",
+    "contacts": [
+      {
+        "name": "Layal Atassi",
+        "emails": [
+          {
+            "value": "l.atassi@cgiar.org"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: Drive | Server path: MOSAIC/datasets/MFL-2026-031/raw/ | Source note: www.geoboundaries.org"
+  },
+  "collection": "TUN-NW",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/TUN-NW/items/MFL-2026-031.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {}
+}

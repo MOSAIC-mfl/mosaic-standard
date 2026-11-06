@@ -1,0 +1,207 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MEK-3S",
+  "title": "3S Basins (Sekong, Sesan, Srepok)",
+  "description": "Datasets registered under the '3S Basins (Sekong, Sesan, Srepok)' Living Landscape (13 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          100.1,
+          8.2,
+          109.5,
+          23.4
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2011-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Agrobiodiversity / crops",
+    "Biodiversity / ecosystems",
+    "Boundaries / admin units",
+    "Decision-support outputs",
+    "Land cover / land use",
+    "Socio-economic / livelihoods",
+    "Water / hydrology"
+  ],
+  "providers": [
+    {
+      "name": "Alliance Bioversity-CIAT",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "CIP",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "IWMI",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "WorldFish",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Internal",
+      "Open",
+      "Restricted"
+    ],
+    "mosaic:theme": [
+      "Agrobiodiversity / crops",
+      "Biodiversity / ecosystems",
+      "Boundaries / admin units",
+      "Decision-support outputs",
+      "Land cover / land use",
+      "Socio-economic / livelihoods",
+      "Water / hydrology"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "cambodia",
+    "lao-people-s-democratic-republic",
+    "viet-nam"
+  ],
+  "mosaic:living_landscape": "MEK-3S",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
+  "mosaic:item_count": 13,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-050.json",
+      "type": "application/json",
+      "title": "watershed boundary"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-051.json",
+      "type": "application/json",
+      "title": "river network"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-052.json",
+      "type": "application/json",
+      "title": "LULC classification"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-053.json",
+      "type": "application/json",
+      "title": "Sekong River Basin Management Plan"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-054.json",
+      "type": "application/json",
+      "title": "soil classification"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-057.json",
+      "type": "application/json",
+      "title": "Crop fields (2023)  focus on Banana, Pumpkins, Taro, Mustard"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-058.json",
+      "type": "application/json",
+      "title": "Forest cover in Cambodia (2015-2023)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-059.json",
+      "type": "application/json",
+      "title": "Community fisheries"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-060.json",
+      "type": "application/json",
+      "title": "Marine fisheries management area"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-061.json",
+      "type": "application/json",
+      "title": "Fish dependency"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-062.json",
+      "type": "application/json",
+      "title": "Rice ecosystem"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-068.json",
+      "type": "application/json",
+      "title": "Tree conservation and restoration priority areas (Laos)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-069.json",
+      "type": "application/json",
+      "title": "Tree conservation and restoration priority areas (Vietnam)"
+    }
+  ],
+  "mosaic:landscape_system": "Three S Rivers Sub-basin in the Mekong Basin",
+  "mosaic:countries": [
+    "Laos",
+    "Cambodia",
+    "Vietnam"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/MEK-3S.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ],
+      "license": "other",
+      "mosaic:license_url": "https://portal.mrcmekong.org/about/account-types",
+      "mosaic:source": "Mekong River Commission (MRC), 'Subcatchments of the Lower Mekong Basin' (Watershed Classification Project, October 2000; layer b_catlmb50): sub-catchments 43 Se Kong, 44 Se San and 45 Sre Pok.",
+      "mosaic:attribution": "Sub-catchment boundaries © Mekong River Commission (MRC)."
+    }
+  }
+}

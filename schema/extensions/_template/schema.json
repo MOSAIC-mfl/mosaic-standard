@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mosaic-mfl.github.io/catalog/schema/v0.2.0/extensions/EXAMPLE/0.1.0/schema.json",
+  "title": "EXAMPLE extension (template)",
+  "description": "Copy this folder to extensions/<name>/<version>/, replace EXAMPLE with <name>, and describe the fields. All fields of an extension live under ONE top-level key named after it.",
+  "type": "object",
+  "properties": {
+    "EXAMPLE": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "some_field": { "type": "string", "minLength": 1, "description": "What it means and when to fill it." }
+      }
+    }
+  }
+}

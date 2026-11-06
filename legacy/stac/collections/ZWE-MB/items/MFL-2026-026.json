@@ -1,0 +1,120 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-026",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          28.8445,
+          -17.4339
+        ],
+        [
+          32.0584,
+          -17.4339
+        ],
+        [
+          32.0584,
+          -15.6073
+        ],
+        [
+          28.8445,
+          -15.6073
+        ],
+        [
+          28.8445,
+          -17.4339
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    28.8445,
+    -17.4339,
+    32.0584,
+    -15.6073
+  ],
+  "properties": {
+    "title": "District/ward boundaries",
+    "description": "Administrative boundaries for the Lower Zambezi Valley (Districts and wards)",
+    "datetime": "2026-07-21T00:00:00Z",
+    "cgiar-cdh:geography": [
+      "zimbabwe"
+    ],
+    "mosaic:living_landscape": "ZWE-MB",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Boundaries / admin units",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "mosaic:spatial_resolution": "Admin - MFLLs Boundary",
+    "mosaic:datetime_note": "No temporal coverage recorded. datetime is a stand-in: the date the record was catalogued (2026-07-21, the canonical registry snapshot it predates), not a time of the data.",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
+    "mosaic:license_original": "Restricted — GADM terms (academic/non-commercial use only, no redistribution)",
+    "contacts": [
+      {
+        "name": "Telma.SIBANDA@um6p.ma",
+        "emails": [
+          {
+            "value": "telma.sibanda@um6p.ma"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: Drive"
+  },
+  "collection": "ZWE-MB",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/ZWE-MB/items/MFL-2026-026.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://gadm.org/",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://gadm.org/",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "application/octet-stream"
+    }
+  }
+}

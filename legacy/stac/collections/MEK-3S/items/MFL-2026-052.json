@@ -1,0 +1,107 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
+  ],
+  "id": "MFL-2026-052",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          105.95,
+          11.8519
+        ],
+        [
+          108.7757,
+          11.8519
+        ],
+        [
+          108.7757,
+          16.3853
+        ],
+        [
+          105.95,
+          16.3853
+        ],
+        [
+          105.95,
+          11.8519
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    105.95,
+    11.8519,
+    108.7757,
+    16.3853
+  ],
+  "properties": {
+    "title": "LULC classification",
+    "description": "MRC produced the data",
+    "datetime": "2026-07-21T00:00:00Z",
+    "cgiar-cdh:geography": [
+      "lao-people-s-democratic-republic"
+    ],
+    "mosaic:living_landscape": "MEK-3S",
+    "mosaic:coverage": "landscape",
+    "mosaic:theme": "Land cover / land use",
+    "mosaic:access_level": "Internal",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "mosaic:spatial_resolution": "basin and country levels",
+    "mosaic:datetime_note": "No temporal coverage recorded. datetime is a stand-in: the date the record was catalogued (2026-07-21, the canonical registry snapshot it predates), not a time of the data.",
+    "mosaic:last_updated": "2020",
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
+    "mosaic:license_original": "Restricted — contact data owner",
+    "contacts": [
+      {
+        "name": "s.douangsavanh@cgiar.org",
+        "emails": [
+          {
+            "value": "s.douangsavanh@cgiar.org"
+          }
+        ],
+        "roles": [
+          "point-of-contact"
+        ]
+      }
+    ],
+    "mosaic:access_note": "Current location: server and drive | Source note: MRC website"
+  },
+  "collection": "MEK-3S",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-052.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {}
+}
