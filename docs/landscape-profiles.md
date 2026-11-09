@@ -83,6 +83,12 @@ layer and its time, highlight a feature with `focus`, and move the camera, also 
 
 ## A new profile
 
+**Without programming:** the Claude Code skill
+[`skills/mosaic-landscape-profile/`](../skills/mosaic-landscape-profile/README.md) guides the whole
+process in any language (a profile like KEN-LVB or PER-PCL, with fewer or changed layers, or a new
+one; data hosting checks; validation with explanations; a preview; the pull request), and writes
+everything in English. By hand:
+
 1. In the catalogue repository, create `landscapes/<CODE>/profile.yaml` with the sections you want. Without a map explorer,
    that is all.
 2. For a map explorer, start from `landscapes/KEN-LVB/explorer.yaml`: change `data`, the camera, the

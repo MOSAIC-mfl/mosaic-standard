@@ -1,0 +1,19 @@
+profile: mosaic-landscape-profile@0.1
+landscape: __CODE__
+title: __LABEL__
+summary: 'TODO: one or two sentences on what the map explorer shows, and for which period.'
+status: draft
+sections:
+- id: explorer
+  kind: map-explorer
+  title: 'TODO: name of the explorer (e.g. Basin Explorer)'
+  source: explorer.yaml
+- id: datasets
+  kind: catalogue-datasets
+  title: Datasets in the catalogue
+- id: data-status
+  kind: data-status
+  title: Data status
+credits:
+- name: 'TODO: who prepared the data and the explorer'
+  role: 'TODO: what they did (data pipeline, analysis, design)'

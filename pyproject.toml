@@ -23,7 +23,7 @@ pythonpath = ["src"]
 [tool.ruff]
 line-length = 120
 target-version = "py310"
-src = ["src", "tests", "scripts"]
+src = ["src", "tests", "scripts", "skills/mosaic-landscape-profile/scripts"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP", "S", "SIM", "RUF"]
@@ -33,6 +33,8 @@ ignore = ["RUF001", "RUF002", "RUF003"]
 "tests/**" = ["S101"]
 "scripts/build_vocab.py" = ["E501"]  # vocabulary tables read better on one line
 "scripts/build_reference.py" = ["E501"]  # sheet texts read better on one line
+"skills/**/scripts/*.py" = ["S603", "S607", "S310"]  # they run git, gh and the validator, and check https URLs
+"skills/**/scripts/preview.py" = ["E501", "S603", "S607"]  # HTML templates read better on one line
 
 [tool.mypy]
 strict = true

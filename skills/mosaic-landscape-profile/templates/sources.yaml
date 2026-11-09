@@ -1,0 +1,11 @@
+layers:
+- id: todo_layer
+  title: 'TODO: layer name'
+  group: 'TODO: group'
+  source: 'TODO: who produced the data, product and version'
+  period: 'TODO: years covered'
+  units: 'TODO: what the values mean'
+  licence: 'TODO: licence as stated by the source (e.g. CC BY 4.0)'
+  citation: 'TODO: how to cite it'
+  caveats: 'TODO: limits a user must know'
+  record: null

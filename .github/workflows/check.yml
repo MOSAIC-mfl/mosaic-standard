@@ -39,7 +39,7 @@ jobs:
           echo "MOSAIC_CATALOG=$PWD/_catalog" >> "$GITHUB_ENV"
           echo "Catalogue: $(git -C _catalog rev-parse --abbrev-ref HEAD) @ $(git -C _catalog rev-parse --short HEAD)"
       - run: pip install -e ".[dev]"
-      - run: ruff check src scripts tests && ruff format --check src scripts tests
+      - run: ruff check src scripts tests skills && ruff format --check src scripts tests skills
       - run: mypy src
       - run: python scripts/build_vocab.py --check
       - run: python scripts/build_docs.py --check
