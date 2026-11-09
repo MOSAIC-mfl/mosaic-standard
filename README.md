@@ -76,8 +76,6 @@ tests/fixtures/                  valid / invalid / incomplete cases the suite ch
 src/mosaic_catalog/              validator, build, inference, CLI; v02.py converts v0.1 records
 scripts/                         build_vocab.py, build_docs.py, build_reference.py, migrate_schema1.py, migrate_v02.py,
                                  migrate_lake_victoria.py, migrate_ucayali.py (explorers -> landscape profiles)
-skills/mosaic-landscape-profile/ Claude Code skill: create or change a landscape profile without programming,
-                                 and open the pull request to the catalogue (see its README.md)
 mosaic.config.yaml               standard version, enforced profiles, publish incomplete records or not
 boundaries/                      landscape delineations (GeoJSON), kept from the first pipeline
 docs/history/                    decisions, guides and record changelogs of the first pipeline

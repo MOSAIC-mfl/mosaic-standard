@@ -2,19 +2,6 @@
 
 ## [0.2.0] - unreleased
 
-### Skill: mosaic-landscape-profile (2026-11-09)
-- `skills/mosaic-landscape-profile/`: a Claude Code skill so that people who do not program can create
-  or change a landscape profile and open the pull request to the catalogue. Cases: like an existing
-  profile, the same with fewer or changed layers, a new page (with or without a map explorer), changes
-  to a profile, a landscape not in the vocabulary yet (request to this repository).
-- Scripts: `setup.py` (workspace, validator, catalogue branch), `new_profile.py` (templates or
-  `--like`, every value to provide as a TODO placeholder, checklist), `inventory.py` (an explorer
-  repository, read only, with suggested modules), `check_data.py` (HTTPS, CORS, byte ranges),
-  `edit_profile.py` (list, remove-overlay with every reference, set-root), `validate.py` (each
-  validator message explained), `preview.py` (HTML review), `prepare_pr.py` (PR text and commands).
-- References: modules (every option with examples from KEN-LVB and PER-PCL), data hosting, recipes,
-  errors, glossary. Tests: `tests/test_skill_landscape_profile.py`; lint covers `skills/`.
-
 ### New repository: mosaic-standard (2026-11-06)
 - Everything that is not data moved here from MOSAIC-mfl/catalog (branch metadata-standard-v0.1 @
   92ccf1e): schemas, vocabularies, crosswalks, `mosaic.config.yaml`, the tool (`src/mosaic_catalog`),

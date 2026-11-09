@@ -1,8 +1,0 @@
-note: Published findings quote the cited paper (page and table recorded); explore cards are open questions, not claims.
-cards:
-- id: todo_study
-  kind: published
-  question: 'TODO: the question the study answers'
-  finding: 'TODO: what the paper found, with page or table'
-  citation: 'TODO: full citation'
-  layers: []
