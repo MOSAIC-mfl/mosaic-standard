@@ -15,8 +15,8 @@ from mosaic_catalog.config import set_catalog
 @pytest.fixture
 def catalog() -> Iterator[Path]:
     path = os.environ.get("MOSAIC_CATALOG")
-    if not path or not (Path(path) / "records").is_dir():
-        pytest.skip("needs a catalogue checkout: set MOSAIC_CATALOG")
+    if not path or not (Path(path) / "records").is_dir() or not (Path(path) / "landscapes").is_dir():
+        pytest.skip("needs a catalogue checkout (records/ and landscapes/): set MOSAIC_CATALOG")
     set_catalog(path)
     yield Path(path)
     set_catalog(None)
