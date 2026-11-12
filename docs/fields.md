@@ -162,6 +162,7 @@ Levels: **Mínimo** = required to be complete (missing -> `review/minimum_gaps`)
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`structures[].foreign_keys[].reference.asset` | Opcional | texto | The data[].name of the referenced dataset's file that holds reference.fields. Required when that dataset has more than one data[] entry. | structures[].foreign_keys[].reference.asset |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`structures[].foreign_keys[].reference.fields` | Opcional | lista de texto | Matching columns in the referenced dataset, paired positionally with fields (same length). | structures[].foreign_keys[].reference.fields |  |
 | &nbsp;&nbsp;`structures[].geometry_column` | Opcional | texto | Name of the geometry column, for a table with embedded geometries. A geometry column is not a variable. | structures[].geometry_column | data[].tabular.geometry_column |
+| `processing_status` | Opcional | texto (vocabulario) | How far the data has been processed (raw, processed, validated), as declared by whoever registers it. MOSAIC does not verify it. Optional: leave it out when unknown; it is never inferred. |  |  |
 | `processing[]` | Opcional | lista de objeto | Ordered processing/provenance steps; at least one must have id: source. | processing[] |  |
 | &nbsp;&nbsp;`processing[].code` | Opcional | objeto | Software or code that produced this step's output. Omit when none is published. | processing[].code |  |
 | &nbsp;&nbsp;&nbsp;&nbsp;`processing[].code.url` | Opcional | texto | Link to the production code or repository. | processing[].code.url |  |

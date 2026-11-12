@@ -2,6 +2,15 @@
 
 ## [0.2.0] - unreleased
 
+### Optional field `processing_status` (2026-11-12)
+- New top-level field and vocabulary `processing_status`: raw, processed, validated - how far the data
+  has been processed, as declared by whoever registers it. MOSAIC does not verify it, and it is never
+  inferred: a record without it is shown as "not stated".
+- Schema-1 crosswalk: `processing_status` is now mapped (lower-cased) instead of dropped.
+  `scripts/recover_processing_status.py` copies the values of the schema-1 records (catalog @ 0dad25c)
+  into the migrated records: 102 of 108 had one; 6 had none and stay without it.
+- Other catalogues: the Climate Data Hub has no equivalent field, so its records have none.
+
 ### New repository: mosaic-standard (2026-11-06)
 - Everything that is not data moved here from MOSAIC-mfl/catalog (branch metadata-standard-v0.1 @
   92ccf1e): schemas, vocabularies, crosswalks, `mosaic.config.yaml`, the tool (`src/mosaic_catalog`),

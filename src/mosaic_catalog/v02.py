@@ -65,6 +65,7 @@ ORDER = [
     "license_text",
     "access",
     "access_note",
+    "processing_status",
     "contact",
     "citation",
     "doi",

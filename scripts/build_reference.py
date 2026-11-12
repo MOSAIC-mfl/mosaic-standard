@@ -189,6 +189,7 @@ class Walker:
             "theme": "themes", "landscape": "landscapes", "geography": "geography", "resourceType": "resource_type",
             "access": "access", "dataKind": "data_kind", "accessMethod": "access_method",
             "contactRole": "contact_role", "serviceType": "service_type", "updateFrequency": "update_frequency",
+            "processingStatus": "processing_status",
         }  # fmt: skip
         self.min = load("levels/minimum.schema.json")
         self.recm = load("levels/recommended.schema.json")

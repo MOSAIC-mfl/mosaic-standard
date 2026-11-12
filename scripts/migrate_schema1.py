@@ -61,7 +61,7 @@ LICENSE_PLACEHOLDERS = {"Other (specify in notes)"}
 # Old country values that are not ISO country names in UN M49.
 GEOGRAPHY_ALIASES = {"Global": "global", "Laos": "LAO", "Vietnam": "VNM", "Latin America and the Caribbean": "m49:419"}
 NOT_LANDSCAPES = {"NATIONAL", "GLOBAL"}
-DROPPED = ("processing_status", "migration_status", "current_location", "server_path", "last_updated")
+DROPPED = ("migration_status", "current_location", "server_path", "last_updated")
 
 
 class Notes:
@@ -282,6 +282,7 @@ def migrate(old: dict[str, Any], dates: tuple[str | None, str | None], notes: No
         "doi": re.sub(r"^https?://(dx\.)?doi\.org/", "", old["doi"]) if old.get("doi") else None,
         "access": access,
         "access_note": access_note,
+        "processing_status": (old.get("processing_status") or "").lower() or None,
         "data": data or None,
         "related": style_links(old) or None,
         "temporal": to_temporal(old.get("temporal_coverage")),

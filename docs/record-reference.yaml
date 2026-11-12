@@ -331,6 +331,8 @@ structures:
           fields: null
     # [OPCIONAL] — texto. Name of the geometry column, for a table with embedded geometries. A geometry column is not a variable
     geometry_column: ""
+# [OPCIONAL] — texto (vocabulario) · vocab/processing_status.json: raw, processed, validated. How far the data has been processed (raw, processed, validated), as declared by whoever registers it. MOSAIC does not verify it. Optional: leave it out when unknown; it is never inferred
+processing_status: ""
 # [OPCIONAL] — lista de objeto. Ordered processing/provenance steps; at least one must have id: source
 processing:
   -

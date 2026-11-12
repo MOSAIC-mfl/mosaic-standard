@@ -185,6 +185,15 @@ SIMPLE = {
             ("other", "Other", "Another API; describe it in the data entry."),
         ],
     ),
+    "processing_status": (
+        "How far the data has been processed, as declared by whoever registers it. MOSAIC does not verify it; "
+        "a record without it is shown as not stated (nothing is inferred).",
+        [
+            ("raw", "Raw", "As supplied by the contributor; not processed."),
+            ("processed", "Processed", "Cleaned, reformatted or harmonised by the contributor."),
+            ("validated", "Validated", "The contributor reports that it has been quality-checked."),
+        ],
+    ),
     "update_frequency": (
         "How often the data is updated at its source.",
         [
@@ -278,6 +287,7 @@ SCHEMA_DEFS = {  # $defs name in schema/vocab.schema.json -> vocabulary file
     "contactRole": "contact_role",
     "serviceType": "service_type",
     "updateFrequency": "update_frequency",
+    "processingStatus": "processing_status",
 }
 
 
