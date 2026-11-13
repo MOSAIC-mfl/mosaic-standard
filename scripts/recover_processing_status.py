@@ -22,10 +22,8 @@ VALUES = {"raw", "processed", "validated"}
 
 
 def old_value(catalog: Path, ref: str, rid: str) -> str | None:
-    res = subprocess.run(
-        ["git", "-C", str(catalog), "show", f"{ref}:records/{rid}.yaml"],
-        capture_output=True, text=True, check=False,
-    )  # fmt: skip
+    cmd = ["git", "-C", str(catalog), "show", f"{ref}:records/{rid}.yaml"]
+    res = subprocess.run(cmd, capture_output=True, text=True, check=False)  # noqa: S603
     if res.returncode != 0:
         return None
     value = (yaml.safe_load(res.stdout) or {}).get("processing_status")

@@ -81,6 +81,8 @@ boundaries/                      landscape delineations (GeoJSON), kept from the
 docs/history/                    decisions, guides and record changelogs of the first pipeline
 legacy/                          Excel registry, schema 1, pending submission, frozen STAC (legacy/README.md);
                                  the catalogue's Publish workflow serves legacy/stac at its old URL
+development/                     how the standard, catalogue, API and website work together (run, publish,
+                                 the landscape-profile skill of mosaic-skills): development/README.md
 ```
 
 ## Use

@@ -84,7 +84,7 @@ layer and its time, highlight a feature with `focus`, and move the camera, also 
 ## A new profile
 
 **Without programming (MOSAIC team):** the Claude Code skill `mosaic-landscape-profile`, in the
-team's `MOSAIC-mfl/ai-context` repository, guides the whole process in any language (a profile like
+`mosaic-skills` repository (how to install it: [`development/docs/landscape-profile-skill.md`](../development/docs/landscape-profile-skill.md)), guides the whole process in any language (a profile like
 KEN-LVB or PER-PCL, with fewer or changed layers, or a new one; a website module when the profile
 needs something new; data checks; validation; previews; the pull requests). By hand:
 

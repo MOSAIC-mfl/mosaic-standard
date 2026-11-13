@@ -2,6 +2,12 @@
 
 ## [0.2.0] - unreleased
 
+### `development/` (2026-11-13)
+- How the standard, the catalogue, the API and the website work together after the rebuild:
+  overview, running locally (static and live API), publishing and moving the API to a server.
+- How to install and demo the Claude Code skill `mosaic-landscape-profile` (it lives in its own
+  repository, `mosaic-skills`).
+
 ### Ported from the old catalogue `main` (2026-11-13)
 - The two commits Lizeth made on MOSAIC-mfl/catalog `main` after the migration base `0dad25c`:
   #16 KEN-LVB five-county boundary (OCHA COD-AB / IEBC, CC BY-IGO 3.0, release
