@@ -92,7 +92,7 @@ The commands that read records or profiles need a checkout of the catalogue: `--
 
 ```sh
 pip install -e ".[dev]"                     # Python 3.10+
-git clone https://github.com/MOSAIC-mfl/catalog.git ../catalog   # (branch metadata-standard-v0.1 until merged)
+git clone https://github.com/MOSAIC-mfl/catalog.git ../catalog
 export MOSAIC_CATALOG=../catalog            # Windows: set MOSAIC_CATALOG=..\catalog
 
 python -m mosaic_catalog validate examples  # check records (text report)
