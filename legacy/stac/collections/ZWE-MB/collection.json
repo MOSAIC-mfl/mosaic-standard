@@ -6,8 +6,8 @@
     "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
   "id": "ZWE-MB",
-  "title": "Mbire - Lower Zambezi Valley",
-  "description": "Datasets registered under the 'Mbire - Lower Zambezi Valley' Living Landscape (7 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "title": "Mbire – Lower Zambezi Valley",
+  "description": "Datasets registered under the 'Mbire – Lower Zambezi Valley' Living Landscape (7 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
   "license": "other",
   "extent": {
     "spatial": {

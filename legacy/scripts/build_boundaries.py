@@ -41,8 +41,8 @@ MAX_VERTICES = 1500
 
 # code -> (name, system, [countries], source shapefile)
 CANONICAL = {
-    "COL-CUM": ("Cumbal (Narino)", "Amazon", ["Colombia"], "aoiCUM_COL.shp"),
-    "PER-PCL": ("Pucallpa - Ucayali", "Amazon", ["Peru"], "aoiPCL_PER.shp"),
+    "COL-CUM": ("Cumbal (Nariño)", "Amazon", ["Colombia"], "aoiCUM_COL.shp"),
+    "PER-PCL": ("Pucallpa – Ucayali", "Amazon", ["Peru"], "aoiPCL_PER.shp"),
     "SEN-FK": ("Fatick Department", "Sudan-Sahelian and Guinea Forest-Savanna Transition",
                ["Senegal"], "MFL_Senegal_LL_SEN.shp"),
     "CIV-NZ": ("N'Zi Watershed", "Sudan-Sahelian and Guinea Forest-Savanna Transition",
@@ -51,10 +51,10 @@ CANONICAL = {
     "ETH-OG": ("Omo-Gibe Basin", "East-South Africa Highland-Lowland-Rift Valley System",
                ["Ethiopia"], "Omo_Gibe_LL_ETH.shp"),
     "KEN-LVB": ("Lake Victoria Basin (Kenya)", "East-South Africa Highland-Lowland-Rift Valley System",
-                ["Kenya"], "LVB-2_KEN.shp"),
+                ["Kenya"], "LVB_Counties_KEN.shp"),  # 5 counties, OCHA COD-AB (2026-11-10)
     "KEN-LEI": ("LEILA (Southern Kenya Rangelands)", "East-South Africa Highland-Lowland-Rift Valley System",
                 ["Kenya"], "Zone1_KEN.shp"),
-    "ZWE-MB": ("Mbire - Lower Zambezi Valley", "East-South Africa Highland-Lowland-Rift Valley System",
+    "ZWE-MB": ("Mbire – Lower Zambezi Valley", "East-South Africa Highland-Lowland-Rift Valley System",
                ["Zimbabwe"], "mfl_aoi_ZWE.shp"),
     "IND-CH": ("Central India Highlands", "Deccan Plateau Forest-Dryland Transition Zone",
                ["India"], "MFL_India_LL_Boundary_IND.shp"),

@@ -53,7 +53,12 @@ FREQUENCY = {
     "Seasonal": "seasonal",
     "On-demand": "irregular",
 }
-SPDX = {"CC BY 4.0": "CC-BY-4.0", "CC BY-SA 4.0": "CC-BY-SA-4.0", "CC0 1.0": "CC0-1.0"}
+SPDX = {
+    "CC BY 4.0": "CC-BY-4.0",
+    "CC BY-SA 4.0": "CC-BY-SA-4.0",
+    "CC0 1.0": "CC0-1.0",
+    "CC BY-IGO 3.0": "CC-BY-3.0-IGO",  # KEN-LVB boundary (OCHA COD-AB), catalog main #16
+}
 # Values that mean "not known" in schema-1 free-text fields.
 PLACEHOLDERS = {"NA", "N/A", "None", "none", "-"}
 # Placeholders that carry no licence information.

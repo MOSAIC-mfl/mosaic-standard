@@ -47,11 +47,11 @@
   "publish": true
  },
  "KEN-LVB": {
-  "source": "GADM 4.1, level 1: counties Kakamega (KEN.11_1), Kisumu (KEN.17_1), Siaya (KEN.38_1) and Vihiga (KEN.45_1), unmodified.",
-  "source_url": "https://gadm.org",
-  "license": "other",
-  "license_url": "https://gadm.org/license.html",
-  "attribution": "County boundaries: GADM version 4.1 (gadm.org).",
+  "source": "Kenya - Subnational Administrative Boundaries (COD-AB), admin level 1, valid 2019-10-31; source Independent Electoral and Boundaries Commission (IEBC), published by OCHA on HDX. Union of 5 counties: Kericho (KE035), Kisumu (KE042), Nandi (KE029), Siaya (KE041) and Vihiga (KE038). Replaces the 4-county GADM 4.1 outline (Kakamega, Kisumu, Siaya, Vihiga) on 2026-11-10.",
+  "source_url": "https://data.humdata.org/dataset/cod-ab-ken",
+  "license": "CC-BY-3.0-IGO",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/igo/legalcode",
+  "attribution": "Contains data from 'Kenya - Subnational Administrative Boundaries' (COD-AB), source: Independent Electoral and Boundaries Commission (IEBC), published by UN OCHA on the Humanitarian Data Exchange (https://data.humdata.org/dataset/cod-ab-ken), licensed under CC BY-IGO 3.0. Changes: five counties dissolved into one outline and simplified.",
   "publish": true
  },
  "MEK-3S": {

@@ -2,6 +2,15 @@
 
 ## [0.2.0] - unreleased
 
+### Ported from the old catalogue `main` (2026-11-13)
+- The two commits Lizeth made on MOSAIC-mfl/catalog `main` after the migration base `0dad25c`:
+  #16 KEN-LVB five-county boundary (OCHA COD-AB / IEBC, CC BY-IGO 3.0, release
+  `boundaries-2026-11-10`) and #17 one spelling per landscape (Cumbal (Nariño), Pucallpa – Ucayali,
+  Mbire – Lower Zambezi Valley). In `boundaries/`, `legacy/spec/`, `legacy/scripts/`, `legacy/stac/`
+  (now the last build of the old `main`, 9abbfc6) and `docs/history/`.
+- `vocab/landscapes.json`: KEN-LVB bbox of the new outline (33.948, -0.6615, 35.675, 0.5631).
+- Schema-1 crosswalk: "CC BY-IGO 3.0" -> SPDX `CC-BY-3.0-IGO`.
+
 ### Optional field `processing_status` (2026-11-12)
 - New top-level field and vocabulary `processing_status`: raw, processed, validated - how far the data
   has been processed, as declared by whoever registers it. MOSAIC does not verify it, and it is never

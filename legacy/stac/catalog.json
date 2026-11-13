@@ -25,7 +25,7 @@
       "rel": "child",
       "href": "./collections/COL-CUM/collection.json",
       "type": "application/json",
-      "title": "Cumbal (Narino)"
+      "title": "Cumbal (Nariño)"
     },
     {
       "rel": "child",
@@ -67,7 +67,7 @@
       "rel": "child",
       "href": "./collections/PER-PCL/collection.json",
       "type": "application/json",
-      "title": "Pucallpa - Ucayali"
+      "title": "Pucallpa – Ucayali"
     },
     {
       "rel": "child",
@@ -85,7 +85,7 @@
       "rel": "child",
       "href": "./collections/ZWE-MB/collection.json",
       "type": "application/json",
-      "title": "Mbire - Lower Zambezi Valley"
+      "title": "Mbire – Lower Zambezi Valley"
     },
     {
       "rel": "related",

@@ -6,8 +6,8 @@
     "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
   "id": "PER-PCL",
-  "title": "Pucallpa - Ucayali",
-  "description": "Datasets registered under the 'Pucallpa - Ucayali' Living Landscape (13 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary. NOTE: this landscape's name and delineation are PENDING CONFIRMATION with the country team.",
+  "title": "Pucallpa – Ucayali",
+  "description": "Datasets registered under the 'Pucallpa – Ucayali' Living Landscape (13 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary. NOTE: this landscape's name and delineation are PENDING CONFIRMATION with the country team.",
   "license": "other",
   "extent": {
     "spatial": {

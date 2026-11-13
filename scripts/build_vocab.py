@@ -103,7 +103,7 @@ LANDSCAPES = [
     ("CIV-NZ", "N'Zi Watershed", ["CIV"], [-5.3792, 5.95, -3.8583, 9.4333]),
     ("TUN-NW", "Northwestern Tunisia", ["TUN"], [8.9235, 35.7384, 9.4464, 36.4324]),
     ("ETH-OG", "Omo-Gibe Basin", ["ETH"], [34.9533, 4.431, 38.4128, 9.3685]),
-    ("KEN-LVB", "Lake Victoria Basin (Kenya)", ["KEN"], [33.9499, -0.4243, 35.343, 0.6557]),
+    ("KEN-LVB", "Lake Victoria Basin (Kenya)", ["KEN"], [33.948, -0.6615, 35.675, 0.5631]),  # 5 counties (2026-11-10)
     ("KEN-LEI", "LEILA (Southern Kenya Rangelands)", ["KEN"], [35.9962, -3.1869, 38.5194, -0.7526]),
     ("ZWE-MB", "Mbire – Lower Zambezi Valley", ["ZWE"], [28.8445, -17.4339, 32.0584, -15.6073]),
     ("IND-CH", "Central India Highlands", ["IND"], [78.2942, 22.2022, 81.1975, 25.9555]),

@@ -6,7 +6,7 @@
   "bbox_order": "[west, south, east, north]  (minLon, minLat, maxLon, maxLat)",
   "centroid_order": "[lon, lat]",
   "accuracy": "Landscape entries marked delineated:true are derived from the REAL delineation shapefiles (MOSAIC_LLV_delim, dissolved, EPSG:4326) - authoritative for discovery extents. GLB-UNSPEC and country_fallback remain coarse locators only.",
-  "status": "CANONICAL - built from delineation shapefiles by scripts/build_boundaries.py on 2026-09-29. Approved by Lizeth 2026-07-21; PER-PCL pending confirmation with the Peru team.",
+  "status": "CANONICAL - built from delineation shapefiles by scripts/build_boundaries.py on 2026-11-10. Approved by Lizeth 2026-07-21; PER-PCL pending confirmation with the Peru team.",
   "lookup_rule": "Engineer: look up by landscape CODE first. If code missing or = GLB-UNSPEC, fall back to country_fallback by Country. If country also unknown, use GLB-UNSPEC (world-ish box) and flag."
  },
  "landscapes": {
@@ -21,7 +21,7 @@
     -77.9096,
     0.9702
    ],
-   "name": "Cumbal (Narino)",
+   "name": "Cumbal (Nariño)",
    "landscape_system": "Amazon",
    "countries": [
     "Colombia"
@@ -39,7 +39,7 @@
     -75.2342,
     -8.635
    ],
-   "name": "Pucallpa - Ucayali",
+   "name": "Pucallpa – Ucayali",
    "landscape_system": "Amazon",
    "countries": [
     "Peru"
@@ -121,14 +121,14 @@
   },
   "KEN-LVB": {
    "bbox": [
-    33.9499,
-    -0.4244,
-    35.343,
-    0.6557
+    33.948,
+    -0.6615,
+    35.675,
+    0.5631
    ],
    "centroid": [
-    34.5623,
-    0.0264
+    34.8223,
+    -0.0661
    ],
    "name": "Lake Victoria Basin (Kenya)",
    "landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
@@ -166,7 +166,7 @@
     30.1731,
     -16.4096
    ],
-   "name": "Mbire - Lower Zambezi Valley",
+   "name": "Mbire – Lower Zambezi Valley",
    "landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
    "countries": [
     "Zimbabwe"
