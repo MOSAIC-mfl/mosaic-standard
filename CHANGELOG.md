@@ -8,6 +8,11 @@
 - How to install and demo the Claude Code skill `mosaic-landscape-profile` (it lives in its own
   repository, `mosaic-skills`).
 
+### File formats recovered (2026-11-13)
+- `scripts/recover_formats.py`: `data[].media_type` from the extensions of the schema-1
+  `file_names` (31 records; the first website showed these formats). Formats the first pipeline
+  guessed from the data type when there were no file names are not copied.
+
 ### Ported from the old catalogue `main` (2026-11-13)
 - The two commits Lizeth made on MOSAIC-mfl/catalog `main` after the migration base `0dad25c`:
   #16 KEN-LVB five-county boundary (OCHA COD-AB / IEBC, CC BY-IGO 3.0, release

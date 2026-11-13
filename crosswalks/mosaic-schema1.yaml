@@ -23,7 +23,7 @@ fields:
   download_url: data[] / access_note  # each URL -> one access point; text without a URL on a non-public record -> access_note
   data_type: data[].kind              # Vector / Raster / Tabular / Mixed -> vector / raster / tabular / mixed (every access point);
                                       # data[].method: a file URL -> download, other URL -> landing_page, no URL -> request
-  file_names: data[0].files
+  file_names: data[0].files          # and data[].media_type from the file extensions (scripts/recover_formats.py)
   file_size: data[0].size
   gee_asset_id: data[]                # {method: service, service_type: earth-engine, access: internal}; asset id in the
                                       # description, no URL until the asset is public (decision 2026-09-29)
