@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def _load_migration() -> ModuleType:
-    spec = importlib.util.spec_from_file_location("migrate_schema1", ROOT / "scripts" / "migrate_schema1.py")
+    spec = importlib.util.spec_from_file_location("migrate_schema1", ROOT / "legacy" / "scripts" / "migrate_schema1.py")
     assert spec and spec.loader
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
@@ -155,6 +155,11 @@ def test_build_outputs(tmp_path: Path, empty_catalog: Path) -> None:
     rec = {r["id"]: r for r in catalog["records"]}["MFL-2026-999"]
     assert rec["meta"]["missing_minimum"] == ["contact"] and rec["schema_version"] == "0.2.0"
     assert (out / "schema" / "record.schema.json").exists()
+    # every schema is also served at the address of its $id (catalog/schema/v<version>/...)
+    for f in (ROOT / "schema").rglob("*.json"):
+        sid = json.loads(f.read_text(encoding="utf-8")).get("$id", "")
+        if sid and "_template" not in f.parts:
+            assert (out / sid.split("/catalog/", 1)[1]).exists(), sid
 
 
 def test_v01_to_v02_moves_and_renames_only() -> None:
@@ -192,3 +197,18 @@ def test_v01_to_v02_moves_and_renames_only() -> None:
     assert [f for f, _ in notes] == ["license"]
     assert convert(new) == (new, [])  # already v0.2: unchanged
     assert Standard().check(new).status is not Status.INVALID
+
+
+def test_review_list_keeps_notes(tmp_path: Path) -> None:
+    from mosaic_catalog.cli import _write_list
+
+    path = tmp_path / "minimum_gaps"
+    rows = [("MFL-2026-001", "license", "missing"), ("MFL-2026-002", "contact", "no licensor")]
+    _write_list(path, rows, {}, "Gaps", "intro")
+    lines = path.with_suffix(".csv").read_text(encoding="utf-8").splitlines()
+    lines[1] = "MFL-2026-001,license,missing,ask the author,,complete"
+    path.with_suffix(".csv").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    # the list is written again: row 001 keeps its notes, a new row starts empty, a fixed row goes
+    _write_list(path, [rows[0], ("MFL-2026-003", "title", "missing")], {"MFL-2026-001": "Jane"}, "Gaps", "intro")
+    out = path.with_suffix(".csv").read_text(encoding="utf-8").splitlines()
+    assert out[1:] == ["MFL-2026-001,license,missing,ask the author,Jane,complete", "MFL-2026-003,title,missing,,,"]

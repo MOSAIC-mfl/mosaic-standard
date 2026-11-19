@@ -131,6 +131,8 @@ def build(records_dir: Path, out_dir: Path, cfg: Config | None = None) -> BuildR
     for sub in ("schema", "vocab", "crosswalks"):
         shutil.rmtree(out_dir / sub, ignore_errors=True)
         shutil.copytree(ROOT / sub, out_dir / sub, ignore=shutil.ignore_patterns("sources", "_template"))
+    # The schemas' $id addresses carry the version (catalog/schema/v<version>/...): serve them there too.
+    shutil.copytree(ROOT / "schema", out_dir / "schema" / f"v{std.version}", ignore=shutil.ignore_patterns("_template"))
     return BuildResult(len(published), dict(skipped), [])
 
 

@@ -6,7 +6,7 @@ declared (Raw / Processed / Validated). The first migration left it out; this sc
 records/<id>/record.yaml as raw / processed / validated. The old repo is only read (git show); a
 record whose old value is empty, or that has no schema-1 file, is left as it is - nothing is inferred.
 
-    python3 scripts/recover_processing_status.py --catalog ../catalog [--ref 0dad25c] [--check]
+    python legacy/scripts/recover_processing_status.py --catalog ../catalog [--ref 0dad25c] [--check]
 """
 
 from __future__ import annotations

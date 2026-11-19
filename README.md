@@ -74,8 +74,8 @@ review/                          minimum_gaps, classification_gaps, migration_no
 examples/                        real records converted by hand (999 a rich one, with an example id; 079 and 090)
 tests/fixtures/                  valid / invalid / incomplete cases the suite checks
 src/mosaic_catalog/              validator, build, inference, CLI; v02.py converts v0.1 records
-scripts/                         build_vocab.py, build_docs.py, build_reference.py, migrate_schema1.py, migrate_v02.py,
-                                 migrate_lake_victoria.py, migrate_ucayali.py (explorers -> landscape profiles)
+scripts/                         build_vocab.py, build_docs.py, build_reference.py (the one-off migration and
+                                 recovery scripts are in legacy/scripts/)
 mosaic.config.yaml               standard version, enforced profiles, publish incomplete records or not
 boundaries/                      landscape delineations (GeoJSON), kept from the first pipeline
 docs/history/                    decisions, guides and record changelogs of the first pipeline
@@ -129,12 +129,12 @@ Editors with the YAML language server can validate while typing (once the schema
 ## Migration from the old catalogue (phase 2)
 
 The 108 records were converted from the schema-1 records of this repository's first pipeline
-(main @ `0dad25c`, see [`legacy/README.md`](legacy/README.md)) by `scripts/migrate_schema1.py`,
+(main @ `0dad25c`, see [`legacy/README.md`](legacy/README.md)) by `legacy/scripts/migrate_schema1.py`,
 which reads them with `git show 0dad25c:records/...` (`--ref`). Mapping: [`crosswalks/mosaic-schema1.yaml`](crosswalks/mosaic-schema1.yaml).
 
 ```sh
-python scripts/migrate_schema1.py --source ../catalog --ref 0dad25c --out ../catalog/records   # reads the first pipeline
-python scripts/migrate_v02.py --catalog ../catalog             # v0.1 -> v0.2 (already applied; leaves v0.2 records as they are)
+python legacy/scripts/migrate_schema1.py --source ../catalog --ref 0dad25c --out ../catalog/records   # reads the first pipeline
+python legacy/scripts/migrate_v02.py --catalog ../catalog             # v0.1 -> v0.2 (already applied; leaves v0.2 records as they are)
 python -m mosaic_catalog --catalog ../catalog validate --gaps review/minimum_gaps
 ```
 

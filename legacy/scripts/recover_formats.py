@@ -11,7 +11,7 @@ no file names (Raster -> GeoTIFF, Tabular -> CSV); those guesses are not copied.
 have several formats gets one per data entry when the entry's own link or description names the
 file; a format with no media type here (e.g. DSSAT .SOL) is left out and listed.
 
-    python3 scripts/recover_formats.py --catalog ../catalog [--ref 9abbfc6] [--check]
+    python legacy/scripts/recover_formats.py --catalog ../catalog [--ref 9abbfc6] [--check]
 """
 
 from __future__ import annotations
