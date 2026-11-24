@@ -2,6 +2,12 @@
 
 ## [0.2.0] - unreleased
 
+### TODO placeholders in landscape profiles (2026-11-24)
+- `validate-landscapes` reports values left as `TODO` placeholders (texts starting with `TODO`,
+  `TODO.example.org` addresses): a warning while the profile is a `draft`, an error once it is
+  `review` or `published`. Found by a test of the `mosaic-landscape-profile` skill, which could
+  otherwise open a pull request whose page shows "TODO".
+
 ### Legend groups and boundary credits (2026-11-24)
 - Explorer profiles: the rows of a `classes` legend have a schema (`legend_class`: `name` required;
   `value`, `color`, `rgb`, and the new optional `group`, the heading the class is listed under).

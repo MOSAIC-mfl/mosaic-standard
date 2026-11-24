@@ -262,7 +262,44 @@ def load_profile(folder: Path, vocab: Mapping[str, Mapping[str, Any]], record_id
         if sec.get("kind") == "map-explorer" and sec.get("source"):
             resolved["config"] = _load_explorer(folder, sec["source"], problems, record_ids)
         prof.sections.append(resolved)
+    problems += _placeholder_checks(folder, data.get("status", "draft"))
     return prof
+
+
+def _placeholders(node: Any, path: str = "") -> Iterator[str]:
+    """Paths of the values that are still a "TODO" placeholder (texts or a TODO.example.org address)."""
+    if isinstance(node, dict):
+        for k, v in node.items():
+            yield from _placeholders(v, f"{path}.{k}" if path else str(k))
+    elif isinstance(node, list):
+        for i, v in enumerate(node):
+            yield from _placeholders(v, f"{path}[{i}]")
+    elif isinstance(node, str) and (node.lstrip().startswith("TODO") or "TODO:" in node or "TODO.example" in node):
+        yield path
+
+
+def _placeholder_checks(folder: Path, status: str) -> list[Problem]:
+    """A page under review or published must not show "TODO" texts; a draft may (with a warning)."""
+    level = "warning" if status == "draft" else "error"
+    out: list[Problem] = []
+    for f in sorted(folder.glob("*.yaml")):
+        try:
+            doc = yaml.safe_load(f.read_text(encoding="utf-8"))
+        except (OSError, yaml.YAMLError):
+            continue  # reported by the file's own check
+        found = list(_placeholders(doc))
+        if found:
+            more = f" and {len(found) - 5} more" if len(found) > 5 else ""
+            out.append(
+                Problem(
+                    level,
+                    f"{folder.name}/{f.name}",
+                    f"{len(found)} 'TODO' placeholder(s) left (the website would show them): "
+                    + ", ".join(found[:5])
+                    + more,
+                )
+            )
+    return out
 
 
 def _load_explorer(folder: Path, source: str, problems: list[Problem], record_ids: set[str]) -> dict[str, Any]:
