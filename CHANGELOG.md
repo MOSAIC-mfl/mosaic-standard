@@ -2,6 +2,14 @@
 
 ## [0.2.0] - unreleased
 
+### Legend groups and boundary credits (2026-11-24)
+- Explorer profiles: the rows of a `classes` legend have a schema (`legend_class`: `name` required;
+  `value`, `color`, `rgb`, and the new optional `group`, the heading the class is listed under).
+  Other keys are still allowed. Documented in `docs/landscape-profiles.md`, with the panel option
+  `decimals_level`.
+- `legacy/spec/boundary_provenance.json`: a short `credit` per landscape for a map's attribution
+  line (the website draws the boundary on the map explorers); the full `attribution` is unchanged.
+
 ### Review fixes (2026-11-19)
 - `build` also writes the schemas under `schema/v<version>/`, the address their `$id` gives
   (`…/catalog/schema/v0.2.0/…` returned 404).

@@ -27,6 +27,17 @@
     "path": {"type": "string", "pattern": "^[A-Za-z0-9_./{}-]+$", "not": {"pattern": "\\.\\."}},
     "fileRef": {"type": "object", "required": ["file"], "additionalProperties": false, "properties": {"file": {"type": "string", "pattern": "^[a-z0-9_-]+\\.ya?ml$"}}},
     "colour": {"type": "string", "pattern": "^(#[0-9a-fA-F]{3,8}|rgba?\\([0-9., ]+\\))$"},
+    "legend_class": {
+      "type": "object", "required": ["name"],
+      "description": "One row of a classes legend. Other keys are allowed (a module may read its own).",
+      "properties": {
+        "name": {"type": "string"},
+        "value": {"type": "number", "description": "Pixel value or code of the class in the data."},
+        "color": {"$ref": "#/$defs/colour"},
+        "rgb": {"type": "array", "items": {"type": "integer", "minimum": 0, "maximum": 255}, "minItems": 3, "maxItems": 3},
+        "group": {"type": "string", "description": "Heading the class is listed under (e.g. a level-1 category of the source's own legend). Classes of one group are shown together, groups in the order they first appear; classes without a group come last, with no heading."}
+      }
+    },
     "data": {
       "type": "object", "required": ["roots", "default_root"], "additionalProperties": false,
       "properties": {
@@ -96,7 +107,7 @@
         "title": {"type": "string", "description": "{year} is replaced by the selected year."},
         "colors": {"type": "array", "items": {"$ref": "#/$defs/colour"}},
         "labels": {"type": "array", "items": {"type": "string"}},
-        "classes": {"type": "array", "items": {"type": "object"}},
+        "classes": {"type": "array", "items": {"$ref": "#/$defs/legend_class"}},
         "notes": {"type": "array", "items": {"type": "string"}},
         "source": {"type": "string"}
       }

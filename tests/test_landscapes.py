@@ -91,3 +91,17 @@ def test_bundle_inlines_the_explorer_files() -> None:
     assert cfg["story"]["chapters"] and cfg["studies"]["cards"]
     assert isinstance(cfg["about"]["sources"], list)  # sources.yaml inlined
     json.dumps(doc)  # one JSON document
+
+
+def _first_classes(d: dict) -> list[dict]:  # type: ignore[type-arg]
+    return next(o["legend"]["classes"] for o in d["overlays"] if (o.get("legend") or {}).get("kind") == "classes")
+
+
+def test_legend_classes_may_be_grouped(tmp_path: Path) -> None:
+    folder = _copy(tmp_path, "PER-PCL")
+    _edit(folder / "explorer.yaml", lambda d: _first_classes(d)[0].update(group="Forest formation · Formación boscosa"))
+    assert _errors(folder) == []
+    _edit(folder / "explorer.yaml", lambda d: _first_classes(d)[0].update(group=1))
+    assert any("is not of type 'string'" in e for e in _errors(folder)), _errors(folder)
+    _edit(folder / "explorer.yaml", lambda d: (_first_classes(d)[0].pop("group"), _first_classes(d)[0].pop("name")))
+    assert any("'name' is a required property" in e for e in _errors(folder)), _errors(folder)

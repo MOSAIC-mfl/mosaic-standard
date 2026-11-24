@@ -62,7 +62,7 @@ must register it first (see mosaic-web, `docs/landscape-profiles.md`).
 | `map` | camera and limits, `terrain`, `sky`, `glyphs`, and the base map as MapLibre `sources` and `layers` (files as `{asset: path}` or `{pmtiles: path}`) |
 | `groups` | the rail groups, in order |
 | `toggles` | switch base layers on and off (place names, admin boundaries, rivers) |
-| `panels` | side panels opened from the rail (`kind: series-summary`: KPIs and the monthly chart of a series) |
+| `panels` | side panels opened from the rail (`kind: series-summary`: KPIs and the monthly chart of a series; `decimals` for the differences, `decimals_level` for the levels, default the same) |
 | `overlays` | the layers people choose, one at a time; `kind` picks the renderer, `inspect` what a click shows |
 | `click` | what a click shows with no overlay (place, administrative unit) |
 | `story`, `studies`, `about` | the files above |
@@ -80,6 +80,11 @@ Click kinds: `cell-sum`, `class-at-point`, `annual-series`, `region-series`, `fe
 `class-bars` (one horizontal bar per class). Story chapters can carry `steps` (chips that switch the
 layer and its time, highlight a feature with `focus`, and move the camera, also to a `bounds` box);
 `story.map.focus` names the layers and the field of that highlight.
+
+A `classes` legend lists `name` and `color` (or `rgb`) per class, with the pixel `value` when the data
+has codes. A class may name its `group`: the legend then shows the classes of each group under a
+heading, groups in the order they first appear and classes without a group last. Use the source's own
+categories (for MapBiomas, level 1 of its legend), not new ones.
 
 ## A new profile
 
