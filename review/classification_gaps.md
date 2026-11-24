@@ -1,10 +1,9 @@
 # Data the website cannot classify yet
 
-47 records, 48 rows. Not part of the minimum, but needed to show and describe the data. A tool fills them when it can read the file (python -m mosaic_catalog infer); the rest needs a person.
+46 records, 47 rows. Not part of the minimum, but needed to show and describe the data. A tool fills them when it can read the file (python -m mosaic_catalog infer); the rest needs a person.
 
 | Record | Field | Problem | Owner |
 |---|---|---|---|
-| MFL-2026-000 | `data.0` | vector data entry without geometry_type | Sudharsan Maliappan <s.maliappan@cgiar.org> |
 | MFL-2026-016 | `data.0` | vector data entry without geometry_type | CoRE Stack (external) |
 | MFL-2026-018 | `data.0` | vector data entry without geometry_type | <dieyemohamadou@gmail.com> |
 | MFL-2026-019 | `data.0` | vector data entry without geometry_type | <dieyemohamadou@gmail.com> |

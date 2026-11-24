@@ -1,11 +1,9 @@
 # Records below the MOSAIC minimum
 
-115 records, 245 rows. Decision per row: complete / publish incomplete / withdraw.
+114 records, 243 rows. Decision per row: complete / publish incomplete / withdraw.
 
 | Record | Field | Problem | Owner |
 |---|---|---|---|
-| MFL-2026-000 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
-| MFL-2026-000 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
 | MFL-2026-001 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
 | MFL-2026-001 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
 | MFL-2026-002 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
