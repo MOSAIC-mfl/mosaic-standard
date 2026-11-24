@@ -118,12 +118,32 @@ def _write_gaps(reports: list[Report], path: Path, owners: dict[str, str]) -> No
     )
 
 
+def _kept_notes(csv_path: Path) -> dict[tuple[str, str, str], tuple[str, str]]:
+    """suggestion and decision already written in a review list, per (record, field, problem)."""
+    if not csv_path.exists():
+        return {}
+    with csv_path.open(newline="", encoding="utf-8") as fh:
+        return {
+            (r.get("record", ""), r.get("field", ""), r.get("problem", "")): (
+                r.get("suggestion") or "",
+                r.get("decision") or "",
+            )
+            for r in csv.DictReader(fh)
+        }
+
+
 def _write_list(path: Path, rows: list[tuple[str, str, str]], owners: dict[str, str], title: str, intro: str) -> None:
+    """Writes <path>.csv and <path>.md. A suggestion or decision a person wrote in the CSV stays with
+    its row (same record, field and problem) when the list is written again."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.with_suffix(".csv").open("w", newline="", encoding="utf-8") as fh:
+    csv_path = path.with_suffix(".csv")
+    kept = _kept_notes(csv_path)
+    with csv_path.open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(["record", "field", "problem", "suggestion", "owner", "decision"])
-        w.writerows([(rid, f, m, "", owners.get(rid, ""), "") for rid, f, m in rows])
+        for rid, f, m in rows:
+            suggestion, decision = kept.get((rid, f, m), ("", ""))
+            w.writerow((rid, f, m, suggestion, owners.get(rid, ""), decision))
     lines = [
         f"# {title}",
         "",

@@ -2,6 +2,16 @@
 
 ## [0.2.0] - unreleased
 
+### Review fixes (2026-11-19)
+- `build` also writes the schemas under `schema/v<version>/`, the address their `$id` gives
+  (`…/catalog/schema/v0.2.0/…` returned 404).
+- The review lists (`validate --gaps`) keep the `suggestion` and `decision` a person wrote in the
+  CSV, per record, field and problem, when they are written again. `review/` regenerated: 114
+  records below the minimum (243 rows), of 142.
+- The one-off migration and recovery scripts (`migrate_*.py`, `recover_*.py`) moved to
+  `legacy/scripts/`: running the explorer ones again would empty the layers' `record:` links.
+- `uv.lock` removed (it named the earlier project, and nothing used it).
+
 ### `development/` (2026-11-13)
 - How the standard, the catalogue, the API and the website work together after the rebuild:
   overview, running locally (static and live API), publishing and moving the API to a server.

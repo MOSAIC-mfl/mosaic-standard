@@ -88,7 +88,7 @@ Each `data[]` entry is one way to reach the data:
 
 ## 7. From v0.1 to v0.2
 
-`src/mosaic_catalog/v02.py` (run by `scripts/migrate_v02.py`) moves and renames only:
+`src/mosaic_catalog/v02.py` (run by `legacy/scripts/migrate_v02.py`) moves and renames only:
 
 | v0.1 | v0.2 |
 |---|---|

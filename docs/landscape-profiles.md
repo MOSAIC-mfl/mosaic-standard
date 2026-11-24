@@ -101,7 +101,7 @@ needs something new; data checks; validation; previews; the pull requests). By h
 
 The profile was converted from the Lake Victoria Basin Explorer by Andrés Aguilar
 (https://github.com/anaguilarar/mosaic-lake-victoria, commit 0d22fe2) with
-`scripts/migrate_lake_victoria.py`. The explorer's repository is only read. Its own JSON files
+`legacy/scripts/migrate_lake_victoria.py`. The explorer's repository is only read. Its own JSON files
 (`layers.json`, `story_chapters.json`, `studies.json`) are converted as they are; what it kept in
 JavaScript (layers, legends, map style, colours) is transcribed in the script, so the profile shows
 exactly what the explorer shows.
@@ -113,10 +113,10 @@ withheld), DAHITI lake levels (non-commercial), HydroSHEDS rivers (display only)
 ## Pucallpa – Ucayali (PER-PCL)
 
 Converted the same way from the MOSAIC Ucayali Explorer by Andrés Aguilar
-(https://github.com/anaguilarar/mosaic-ucayali, commit 24fbe3a) with `scripts/migrate_ucayali.py`:
+(https://github.com/anaguilarar/mosaic-ucayali, commit 24fbe3a) with `legacy/scripts/migrate_ucayali.py`:
 
 ```
-python scripts/migrate_ucayali.py --source D:/Code/Mosaic/mosaic-ucayali --catalog ../catalog
+python legacy/scripts/migrate_ucayali.py --source D:/Code/Mosaic/mosaic-ucayali --catalog ../catalog
 ```
 
 The explorer was scaffolded from the Lake Victoria one, so land cover, forest loss, fire, burned area

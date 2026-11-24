@@ -2,13 +2,13 @@
 """Migrate MOSAIC schema-1 records (old `catalog` repo) to the MOSAIC standard (v0.2).
 
 Two steps: schema 1 -> v0.1 (this file, crosswalks/mosaic-schema1.yaml), then v0.1 -> v0.2
-(src/mosaic_catalog/v02.py, the same conversion as scripts/migrate_v02.py).
+(src/mosaic_catalog/v02.py, the same conversion as legacy/scripts/migrate_v02.py).
 
 The old repository is only READ, through `git show <ref>:records/<file>` and `git log`;
 its working tree, branches and files are never touched.
 
-    python3 scripts/migrate_schema1.py --source ../catalog            # ref main -> records/
-    python3 scripts/migrate_schema1.py --source ../catalog --dry-run  # print the summary only
+    python legacy/scripts/migrate_schema1.py --source ../catalog            # ref main -> records/
+    python legacy/scripts/migrate_schema1.py --source ../catalog --dry-run  # print the summary only
 
 Nothing is invented. Values the old record does not have stay empty; the validator lists
 them in review/minimum_gaps.*. Conversions a person should look at go to
@@ -29,7 +29,7 @@ from urllib.parse import urlparse
 
 import yaml
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 from mosaic_catalog.v02 import convert  # noqa: E402
 
@@ -333,7 +333,7 @@ def migrate(old: dict[str, Any], dates: tuple[str | None, str | None], notes: No
 # -- output ----------------------------------------------------------------------------------------
 HEADER = (
     "# MOSAIC record (standard v0.2). Migrated from the schema-1 record {src} on {ref} by\n"
-    "# scripts/migrate_schema1.py. Fields the old record did not have are absent: see review/.\n"
+    "# legacy/scripts/migrate_schema1.py. Fields the old record did not have are absent: see review/.\n"
 )
 
 

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Convert the records from the MOSAIC standard v0.1 to v0.2 (in place).
 
-    python scripts/migrate_v02.py                 # records/, examples/ and tests/fixtures/
-    python scripts/migrate_v02.py --dry-run
+    python legacy/scripts/migrate_v02.py                 # records/, examples/ and tests/fixtures/
+    python legacy/scripts/migrate_v02.py --dry-run
 
 Moves and renames only (src/mosaic_catalog/v02.py); what cannot be carried over is listed in
 review/migration_v02.md. A record already in v0.2 is left as it is.
@@ -16,7 +16,7 @@ from pathlib import Path
 
 import yaml
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 
 from mosaic_catalog.config import records_dir, set_catalog  # noqa: E402
@@ -24,7 +24,7 @@ from mosaic_catalog.v02 import convert  # noqa: E402
 from mosaic_catalog.yamlio import header_of, write_record  # noqa: E402
 
 HEADER_OLD = "(standard v0.1)"
-HEADER_NEW = "(standard v0.2; v0.1 -> v0.2 by scripts/migrate_v02.py)"
+HEADER_NEW = "(standard v0.2; v0.1 -> v0.2 by legacy/scripts/migrate_v02.py)"
 
 
 def files() -> list[Path]:

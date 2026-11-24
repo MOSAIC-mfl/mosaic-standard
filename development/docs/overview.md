@@ -41,7 +41,7 @@ Face dataset); moving those layers is a separate decision.
   access, data kinds, …), crosswalks (CDH, schema 1), landscape profile schemas.
 - `processing_status` (optional): raw / processed / validated, declared by whoever registers the
   record, never inferred. Recovered for 102 of 108 records from the schema-1 records
-  (`scripts/recover_processing_status.py`); CDH has no such field, so its records have none.
+  (`legacy/scripts/recover_processing_status.py`); CDH has no such field, so its records have none.
 - The tool (`python -m mosaic_catalog --catalog <checkout> validate | validate-landscapes | build`).
 - `boundaries/` and `legacy/` (the first pipeline: schema 1, the Excel registry, the frozen STAC),
   including the last two commits of the old catalogue `main` (KEN-LVB five-county boundary, landscape

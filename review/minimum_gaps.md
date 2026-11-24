@@ -1,49 +1,47 @@
 # Records below the MOSAIC minimum
 
-108 records, 238 rows. Decision per row: complete / publish incomplete / withdraw.
+114 records, 243 rows. Decision per row: complete / publish incomplete / withdraw.
 
 | Record | Field | Problem | Owner |
 |---|---|---|---|
-| MFL-2026-000 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-000 | `contact` | every contact needs an organization and its roles | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-001 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-001 | `contact` | every contact needs an organization and its roles | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-002 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-002 | `contact` | every contact needs an organization and its roles | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-003 | `license` | missing: license | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-003 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-003 | `contact` | every contact needs an organization and its roles | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-004 | `license` | missing: license | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-004 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-004 | `contact` | every contact needs an organization and its roles | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-005 | `license` | missing: license | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-005 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-005 | `contact` | every contact needs an organization and its roles | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-006 | `access_note` | restricted / non-public resource without access_note (how to obtain it) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-006 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-006 | `contact` | every contact needs an organization and its roles | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-007 | `access_note` | restricted / non-public resource without access_note (how to obtain it) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-007 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-007 | `contact` | every contact needs an organization and its roles | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-008 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-008 | `contact` | every contact needs an organization and its roles | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-009 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-009 | `contact` | every contact needs an organization and its roles | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-010 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-010 | `contact` | every contact needs an organization and its roles | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-011 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-011 | `contact` | every contact needs an organization and its roles | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-012 | `license` | missing: license | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-012 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-012 | `contact` | every contact needs an organization and its roles | Sudharsan Malaiappan <s.maliappan@cgiar.org> |
-| MFL-2026-013 | `contact` | no contact with the licensor role (who grants the licence) | Core Stack (Open access) |
-| MFL-2026-013 | `contact` | every contact needs an organization and its roles | Core Stack (Open access) |
-| MFL-2026-014 | `contact` | no contact with the licensor role (who grants the licence) | Core Stack (Open access) |
-| MFL-2026-014 | `contact` | every contact needs an organization and its roles | Core Stack (Open access) |
-| MFL-2026-015 | `contact` | no contact with the licensor role (who grants the licence) | Core Stack (Open access) |
-| MFL-2026-015 | `contact` | every contact needs an organization and its roles | Core Stack (Open access) |
-| MFL-2026-016 | `contact` | no contact with the licensor role (who grants the licence) | Core Stack (Open access) |
-| MFL-2026-016 | `contact` | every contact needs an organization and its roles | Core Stack (Open access) |
+| MFL-2026-001 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-001 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-002 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-002 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-003 | `license` | missing: license | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-003 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-003 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-004 | `license` | missing: license | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-004 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-004 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-005 | `license` | missing: license | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-005 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-005 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-006 | `access_note` | restricted / non-public resource without access_note (how to obtain it) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-006 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-006 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-007 | `access_note` | restricted / non-public resource without access_note (how to obtain it) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-007 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-007 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-008 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-008 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-009 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-009 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-010 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-010 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-011 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-011 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-012 | `license` | missing: license | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-012 | `contact` | no contact with the licensor role (who grants the licence) | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-012 | `contact` | every contact needs an organization and its roles | Sudharsan Maliappan <s.maliappan@cgiar.org> |
+| MFL-2026-013 | `contact` | no contact with the licensor role (who grants the licence) | CoRE Stack (external) |
+| MFL-2026-013 | `contact` | every contact needs an organization and its roles | CoRE Stack (external) |
+| MFL-2026-014 | `contact` | no contact with the licensor role (who grants the licence) | CoRE Stack (external) |
+| MFL-2026-014 | `contact` | every contact needs an organization and its roles | CoRE Stack (external) |
+| MFL-2026-015 | `contact` | no contact with the licensor role (who grants the licence) | CoRE Stack (external) |
+| MFL-2026-015 | `contact` | every contact needs an organization and its roles | CoRE Stack (external) |
+| MFL-2026-016 | `contact` | no contact with the licensor role (who grants the licence) | CoRE Stack (external) |
+| MFL-2026-016 | `contact` | every contact needs an organization and its roles | CoRE Stack (external) |
 | MFL-2026-017 | `contact` | no contact with the licensor role (who grants the licence) | <dieyemohamadou@gmail.com> |
 | MFL-2026-017 | `contact` | every contact needs an organization and its roles | <dieyemohamadou@gmail.com> |
 | MFL-2026-018 | `contact` | no contact with the licensor role (who grants the licence) | <dieyemohamadou@gmail.com> |
@@ -62,16 +60,16 @@
 | MFL-2026-023 | `contact` | every contact needs an organization and its roles | <dieyemohamadou@gmail.com> |
 | MFL-2026-024 | `contact` | no contact with the licensor role (who grants the licence) | <dieyemohamadou@gmail.com> |
 | MFL-2026-024 | `contact` | every contact needs an organization and its roles | <dieyemohamadou@gmail.com> |
-| MFL-2026-025 | `contact` | no contact with the licensor role (who grants the licence) | <Telma.SIBANDA@um6p.ma> |
-| MFL-2026-025 | `contact` | every contact needs an organization and its roles | <Telma.SIBANDA@um6p.ma> |
-| MFL-2026-026 | `contact` | no contact with the licensor role (who grants the licence) | <Telma.SIBANDA@um6p.ma> |
-| MFL-2026-026 | `contact` | every contact needs an organization and its roles | <Telma.SIBANDA@um6p.ma> |
-| MFL-2026-027 | `contact` | no contact with the licensor role (who grants the licence) | <Telma.SIBANDA@um6p.ma> |
-| MFL-2026-027 | `contact` | every contact needs an organization and its roles | <Telma.SIBANDA@um6p.ma> |
-| MFL-2026-028 | `contact` | no contact with the licensor role (who grants the licence) | <Telma.SIBANDA@um6p.ma> |
-| MFL-2026-028 | `contact` | every contact needs an organization and its roles | <Telma.SIBANDA@um6p.ma> |
-| MFL-2026-029 | `contact` | no contact with the licensor role (who grants the licence) | <Telma.SIBANDA@um6p.ma> |
-| MFL-2026-029 | `contact` | every contact needs an organization and its roles | <Telma.SIBANDA@um6p.ma> |
+| MFL-2026-025 | `contact` | no contact with the licensor role (who grants the licence) | Telma Sibanda <Telma.SIBANDA@um6p.ma> |
+| MFL-2026-025 | `contact` | every contact needs an organization and its roles | Telma Sibanda <Telma.SIBANDA@um6p.ma> |
+| MFL-2026-026 | `contact` | no contact with the licensor role (who grants the licence) | Telma Sibanda <Telma.SIBANDA@um6p.ma> |
+| MFL-2026-026 | `contact` | every contact needs an organization and its roles | Telma Sibanda <Telma.SIBANDA@um6p.ma> |
+| MFL-2026-027 | `contact` | no contact with the licensor role (who grants the licence) | Telma Sibanda <Telma.SIBANDA@um6p.ma> |
+| MFL-2026-027 | `contact` | every contact needs an organization and its roles | Telma Sibanda <Telma.SIBANDA@um6p.ma> |
+| MFL-2026-028 | `contact` | no contact with the licensor role (who grants the licence) | Telma Sibanda <Telma.SIBANDA@um6p.ma> |
+| MFL-2026-028 | `contact` | every contact needs an organization and its roles | Telma Sibanda <Telma.SIBANDA@um6p.ma> |
+| MFL-2026-029 | `contact` | no contact with the licensor role (who grants the licence) | Telma Sibanda <Telma.SIBANDA@um6p.ma> |
+| MFL-2026-029 | `contact` | every contact needs an organization and its roles | Telma Sibanda <Telma.SIBANDA@um6p.ma> |
 | MFL-2026-030 | `contact` | no contact with the licensor role (who grants the licence) | Layal Atassi <l.atassi@cgiar.org> |
 | MFL-2026-030 | `contact` | every contact needs an organization and its roles | Layal Atassi <l.atassi@cgiar.org> |
 | MFL-2026-031 | `contact` | no contact with the licensor role (who grants the licence) | Layal Atassi <l.atassi@cgiar.org> |
@@ -113,25 +111,25 @@
 | MFL-2026-046 | `contact` | every contact needs an organization and its roles | Louis Kouadio <a.kouadio2@cgiar.org> |
 | MFL-2026-048 | `contact` | no contact with the licensor role (who grants the licence) | Louis Kouadio <a.kouadio2@cgiar.org> |
 | MFL-2026-048 | `contact` | every contact needs an organization and its roles | Louis Kouadio <a.kouadio2@cgiar.org> |
-| MFL-2026-050 | `contact` | no contact with the licensor role (who grants the licence) | <s.douangsavanh@cgiar.org> |
-| MFL-2026-050 | `contact` | every contact needs an organization and its roles | <s.douangsavanh@cgiar.org> |
-| MFL-2026-051 | `contact` | no contact with the licensor role (who grants the licence) | <s.douangsavanh@cgiar.org> |
-| MFL-2026-051 | `contact` | every contact needs an organization and its roles | <s.douangsavanh@cgiar.org> |
-| MFL-2026-052 | `contact` | no contact with the licensor role (who grants the licence) | <s.douangsavanh@cgiar.org> |
-| MFL-2026-052 | `contact` | every contact needs an organization and its roles | <s.douangsavanh@cgiar.org> |
-| MFL-2026-053 | `contact` | no contact with the licensor role (who grants the licence) | <s.douangsavanh@cgiar.org> |
-| MFL-2026-053 | `contact` | every contact needs an organization and its roles | <s.douangsavanh@cgiar.org> |
-| MFL-2026-054 | `contact` | no contact with the licensor role (who grants the licence) | <s.douangsavanh@cgiar.org> |
-| MFL-2026-054 | `contact` | every contact needs an organization and its roles | <s.douangsavanh@cgiar.org> |
-| MFL-2026-055 | `access_note` | restricted / non-public resource without access_note (how to obtain it) | <javier.ochoa@cgiar.org> |
-| MFL-2026-055 | `contact` | no contact with the licensor role (who grants the licence) | <javier.ochoa@cgiar.org> |
-| MFL-2026-055 | `contact` | every contact needs an organization and its roles | <javier.ochoa@cgiar.org> |
-| MFL-2026-056 | `access_note` | restricted / non-public resource without access_note (how to obtain it) | <javier.ochoa@cgiar.org> |
-| MFL-2026-056 | `contact` | no contact with the licensor role (who grants the licence) | <javier.ochoa@cgiar.org> |
-| MFL-2026-056 | `contact` | every contact needs an organization and its roles | <javier.ochoa@cgiar.org> |
-| MFL-2026-057 | `access_note` | restricted / non-public resource without access_note (how to obtain it) | <javier.ochoa@cgiar.org> |
-| MFL-2026-057 | `contact` | no contact with the licensor role (who grants the licence) | <javier.ochoa@cgiar.org> |
-| MFL-2026-057 | `contact` | every contact needs an organization and its roles | <javier.ochoa@cgiar.org> |
+| MFL-2026-050 | `contact` | no contact with the licensor role (who grants the licence) | Somphasith Douangsavanh <s.douangsavanh@cgiar.org> |
+| MFL-2026-050 | `contact` | every contact needs an organization and its roles | Somphasith Douangsavanh <s.douangsavanh@cgiar.org> |
+| MFL-2026-051 | `contact` | no contact with the licensor role (who grants the licence) | Somphasith Douangsavanh <s.douangsavanh@cgiar.org> |
+| MFL-2026-051 | `contact` | every contact needs an organization and its roles | Somphasith Douangsavanh <s.douangsavanh@cgiar.org> |
+| MFL-2026-052 | `contact` | no contact with the licensor role (who grants the licence) | Somphasith Douangsavanh <s.douangsavanh@cgiar.org> |
+| MFL-2026-052 | `contact` | every contact needs an organization and its roles | Somphasith Douangsavanh <s.douangsavanh@cgiar.org> |
+| MFL-2026-053 | `contact` | no contact with the licensor role (who grants the licence) | Somphasith Douangsavanh <s.douangsavanh@cgiar.org> |
+| MFL-2026-053 | `contact` | every contact needs an organization and its roles | Somphasith Douangsavanh <s.douangsavanh@cgiar.org> |
+| MFL-2026-054 | `contact` | no contact with the licensor role (who grants the licence) | Somphasith Douangsavanh <s.douangsavanh@cgiar.org> |
+| MFL-2026-054 | `contact` | every contact needs an organization and its roles | Somphasith Douangsavanh <s.douangsavanh@cgiar.org> |
+| MFL-2026-055 | `access_note` | restricted / non-public resource without access_note (how to obtain it) | Javier Ochoa <javier.ochoa@cgiar.org> |
+| MFL-2026-055 | `contact` | no contact with the licensor role (who grants the licence) | Javier Ochoa <javier.ochoa@cgiar.org> |
+| MFL-2026-055 | `contact` | every contact needs an organization and its roles | Javier Ochoa <javier.ochoa@cgiar.org> |
+| MFL-2026-056 | `access_note` | restricted / non-public resource without access_note (how to obtain it) | Javier Ochoa <javier.ochoa@cgiar.org> |
+| MFL-2026-056 | `contact` | no contact with the licensor role (who grants the licence) | Javier Ochoa <javier.ochoa@cgiar.org> |
+| MFL-2026-056 | `contact` | every contact needs an organization and its roles | Javier Ochoa <javier.ochoa@cgiar.org> |
+| MFL-2026-057 | `access_note` | restricted / non-public resource without access_note (how to obtain it) | Javier Ochoa <javier.ochoa@cgiar.org> |
+| MFL-2026-057 | `contact` | no contact with the licensor role (who grants the licence) | Javier Ochoa <javier.ochoa@cgiar.org> |
+| MFL-2026-057 | `contact` | every contact needs an organization and its roles | Javier Ochoa <javier.ochoa@cgiar.org> |
 | MFL-2026-058 | `license` | missing: license | Shwu Jiau Teoh <s.teoh@cgiar.org> |
 | MFL-2026-058 | `contact` | no contact with the licensor role (who grants the licence) | Shwu Jiau Teoh <s.teoh@cgiar.org> |
 | MFL-2026-058 | `contact` | every contact needs an organization and its roles | Shwu Jiau Teoh <s.teoh@cgiar.org> |
@@ -147,8 +145,8 @@
 | MFL-2026-063 | `contact` | every contact needs an organization and its roles | Smitha Krishnan <s.krishnan@cgiar.org> |
 | MFL-2026-064 | `contact` | no contact with the licensor role (who grants the licence) | Hannes Gaisberger <h.gaisberger@cgiar.org> |
 | MFL-2026-064 | `contact` | every contact needs an organization and its roles | Hannes Gaisberger <h.gaisberger@cgiar.org> |
-| MFL-2026-065 | `contact` | no contact with the licensor role (who grants the licence) | <Telma.SIBANDA@um6p.ma> |
-| MFL-2026-065 | `contact` | every contact needs an organization and its roles | <Telma.SIBANDA@um6p.ma> |
+| MFL-2026-065 | `contact` | no contact with the licensor role (who grants the licence) | Telma Sibanda <Telma.SIBANDA@um6p.ma> |
+| MFL-2026-065 | `contact` | every contact needs an organization and its roles | Telma Sibanda <Telma.SIBANDA@um6p.ma> |
 | MFL-2026-066 | `contact` | no contact with the licensor role (who grants the licence) | Louis Kouadio <a.kouadio2@cgiar.org> |
 | MFL-2026-066 | `contact` | every contact needs an organization and its roles | Louis Kouadio <a.kouadio2@cgiar.org> |
 | MFL-2026-067 | `contact` | no contact with the licensor role (who grants the licence) | Louis Kouadio <a.kouadio2@cgiar.org> |
@@ -185,9 +183,9 @@
 | MFL-2026-081 | `contact` | every contact needs an organization and its roles | Beatriz Rodríguez <b.rodriguez@cgiar.org> |
 | MFL-2026-082 | `contact` | no contact with the licensor role (who grants the licence) | Beatriz Rodríguez <b.rodriguez@cgiar.org> |
 | MFL-2026-082 | `contact` | every contact needs an organization and its roles | Beatriz Rodríguez <b.rodriguez@cgiar.org> |
-| MFL-2026-083 | `access_note` | restricted / non-public resource without access_note (how to obtain it) | <z.guo@cgiar.org> |
-| MFL-2026-083 | `contact` | no contact with the licensor role (who grants the licence) | <z.guo@cgiar.org> |
-| MFL-2026-083 | `contact` | every contact needs an organization and its roles | <z.guo@cgiar.org> |
+| MFL-2026-083 | `access_note` | restricted / non-public resource without access_note (how to obtain it) | Zhe Guo <z.guo@cgiar.org> |
+| MFL-2026-083 | `contact` | no contact with the licensor role (who grants the licence) | Zhe Guo <z.guo@cgiar.org> |
+| MFL-2026-083 | `contact` | every contact needs an organization and its roles | Zhe Guo <z.guo@cgiar.org> |
 | MFL-2026-084 | `contact` | no contact with the licensor role (who grants the licence) | Louis Kouadio <a.kouadio2@cgiar.org> |
 | MFL-2026-084 | `contact` | every contact needs an organization and its roles | Louis Kouadio <a.kouadio2@cgiar.org> |
 | MFL-2026-085 | `contact` | no contact with the licensor role (who grants the licence) | Ambica Paliwal <a.paliwal@cgiar.org> |
@@ -232,13 +230,20 @@
 | MFL-2026-104 | `contact` | every contact needs an organization and its roles | Lizeth Llanos <l.llanos@cgiar.org> |
 | MFL-2026-105 | `contact` | no contact with the licensor role (who grants the licence) | Lizeth Llanos <l.llanos@cgiar.org> |
 | MFL-2026-105 | `contact` | every contact needs an organization and its roles | Lizeth Llanos <l.llanos@cgiar.org> |
-| MFL-2026-106 | `contact` | no contact with the licensor role (who grants the licence) | Core Stack (Open access) |
-| MFL-2026-106 | `contact` | every contact needs an organization and its roles | Core Stack (Open access) |
-| MFL-2026-107 | `contact` | no contact with the licensor role (who grants the licence) | Core Stack (Open access) |
-| MFL-2026-107 | `contact` | every contact needs an organization and its roles | Core Stack (Open access) |
-| MFL-2026-108 | `contact` | no contact with the licensor role (who grants the licence) | Core Stack (Open access) |
-| MFL-2026-108 | `contact` | every contact needs an organization and its roles | Core Stack (Open access) |
-| MFL-2026-109 | `contact` | no contact with the licensor role (who grants the licence) | Core Stack (Open access) |
-| MFL-2026-109 | `contact` | every contact needs an organization and its roles | Core Stack (Open access) |
-| MFL-2026-110 | `contact` | no contact with the licensor role (who grants the licence) | Core Stack (Open access) |
-| MFL-2026-110 | `contact` | every contact needs an organization and its roles | Core Stack (Open access) |
+| MFL-2026-106 | `contact` | no contact with the licensor role (who grants the licence) | CoRE Stack (external) |
+| MFL-2026-106 | `contact` | every contact needs an organization and its roles | CoRE Stack (external) |
+| MFL-2026-107 | `contact` | no contact with the licensor role (who grants the licence) | CoRE Stack (external) |
+| MFL-2026-107 | `contact` | every contact needs an organization and its roles | CoRE Stack (external) |
+| MFL-2026-108 | `contact` | no contact with the licensor role (who grants the licence) | CoRE Stack (external) |
+| MFL-2026-108 | `contact` | every contact needs an organization and its roles | CoRE Stack (external) |
+| MFL-2026-109 | `contact` | no contact with the licensor role (who grants the licence) | CoRE Stack (external) |
+| MFL-2026-109 | `contact` | every contact needs an organization and its roles | CoRE Stack (external) |
+| MFL-2026-110 | `contact` | no contact with the licensor role (who grants the licence) | CoRE Stack (external) |
+| MFL-2026-110 | `contact` | every contact needs an organization and its roles | CoRE Stack (external) |
+| MFL-2026-116 | `contact` | no contact with the licensor role (who grants the licence) | IGAD Climate Prediction and Applications Centre (ICPAC) |
+| MFL-2026-117 | `contact` | no contact with the licensor role (who grants the licence) | Andrés Aguilar |
+| MFL-2026-120 | `contact` | no contact with the licensor role (who grants the licence) | Andrés Aguilar |
+| MFL-2026-127 | `contact` | no contact with the licensor role (who grants the licence) | William & Mary geoLab (geoBoundaries) |
+| MFL-2026-130 | `contact` | no contact with the licensor role (who grants the licence) | Ministerio del Ambiente (MINAM), PNCBMCC |
+| MFL-2026-131 | `contact` | no contact with the licensor role (who grants the licence) | Andrés Aguilar |
+| MFL-2026-132 | `contact` | no contact with the licensor role (who grants the licence) | Andrés Aguilar |
