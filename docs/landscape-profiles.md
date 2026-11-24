@@ -81,6 +81,10 @@ Click kinds: `cell-sum`, `class-at-point`, `annual-series`, `region-series`, `fe
 layer and its time, highlight a feature with `focus`, and move the camera, also to a `bounds` box);
 `story.map.focus` names the layers and the field of that highlight.
 
+A value left as a `TODO` placeholder (a text starting with `TODO`, or a `TODO.example.org` address) is
+a warning while the profile's `status` is `draft`, and an error once it is `review` or `published`:
+the website would show it.
+
 A `classes` legend lists `name` and `color` (or `rgb`) per class, with the pixel `value` when the data
 has codes. A class may name its `group`: the legend then shows the classes of each group under a
 heading, groups in the order they first appear and classes without a group last. Use the source's own

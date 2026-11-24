@@ -105,3 +105,14 @@ def test_legend_classes_may_be_grouped(tmp_path: Path) -> None:
     assert any("is not of type 'string'" in e for e in _errors(folder)), _errors(folder)
     _edit(folder / "explorer.yaml", lambda d: (_first_classes(d)[0].pop("group"), _first_classes(d)[0].pop("name")))
     assert any("'name' is a required property" in e for e in _errors(folder)), _errors(folder)
+
+
+def test_todo_placeholders_warn_in_a_draft_and_fail_once_published(tmp_path: Path) -> None:
+    folder = _copy(tmp_path)
+    _edit(folder / "explorer.yaml", lambda d: d.update(title="TODO: explorer title"))
+    _edit(folder / "profile.yaml", lambda d: d.update(status="draft"))
+    p = ls.load_profile(folder, ls.vocab(), ls.record_ids())
+    todo = [x for x in p.problems if "'TODO' placeholder" in x.message]
+    assert [x.level for x in todo] == ["warning"] and "title" in todo[0].message
+    _edit(folder / "profile.yaml", lambda d: d.update(status="published"))
+    assert any("'TODO' placeholder" in e and "explorer.yaml" in e for e in _errors(folder)), _errors(folder)
