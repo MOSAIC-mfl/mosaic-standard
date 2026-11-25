@@ -2,6 +2,17 @@
 
 ## [0.2.0] - unreleased
 
+### Security review fixes (2026-11-25)
+- `validate-landscapes`: a `profile.yaml` that is `{}` is an error ("empty profile"); before, it
+  returned before the schema check and passed as valid.
+- The files a profile names (a section's `source`, the explorer's `story.file`, `studies.file` and
+  `about.sources`) must be a plain file name in the profile's folder. Other names (`../x.yaml`, a
+  sub-path) are an error and the file is not read. The explorer schema's `about.sources` pattern is
+  now the same as the other file references (`^[a-z0-9_-]+\.ya?ml$`).
+- `infer`: zip members with an absolute or drive path are skipped, and only the files extracted
+  inside the temporary folder are read (an absolute member name pointed at the real file on the
+  maintainer's computer).
+
 ### TODO placeholders in landscape profiles (2026-11-24)
 - `validate-landscapes` reports values left as `TODO` placeholders (texts starting with `TODO`,
   `TODO.example.org` addresses): a warning while the profile is a `draft`, an error once it is

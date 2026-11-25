@@ -15,6 +15,7 @@ Nothing here reads the data files the profiles point to: those stay where their 
 from __future__ import annotations
 
 import json
+import re
 from collections import Counter
 from collections.abc import Iterable, Iterator, Mapping
 from dataclasses import dataclass, field
@@ -65,6 +66,9 @@ class Profile:
 
 def _schema(name: str) -> Draft202012Validator:
     return Draft202012Validator(json.loads((SCHEMA_DIR / name).read_text(encoding="utf-8")))
+
+
+LOCAL_FILE = re.compile(r"[a-z0-9_-]+\.ya?ml")  # same rule as the schemas' file references
 
 
 def _vocab() -> dict[str, dict[str, Any]]:
@@ -238,6 +242,8 @@ def load_profile(folder: Path, vocab: Mapping[str, Mapping[str, Any]], record_id
     code = folder.name
     prof = Profile(code, curated=True, data=data, problems=problems)
     if not data:
+        if not problems:  # an empty file (or "{}") must not pass as a valid profile
+            problems.append(Problem("error", f"{code}/{PROFILE_FILE}", "empty profile"))
         return prof
     problems += _validate(_schema("profile.schema.json"), data, f"{code}/{PROFILE_FILE}")
     if data.get("landscape") != code:
@@ -259,8 +265,9 @@ def load_profile(folder: Path, vocab: Mapping[str, Mapping[str, Any]], record_id
                     f"section kind '{sec.get('kind')}' is not a core kind: the website must register it",
                 )
             )
-        if sec.get("kind") == "map-explorer" and sec.get("source"):
-            resolved["config"] = _load_explorer(folder, sec["source"], problems, record_ids)
+        source = sec.get("source")
+        if sec.get("kind") == "map-explorer" and source and _local_name(source, f"{code}/{PROFILE_FILE}", problems):
+            resolved["config"] = _load_explorer(folder, source, problems, record_ids)
         prof.sections.append(resolved)
     problems += _placeholder_checks(folder, data.get("status", "draft"))
     return prof
@@ -302,6 +309,14 @@ def _placeholder_checks(folder: Path, status: str) -> list[Problem]:
     return out
 
 
+def _local_name(name: Any, where: str, problems: list[Problem]) -> bool:
+    """A file a profile names must be a plain YAML file name in the profile's own folder (no '/', no '..')."""
+    if isinstance(name, str) and LOCAL_FILE.fullmatch(name):
+        return True
+    problems.append(Problem("error", where, f"'{name}' must be a file name in the profile folder (e.g. story.yaml)"))
+    return False
+
+
 def _load_explorer(folder: Path, source: str, problems: list[Problem], record_ids: set[str]) -> dict[str, Any]:
     code = folder.name
     explorer = _load_yaml(folder / source, problems) or {}
@@ -313,7 +328,7 @@ def _load_explorer(folder: Path, source: str, problems: list[Problem], record_id
         "sources": (explorer.get("about") or {}).get("sources"),
     }
     for key, name in refs.items():
-        if not name:
+        if not name or not _local_name(name, f"{code}/{source}", problems):
             continue
         doc = _load_yaml(folder / name, problems)
         if doc is None:

@@ -129,3 +129,15 @@ def test_inferred_values_are_valid_in_the_standard(tmp_path: Path) -> None:
                                            "locations": [{"url": "https://x.org/t.csv"}]}]}  # fmt: skip
     apply(rec, 0, read_csv(p))
     assert Standard().check(rec).status is not Status.INVALID
+
+
+def test_zip_members_outside_the_folder_are_never_read(tmp_path: Path) -> None:
+    secret = tmp_path / "secret.csv"
+    secret.write_text("password,token\nx,y\n", encoding="utf-8")
+    z = tmp_path / "evil.zip"
+    with zipfile.ZipFile(z, "w") as zf:
+        zf.writestr(str(secret), "a,b\n1,2\n")  # absolute name: must not point at the real secret.csv
+        zf.writestr("../up.csv", "c,d\n3,4\n")
+    f = inspect_file(z)
+    names = [v["name"] for v in f.structure.get("variables", [])]
+    assert "password" not in names and "c" not in names

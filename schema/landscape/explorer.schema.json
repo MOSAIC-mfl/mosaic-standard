@@ -20,7 +20,7 @@
     "studies": {"$ref": "#/$defs/fileRef"},
     "about": {
       "type": "object", "additionalProperties": false,
-      "properties": {"intro": {"type": "string"}, "licence": {"type": "string"}, "sources": {"type": "string", "pattern": "\\.ya?ml$"}}
+      "properties": {"intro": {"type": "string"}, "licence": {"type": "string"}, "sources": {"type": "string", "pattern": "^[a-z0-9_-]+\\.ya?ml$"}}
     }
   },
   "$defs": {

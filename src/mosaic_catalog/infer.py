@@ -193,17 +193,26 @@ READERS: dict[str, Callable[[Path], Findings]] = {
 RASTER_EXT = {".tif", ".tiff", ".nc", ".zarr", ".img", ".asc"}
 
 
+def _safe_member(name: str) -> bool:
+    """A zip member that is a plain relative file path (no folder entry, no '..', no absolute or drive path)."""
+    norm = name.replace("\\", "/")
+    parts = PurePosixPath(norm).parts
+    if not parts or norm.endswith("/") or norm.startswith("/"):
+        return False
+    return ":" not in parts[0] and ".." not in parts
+
+
 def inspect_file(path: Path) -> Findings:
     """Read a downloaded file (or a zip of files) and return what it says about itself."""
     if zipfile.is_zipfile(path):
         with tempfile.TemporaryDirectory() as tmp, zipfile.ZipFile(path) as z:
-            members = [m for m in z.namelist() if not m.endswith("/") and ".." not in PurePosixPath(m).parts]
+            members = [m for m in z.namelist() if _safe_member(m)]
             total = sum(z.getinfo(m).file_size for m in members)
             if total > 4 * MAX_BYTES:
                 return Findings(problems=[f"zip expands to {total} bytes: not inspected"])
-            for m in members:
-                z.extract(m, tmp)
-            files = [Path(tmp) / m for m in members]
+            root = Path(tmp).resolve()
+            # read what was written inside tmp, never the name stored in the zip
+            files = [p for p in (Path(z.extract(m, tmp)).resolve() for m in members) if p.is_relative_to(root)]
             readable = [p for p in files if p.suffix.lower() in READERS]
             rasters = [p for p in files if p.suffix.lower() in RASTER_EXT]
             if len(readable) == 1 or (readable and all(p.suffix.lower() == ".shp" for p in readable[:1])):

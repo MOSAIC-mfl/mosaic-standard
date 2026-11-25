@@ -116,3 +116,31 @@ def test_todo_placeholders_warn_in_a_draft_and_fail_once_published(tmp_path: Pat
     assert [x.level for x in todo] == ["warning"] and "title" in todo[0].message
     _edit(folder / "profile.yaml", lambda d: d.update(status="published"))
     assert any("'TODO' placeholder" in e and "explorer.yaml" in e for e in _errors(folder)), _errors(folder)
+
+
+@pytest.mark.parametrize("text", ["", "{}\n", "# only a comment\n"])
+def test_an_empty_profile_is_an_error(tmp_path: Path, text: str) -> None:
+    folder = _copy(tmp_path)
+    (folder / "profile.yaml").write_text(text, encoding="utf-8")
+    p = ls.load_profile(folder, ls.vocab(), ls.record_ids())
+    assert not p.ok and _errors(folder)
+
+
+@pytest.mark.parametrize(
+    ("file", "change"),
+    [
+        ("explorer.yaml", lambda d: d["about"].update(sources="../../outside.yaml")),
+        ("explorer.yaml", lambda d: d["story"].update(file="../story.yaml")),
+        ("profile.yaml", lambda d: d["sections"][0].update(source="../KEN-LVB/explorer.yaml")),
+    ],
+)
+def test_files_outside_the_profile_folder_are_refused_and_not_read(tmp_path: Path, file: str, change) -> None:  # type: ignore[no-untyped-def]
+    folder = _copy(tmp_path)
+    outside = {"layers": [{"id": "secret", "title": "read from outside the folder"}]}
+    (tmp_path / "outside.yaml").write_text(yaml.safe_dump(outside), encoding="utf-8")
+    (tmp_path / "story.yaml").write_text(yaml.safe_dump({"chapters": []}), encoding="utf-8")
+    _edit(folder / file, change)
+    p = ls.load_profile(folder, ls.vocab(), ls.record_ids())
+    errors = [x.message for x in p.problems if x.level == "error"]
+    assert any("must be a file name in the profile folder" in e for e in errors), errors
+    assert "read from outside the folder" not in json.dumps(p.sections)
