@@ -35,7 +35,7 @@
   "publish": true
  },
  "IND-CH": {
-  "source": "Composite outline: districts Jhansi (Uttar Pradesh), Tikamgarh, Chhatarpur, Damoh and Jabalpur (Madhya Pradesh) from a GADM district layer (GADM v2 attribute schema; same line work as GADM 4.1), and Mandla district (Madhya Pradesh) from the Survey of India district boundary layer with LGD codes (2021).",
+  "source": "Composite outline: districts Jhansi (Uttar Pradesh), Tikamgarh, Chhatarpur, Damoh and Jabalpur (Madhya Pradesh) from a GADM district layer (GADM v2 attribute schema; same line work as GADM 4.1), and Mandla district (Madhya Pradesh) from the Survey of India district boundary layer with LGD codes (2021). The outline is kept as delivered: it draws Jabalpur without its Majholi and Sihora tehsils (about 1,100 km² in the north-east of the district), and Tikamgarh with Niwari, a district of its own since 2018.",
   "source_url": "https://gadm.org",
   "license": "other",
   "license_url": "https://gadm.org/license.html",
